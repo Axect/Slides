@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+	<html class="sl-root decks export offline loaded">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Bird&#39;s-Eye View of NSCool</title>
+
+
+		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
+
+		<!-- Team CSS -->
+		<style id="global-css-output" type="text/css">
+			.reveal {
+  /*.slides h1, .slides h2 { 
+ font-family: "Amatic SC", cursive;
+}
+
+
+.slides h3 {
+  font-family: "WindSong", cursive;
+}
+
+
+.slides h3 {
+  font-family: 'Sacramento', cursive;
+}
+
+
+@font-face {
+	font-family: 'UhBeemysen';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeemysen.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.slides {
+  font-family: "UhBeemysen";
+}
+*/
+}
+
+		</style>
+
+
+	</head>
+	<body class="reveal-viewport theme-font-overpass2 theme-color-white-blue">
+		<div class="reveal">
+			<div class="slides">
+				<section data-id="df7df8da3985282236275854170e460b"><div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 140px; height: auto;" data-block-id="e270357e6c414c9e28b06904eaebae1a"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1><span style="font-size:1.4em">Bird's-EYE View of</span></h1>
+
+<h1><span style="font-size:1.4em">Neutron Star Cooling</span></h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 420px;" data-block-id="45a5b5ab2da0f17290822b5d4e0cbfad"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 120%;">
+<h3>Tae Geun Kim</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 490px;" data-block-id="e2a5b585cda6dde6e14c5ee88c2da5ff"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 90%;">
+<p>Yonsei HEP-COSMO</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 560px;" data-block-id="469af57e7b653546eed6ce6352093469"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 90%;">
+<p>@ 16th Saga-Yonsei Joint Workshop</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 593px;" data-block-id="e49937635161c902112b10fc955bc51b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p><span style="font-size:0.9em">2019.12.23</span></p>
+</div></div></section><section data-id="fb9d8374b18dc9766dfbadc632911134"><div class="sl-block" data-block-type="text" style="width: 803px; left: 80px; top: 70px; height: auto;" data-block-id="c298c57dc78d1b779255de7e62b0ca7f"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+<h2>Table OF CONTENTS</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 803px; left: 80px; top: 140px; height: auto;" data-block-id="cda90072b6d5005817d9812014a79a51"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; line-height: 2.6;" data-has-line-height="">
+<ul>
+	<li class="fade-out fragment" data-fragment-index="0">Introduce Neutron Star</li>
+	<li>Stellar Structure Equation</li>
+	<li>Equip with General Relativity</li>
+	<li>ERA of Computation</li>
+	<li>Mild blueprint</li>
+</ul>
+</div></div></section><section data-id="612ab0491be3f1ff95d6c6963fb49019" data-background-image="neutron-saga/c788381bd00f22a3a25fcc4e02f0b133.jpg" data-background-color="rgb(46,26,33)" data-background-size="contain"><div class="sl-block" data-block-type="text" style="width: 864px; left: 80px; top: 70px; height: auto;" data-block-id="39e7cbbd9b01e2201f70816a370bc558"><div class="sl-block-content" data-placeholder-tag="h1" style="font-size: 200%; text-align: left; z-index: 10;" data-placeholder-text="Text">
+<h1>
+<span style="color:#FFFFFF">Stellar<br>
+structure</span><span style="color:#FFFFFF"> Equation</span><br>
+ </h1>
+</div></div></section><section data-id="afea1ad971b2d11f2444edc0d8d3483c"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-block-id="be1d680bac39db0a779ca46db6f31c9e"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>stellar structure</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 480px; left: 240px; top: 140px;" data-block-id="3de38c5292b3158d128b1564e67c160c"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-fragment-index="0">
+<p><strong><span style="font-size:1.2em">What is a star?</span></strong></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 528px; left: 432px; top: 280px;" data-block-id="1371a784840b929b185c087793346eb6"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; line-height: 1.95;" data-has-line-height="">
+<ul>
+	<li class="fragment" data-fragment-index="4">Generate energy itself (Nuclear fusion)</li>
+	<li class="fragment" data-fragment-index="5">Bound by self-gravity</li>
+	<li class="fragment" data-fragment-index="6"><strong>Stable (via Hydrostatic equilibrium)</strong></li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 480px; height: 480px; left: 240px; top: 220px; min-width: 1px; min-height: 1px;" data-block-id="993b817a77f78d6257c602d4868c13fc"><div class="sl-block-content fragment current-visible" style="z-index: 12;" data-fragment-index="1"><img style="" data-natural-width="355" data-natural-height="355" data-lazy-loaded="" data-src="neutron-saga/6039131d4b7a72ceaf60afc0aa7f8ff1.jpg"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 433.872px; height: 412px; left: 0px; top: 288px; min-width: 1px; min-height: 1px;" data-block-id="c84dee1e9ac6d64760e3180077c173a3"><div class="sl-block-content fragment fade-in-then-semi-out" style="z-index: 13;" data-fragment-index="2"><img style="" data-natural-width="853" data-natural-height="810" data-lazy-loaded="" data-src="neutron-saga/2df6273f0d555c53df128529366f00f8.jpg"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 250px; height: 257px; left: 630px; top: 439px; min-width: 1px; min-height: 1px;" data-block-id="ce63fd671362dcfac4cd2a0c949aa2f2"><div class="sl-block-content fragment fade-in-then-semi-out" style="z-index: 14;" data-fragment-index="3"><img style="" data-natural-width="250" data-natural-height="257" data-lazy-loaded="" data-src="neutron-saga/e573d8ee35ed46d3bdf0692e3ae36677.png"></div></div></section><section data-id="d2b83709649e845d234102fa8efc22ad"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-block-id="9a2d0748392240172cbba5b1d011368d"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Stellar structure</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 480px; left: 240px; top: 140px;" data-block-id="421cf0dea62211d0e3c85ad3b01775c0"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-fragment-index="0">
+<p>How to describe a star?</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 480px; left: 240px; top: 210px;" data-block-id="51bced4433d4d286972c5af915e9b3f6"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" data-fragment-index="1">
+<p style="text-align:center"><strong>Stellar structure equation</strong></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 480px; left: 240px; top: 280px;" data-block-id="419153c5fd7a4780e4612bbab3b1504e"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; line-height: 2.73;" data-has-line-height="" data-fragment-index="2">
+<ol>
+	<li>Mass Conservation</li>
+	<li>Hydrostatic equilibrium</li>
+	<li>Energy transport</li>
+	<li class="visible">Energy generation</li>
+</ol>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 240px; left: 720px; top: 210px;" data-block-id="f2d3f0fb142dc0d2263119a27b479310"><div class="sl-block-style" style="z-index: 14; transform: rotate(0deg);"><div class="sl-block-content fragment current-visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;" data-fragment-index="3">
+<p><span style="font-size:0.9em"><strong>+ Equation of State</strong></span></p>
+</div></div></div></section><section data-id="0e4fe5bc0cb22bce07f1cc1ef272a60b"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-block-id="3e9814ffda5359c6b4e76ace5d7ad2e1"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Stellar structure</h2>
+</div></div>
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 480px; left: 240px; top: 140px;" data-block-id="36d9264c57818026d8b77d6c331049cd"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>Conservation of Mass</p>
+</div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 170.5px; top: 280px;" data-block-id="50eb62e3049c63c50fc7cebc6cbcee53"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 80%;"><div class="math-input">\begin{aligned}
+&amp;dm = 4\pi r^2 \rho dr \\
+\Rightarrow ~&amp;\dfrac{dm}{dr} = 4\pi r^2 \rho
+\end{aligned}</div></div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 565.5px; top: 320.5px;" data-block-id="15a17aa7b36dfa2e8a84768c4c4d2cd1"><div class="sl-block-content notranslate" style="z-index: 13; font-size: 80%;"><div class="math-input">\delta dm = 0</div></div></div></section><section data-id="9693d0c08b47a61be7ab5dea22dca97f"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-block-id="d6dceee13b9e5d03412119732fbd0efe"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Stellar structure</h2>
+</div></div>
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 480px; left: 240px; top: 140px;" data-block-id="31bc8955c954fc546cc6f5c3940fce1a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>Hydrostatic Equilibrium</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 471px; height: 381.811px; left: 0px; top: 240.894px; min-width: 1px; min-height: 1px;" data-block-id="585e710614a1eb6f6ca2e9614781f4ca"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="940" data-natural-height="762" data-lazy-loaded="" data-src="neutron-saga/abab4ed263e9f9c4942abd9f04de00a9.png"></div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 471px; top: 240.894px;" data-block-id="455738b6fca31c665503d15141effcd4"><div class="sl-block-content notranslate" style="z-index: 13; font-size: 50%;"><div class="math-input">\begin{aligned}
+&amp;F_g = - \dfrac{Gm\Delta m}{r^2},~~ \Delta m = \rho(r) dr dS \\
+&amp;F_P = P(r)dS - P(r+dr)dS = - \dfrac{dP}{dr}dr dS \\
+\Rightarrow~&amp; \Delta m \ddot{r} = F_g + F_P \\
+\Rightarrow~&amp;\ddot{r} = - \dfrac{Gm}{r^2} - \left(\dfrac{1}{\rho}\right)\dfrac{\partial P}{\partial r}
+\end{aligned}</div></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 489px; left: 471px; top: 479.894px;" data-block-id="05c03f68bb8c5d04bc9769c9ed6384dc"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p>If \( \ddot{r} \) = 0</p>
+</div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 639.5px; top: 547px;" data-block-id="26c506d416f06937be83ef418af978c4"><div class="sl-block-content notranslate" style="z-index: 15; font-size: 50%; border-style: solid; border-width: 2px; padding: 3px; border-color: rgb(0, 0, 255);"><div class="math-input">\dfrac{dP}{dr} = - \rho \dfrac{Gm}{r^2}</div></div></div></section><section data-id="d295de6582ae49ec18022479576f5d7a"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-block-id="26b6a526e3d9bfce968b3abee3b12622"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Stellar structure</h2>
+</div></div>
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 480px; left: 240px; top: 140px;" data-block-id="54ec029c23c99ace66192f561de29211"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>Total Energy</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 431px; left: 16px; top: 210px;" data-block-id="dbe8e6591e2987b3db785a1eed3819f8"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 80%;">
+<p><span style="font-size:1.0em">From 1st law of thermodynamics,</span></p>
+</div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 76.5px; top: 280px;" data-block-id="4c19aef590aa7fc43ca12a00a1b5912b"><div class="sl-block-content notranslate" style="z-index: 13; font-size: 50%;"><div class="math-input">\delta(udm) = \delta u dm = \delta Q + \delta W</div></div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 16px; top: 350px;" data-block-id="2a1b69568a1e18064b2ada06d85a25a3"><div class="sl-block-content notranslate" style="z-index: 14; font-size: 50%;"><div class="math-input">\begin{aligned}
+\delta W &amp;= -P \delta dV = -P\delta \left(\dfrac{dV}{dm}dm\right) \\
+&amp;=-P \delta \left(\dfrac{1}{\rho}\right) dm \\
+\\
+\delta Q &amp;= q dm \delta t + F(m) \delta t - F(m+dm)\delta t \\
+&amp;= \left(q - \dfrac{\partial F}{\partial m} \right)dm\delta t
+\end{aligned}</div></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 113px; height: 51px; left: 447px; top: 280px;" data-block-id="71f228eadb519acf4559427df31fdf54"><div class="sl-block-content" data-shape-type="arrow-right" data-shape-fill-color="#000000" data-shape-stretch="true" style="z-index: 15;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 113 51"><polygon points="0,15.299999999999999 56.5,15.299999999999999 56.5,0 113,25.5 56.5,51 56.5,35.699999999999996 0,35.699999999999996" class="shape-element" fill="#000000"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 400px; left: 560px; top: 210px;" data-block-id="ff2f4e22e943abb4054fbbc3fa4da2d6"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16; font-size: 80%;">
+<p>Equation becomes...</p>
+</div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 640px; top: 280px;" data-block-id="9842496e1bf91b29c958f48e734b31dc"><div class="sl-block-content notranslate" style="z-index: 17; font-size: 50%;"><div class="math-input">\dot{u} + P \dot{\left( \dfrac{1}{\rho} \right)} = q - \dfrac{\partial F}{\partial m}</div></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 400px; left: 560px; top: 391px;" data-block-id="6e454152f8de30291d6bdbf752cb71fd"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 18; font-size: 80%;">
+<p>Integrate with some tricks</p>
+</div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 635px; top: 433px;" data-block-id="831ad81a1690771958b3bcbced754d66"><div class="sl-block-content notranslate" style="z-index: 19; font-size: 50%;"><div class="math-input">\dot{U} + \dot{K} + \dot{\Omega} = L_{nuc} - L</div></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 389px; left: 560px; top: 524px;" data-block-id="d624bb9f48bada66eb452df056ce48ba"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20; font-size: 80%;">
+<p>For NS, \(\dot{K},\dot{\Omega},L_{nuc}=0\)</p>
+</div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 661px; top: 569px;" data-block-id="92457c8aa3ef0688d539d0f85d735fcc"><div class="sl-block-content notranslate" style="z-index: 21; font-size: 50%; padding: 3px; border-style: solid; border-width: 2px; border-color: rgb(0, 0, 255);"><div class="math-input">\dot{U} = C_v \dfrac{dT}{dt} = -L</div></div></div></section><section data-background-color="rgb(46,26,33)" data-background-image="neutron-saga/c788381bd00f22a3a25fcc4e02f0b133.jpg" data-background-size="contain" data-id="9ffff4a82c292605a16527c9f15af08e"><div class="sl-block" data-block-type="text" style="width: 864px; left: 80px; top: 70px; height: auto;" data-block-id="5064fd4c04819e0a072d7fa4ba02d64a"><div class="sl-block-content" data-placeholder-tag="h1" style="font-size: 200%; text-align: left; z-index: 10;" data-placeholder-text="Text">
+<h1><span style="color:#FFFFFF">Equip with</span></h1>
+
+<h1>
+<span style="color:#FFFFFF">general relativity</span><br>
+ </h1>
+</div></div></section><section data-id="55eec0e9edbaa5d4a8529736df33a5ff"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-block-id="1dc74bbe297ae8dcf080275669f45c35"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>setup geometry</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 140px;" data-block-id="2ee76296d57c14aff34f3dfe6f39992a"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 90%;" data-fragment-index="0">
+<p>For static, non-rotating and spherical symmetric star, we can write metric as follows</p>
+</div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 245.5px; top: 188px;" data-block-id="080799d77bb37f82fa5feabef0255a6f"><div class="sl-block-content notranslate fragment" style="z-index: 12; font-size: 60%;" data-fragment-index="0"><div class="math-input">ds^2 = -e^{2\Phi(r)}dt^2 + e^{2\Lambda(r)}dr^2 + r^2 d\Omega^2</div></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 280px;" data-block-id="b850d748f7f669026a4222692c7ef50b"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 90%;" data-fragment-index="1">
+<p>Consider <em>perfect fluid </em>matter.<br>
+From energy-momentum conservation (\(\nabla_\nu T^{\mu\nu} = 0 \)), we can obtain next equation.</p>
+</div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 374.5px; top: 369px;" data-block-id="30b4b1f68080239bcb08a8c2f80904e7"><div class="sl-block-content notranslate fragment" style="z-index: 14; font-size: 50%;" data-fragment-index="1"><div class="math-input">\dfrac{dP}{dr} = - (\rho + P) \dfrac{d\Phi}{dr}</div></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 457px;" data-block-id="510bb74a98e9065bf495818a232548f7"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; font-size: 90%;" data-fragment-index="2">
+<p>From Einstein equation, we can get below relations.</p>
+</div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 371px; top: 507px;" data-block-id="53210c7c77ef5156e9aadcd867a8da00"><div class="sl-block-content notranslate fragment" style="z-index: 16; font-size: 50%;" data-fragment-index="2"><div class="math-input">e^{-2\Lambda(r)} = 1 - \dfrac{2m(r)}{r}</div></div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 340px; top: 565px;" data-block-id="4f4eafb46df1e0201a75732edfed6fc8"><div class="sl-block-content notranslate fragment" style="z-index: 17; font-size: 50%;" data-fragment-index="2"><div class="math-input">\dfrac{d\Phi}{dr} = -\dfrac{1}{\rho}\dfrac{dP}{dr}\left(1 + \dfrac{P}{\rho}\right)^{-1}</div></div></div></section><section data-id="cb70b65477b6e83bb4acafb47a4919a4"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-block-id="7664dcbc5915ca84be1867998e5bdc40"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Tolman-oppenheimer-volkoff equation</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 149px; top: 271px;" data-block-id="ba36361b5a8166e6a5c62289cb11ef65"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 60%;"><div class="math-input">\begin{aligned}
+\dfrac{dm}{dr} &amp;= 4\pi r^2 \rho \\
+\dfrac{dP}{dr} &amp;= - \dfrac{\rho m}{r^2} \left( 1 + \dfrac{P}{\rho}\right) \left(1 + \dfrac{4\pi P r^3}{m}\right) \left(1 - \frac{2m}{r} \right)^{-1}
+\end{aligned}</div></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 174px;" data-block-id="2c86bfd136b9fa0c86cc90299ec31036"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>Combine all equations of previous slides, then we can get next equations.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 524px;" data-block-id="1d2157296bdff1788d4fab95a05f2d53"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>These equation is called <em>TOV equation</em>. <span style="font-size:0.7em">(already appeared in Prof. Tachibana's lecture)</span></p>
+</div></div></section><section data-id="5c0cec9d29f1c2b119b97abae030f8ac"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-block-id="b7a731b3f1224dccb9d60b20d81b239f"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Newtonian <em>VS</em> General Relativity</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 409px; top: 210px;" data-block-id="42366d1d485fdc939f564a976ca66e9c"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 50%;"><div class="math-input">\begin{aligned}
+\dfrac{dm}{dr} &amp;= 4\pi r^2 \rho \\
+\dfrac{dP}{dr} &amp;= - \dfrac{\rho m}{r^2} \left( 1 + \dfrac{P}{\rho}\right) \left(1 + \dfrac{4\pi P r^3}{m}\right) \left(1 - \frac{2m}{r} \right)^{-1}
+\end{aligned}</div></div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 131.5px; top: 210px;" data-block-id="6ab44d85725f54bd21f5200b310234e7"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 50%;"><div class="math-input">\begin{aligned}
+\dfrac{dm}{dr} &amp;= 4\pi r^2 \rho \\
+\dfrac{dP}{dr} &amp;= - \dfrac{\rho m}{r^2}
+\end{aligned}</div></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 400px; left: 0px; top: 140px;" data-block-id="976f88688d5db6c7c33021303f442fa7"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>Newtonian</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 551px; left: 409px; top: 140px;" data-block-id="829b178ed6048c616b5009913e74fd39"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p>General Relativity</p>
+</div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 89px; top: 560px;" data-block-id="fde615727b9aebae50db6937911eaf5c"><div class="sl-block-content notranslate" style="z-index: 15; font-size: 50%;"><div class="math-input">C_v \dfrac{dT}{dt} = - (L+L_{etc})</div></div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 89px; top: 420px;" data-block-id="845ec525a8bbcfdd9989a25c7359c2b4"><div class="sl-block-content notranslate" style="z-index: 16; font-size: 50%;"><div class="math-input">\begin{aligned}
+\dfrac{dT}{dr} &amp;= - \dfrac{3}{4ac} \dfrac{\kappa \rho}{T^3} \dfrac{L}{4\pi r^2} \\
+\dfrac{dL}{dr} &amp;= 4\pi r^2 \rho q
+\end{aligned}</div></div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 398px; top: 420px;" data-block-id="e7135c772ae90f151efee06b3c6d5b55"><div class="sl-block-content notranslate" style="z-index: 17; font-size: 50%;"><div class="math-input">\begin{aligned}
+\dfrac{d(Te^\Phi)}{dr} &amp;= - \dfrac{1}{\lambda}  \dfrac{Le^\Phi}{4\pi r^2 \sqrt{1 - 2m/r}} \\
+\dfrac{d(Le^{2\Phi})}{dr} &amp;= - \dfrac{4\pi r^2 e^\Phi}{\sqrt{1 - 2m/r}}\left( C_v \dfrac{dT}{dt} + e^\Phi(Q_\nu + Q_{etc})\right)
+\end{aligned}</div></div></div></section><section data-background-color="rgb(46,26,33)" data-background-image="neutron-saga/c788381bd00f22a3a25fcc4e02f0b133.jpg" data-background-size="contain" data-id="924dea74b3ec92348ef92b51b439b23c"><div class="sl-block" data-block-type="text" style="width: 864px; left: 80px; top: 70px; height: auto;" data-block-id="5c7336baffba93220878f57dd476b37d"><div class="sl-block-content" data-placeholder-tag="h1" style="font-size: 200%; text-align: left; z-index: 10;" data-placeholder-text="Text">
+<h1>
+<span style="color:#FFFFFF">ERA of computation</span><br>
+ </h1>
+</div></div></section><section data-id="19434ef40260fe31aa32eef4487dc0c3"><div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 28px; height: auto;" data-block-id="dbd299d27d377ca96cb2e019ab6870ce"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>overview of computation process for<br>
+neutron star cooling</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 82px; top: 193px;" data-block-id="7be1396567de7e79bf4104f020e01dcd"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; line-height: 1.95;" data-has-line-height="">
+<ol>
+	<li>Set initial condition - \(\rho_c\)</li>
+	<li>Choose Equation of State - \(P=P(\rho)\)</li>
+	<li>Solve TOV equation - \(m(r),\Phi(r),\rho(r),P(r)\)</li>
+	<li>Determine &amp; calculate neutrino &amp; photon emissivity - \(Q_\nu, Q_\gamma\)</li>
+	<li>Numerically solve system of differential equations - \(L,T\)</li>
+</ol>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 524px;" data-block-id="dee19ab38881301ad274120f6bf74851"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" data-fragment-index="0">
+<p>It seems to be easy to implement.</p>
+</div></div></section><section data-id="2b1441142fe363cf708e11f3587c80ab"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-block-id="84f1dd9ab5d7e6847304ea77ad01a4fa"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Too many things to do</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="image" style="width: 591.835px; height: 627px; left: 0px; top: 73px; min-width: 1px; min-height: 1px;" data-block-id="57e42287f50e1e2b66e6ec2981ae69ab"><div class="sl-block-content fragment fade-in-then-semi-out" style="z-index: 11;" data-fragment-index="0"><img style="" data-natural-width="892" data-natural-height="945" data-lazy-loaded="" data-src="neutron-saga/e4405349167051c859d7344f166c5eb9.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 806.4px; height: 295.71px; left: 153.6px; top: 202.145px; min-width: 1px; min-height: 1px;" data-block-id="bf02cc228241852686a986981d230d35"><div class="sl-block-content fragment" style="z-index: 12;" data-fragment-index="1"><img style="" data-natural-width="889" data-natural-height="326" data-lazy-loaded="" data-src="neutron-saga/b6ec3ec232f7ea0b7a8c1d9d1feb782b.png"></div></div></section><section data-id="f8eb47ba73a8cb3c1ccb290dfc9f7e1d"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-block-id="3475111e89977d0cde2a91c5e7991402"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>two candidates</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 480px; left: 0px; top: 140px;" data-block-id="928498d5e5496161b172364e5d8fae88"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<pre style="text-align:center">NSCool <span style="font-size:0.7em">(D. Page)</span></pre>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 480px; left: 480px; top: 140px;" data-block-id="6413e80c9d33ce989e9d2bb3ec0faf1c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<pre style="text-align:center">dStar <span style="font-size:0.7em">(E. F. Brown)</span></pre>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 480px; left: 0px; top: 210px;" data-block-id="0e8ce5aebe13eafddbd0f7f48c5f1730"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; line-height: 1.56;" data-has-line-height="">
+<ul>
+	<li>Pros
+	<ul>
+		<li>
+<span style="font-size:0.9em">Stand-alone</span><span style="font-size:0.7em"> (No external dependencies)</span>
+</li>
+		<li>
+<span style="font-size:0.9em">Have experiences working with Particle Physics</span><span style="font-size:0.7em"> (By Koichi Hamaguchi)</span>
+</li>
+	</ul>
+	</li>
+	<li>
+	<p>Cons</p>
+
+	<ul>
+		<li>
+		<p><span style="font-size:0.9em">Too old</span> <span style="font-size:0.7em">(Fortran 77)</span></p>
+		</li>
+		<li>
+		<p><span style="font-size:0.9em">Contains some errors</span></p>
+		</li>
+		<li>
+		<p><span style="font-size:0.9em">Contains deprecated codes</span></p>
+		</li>
+		<li>
+		<p><span style="font-size:0.9em">No any documentation</span></p>
+		</li>
+	</ul>
+	</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 480px; left: 480px; top: 210px;" data-block-id="0bfb046147294a7c83f9aeb39d079753"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; line-height: 1.56;" data-has-line-height="">
+<ul>
+	<li>Pros
+	<ul>
+		<li>
+<span style="font-size:0.9em">Reliable</span> <span style="font-size:0.7em">(Built on MESA)</span>
+</li>
+		<li>
+<span style="font-size:0.9em">Readable &amp; Relatively easy to use</span><br>
+		<span style="font-size:0.7em">(Modern Fortran)</span>
+</li>
+		<li>
+<span style="font-size:0.9em">Opensource</span> <span style="font-size:0.7em">(on Github)</span>
+</li>
+	</ul>
+	</li>
+	<li>Cons
+	<ul>
+		<li><span style="font-size:0.9em">Should study MESA first</span></li>
+		<li><span style="font-size:0.9em">Nobody used this code for particle physics related research</span></li>
+	</ul>
+	</li>
+</ul>
+</div></div></section><section data-id="afd7e3fdbe79bd2e4f1be194322b6de4"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-block-id="24c44a10ed476064cc2486631f9a2f71"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>My Process</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 140px;" data-block-id="c0e261cf5dbcfa5d4132a2486a2a1d36"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>Now, I'm working with NSCool. But hard to customize &amp; still some errors.<br>
+\(\Rightarrow \) Porting to effective modern platform with some modification - <em>Rust</em></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 640px; left: 160px; top: 244px;" data-block-id="2fe0e7e36cfe52d0840b4eeb502eb994"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" data-fragment-index="0">
+<p>- Much side-effects, not pure subroutine</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 93.8264px; height: 96px; left: 273.087px; top: 302px; min-width: 1px; min-height: 1px;" data-block-id="60a03316109d8eef6e285f99df25f6a6" data-locked="true"><div class="sl-block-content fragment" style="z-index: 13;" data-fragment-index="0"><img style="" data-natural-width="259" data-natural-height="265" data-lazy-loaded="" data-src="neutron-saga/7b7a5734b09f07c9b7df2e2761cb53c5.png"></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 400px; top: 350px;" data-block-id="8292cabde8396dfa5237ed1fdcea0ed5" data-locked="true"><div class="sl-block-content fragment" data-line-x1="0" data-line-y1="0" data-line-x2="151" data-line-y2="0" data-line-color="#000000" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 14;" data-fragment-index="0"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="151" height="1" viewbox="0 0 151 1"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="0" y1="0" x2="149" y2="0"></line><line stroke="#000000" stroke-width="2" x1="0" y1="0" x2="149" y2="0"></line><path style="fill: rgba(0,0,0,0);" stroke="#000000" stroke-width="2" transform="translate(149,0) rotate(90)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 160px; left: 400px; top: 314px;" data-block-id="997aa607487aa1bf1b8db03ecbc2e593"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;" data-fragment-index="0">
+<p><span style="font-size:0.7em">Raw coding</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 97.5px; height: 97.5px; left: 591.25px; top: 301.25px; min-width: 1px; min-height: 1px;" data-block-id="83a3e217fe32ada897b03f13832c2601"><div class="sl-block-content fragment" style="z-index: 16;" data-fragment-index="0"><img style="" data-natural-width="512" data-natural-height="512" data-lazy-loaded="" data-src="neutron-saga/e144c30e65dfea752f326c0af48453ec.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 640px; left: 160px; top: 454px;" data-block-id="f2ed078a12ab6fcc4133bc18c10ee10d"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17;" data-fragment-index="1">
+<p>- Not much side-effects, pure subroutine</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 93.8264px; height: 96px; left: 113.087px; top: 512px; min-width: 1px; min-height: 1px;" data-block-id="5499b758a084febb83f7b97d937c6eb9"><div class="sl-block-content fragment" style="z-index: 18;" data-fragment-index="1"><img style="" data-natural-width="259" data-natural-height="265" data-lazy-loaded="" data-src="neutron-saga/7b7a5734b09f07c9b7df2e2761cb53c5.png"></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 240px; top: 560px;" data-block-id="d31a006d79cf71454d855ec3ab36a941"><div class="sl-block-content fragment" data-line-x1="0" data-line-y1="0" data-line-x2="160" data-line-y2="0" data-line-color="#000000" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 19;" data-fragment-index="1"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="160" height="1" viewbox="0 0 160 1"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="0" y1="0" x2="158" y2="0"></line><line stroke="#000000" stroke-width="2" x1="0" y1="0" x2="158" y2="0"></line><path style="fill: rgba(0,0,0,0);" stroke="#000000" stroke-width="2" transform="translate(158,0) rotate(90)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 160px; left: 240px; top: 524px;" data-block-id="52991f25bbf91a5b95f13e8645290096"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20;" data-fragment-index="1">
+<pre style="text-align: center;"><span style="font-size:0.7em">extern</span></pre>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 90.3166px; height: 96px; left: 431.549px; top: 512px; min-width: 1px; min-height: 1px;" data-block-id="e67ef2ae6d8db32043aceab9e357b5c4"><div class="sl-block-content fragment" style="z-index: 21;" data-fragment-index="1"><img style="" data-natural-width="731" data-natural-height="777" data-lazy-loaded="" data-src="neutron-saga/f6412c170a55fac12d330c2cf2a2254b.svg"></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 560px; top: 558px;" data-block-id="e026f1e50811c417ef094b4b07849f39"><div class="sl-block-content fragment" data-line-x1="0" data-line-y1="0" data-line-x2="160" data-line-y2="0" data-line-color="#000000" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 22;" data-fragment-index="1"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="160" height="1" viewbox="0 0 160 1"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="0" y1="0" x2="158" y2="0"></line><line stroke="#000000" stroke-width="2" x1="0" y1="0" x2="158" y2="0"></line><path style="fill: rgba(0,0,0,0);" stroke="#000000" stroke-width="2" transform="translate(158,0) rotate(90)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 160px; left: 560px; top: 526px;" data-block-id="a935e7a727f62e02264fd2f2c5b8d447"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 23;" data-fragment-index="1">
+<pre style="text-align:center"><span style="font-size:0.7em">ffi</span></pre>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 97.5px; height: 97.5px; left: 751.25px; top: 512px; min-width: 1px; min-height: 1px;" data-block-id="206c249ecc0b068f7f498e656f7a1f07"><div class="sl-block-content fragment" style="z-index: 24;" data-fragment-index="1"><img style="" data-natural-width="512" data-natural-height="512" data-lazy-loaded="" data-src="neutron-saga/e144c30e65dfea752f326c0af48453ec.png"></div></div></section><section data-background-color="rgb(46,26,33)" data-background-image="neutron-saga/c788381bd00f22a3a25fcc4e02f0b133.jpg" data-background-size="contain" data-id="8f14f8c1254f007b7227dba2a09426c9"><div class="sl-block" data-block-type="text" style="width: 864px; left: 80px; top: 70px; height: auto;" data-block-id="bdb6f8bd031aa0d2e57d13ef25644d78"><div class="sl-block-content" data-placeholder-tag="h1" style="font-size: 200%; text-align: left; z-index: 10;" data-placeholder-text="Text">
+<h1>
+<span style="color:#FFFFFF">mild<br>
+blueprint</span><br>
+ </h1>
+</div></div></section><section data-id="c4ae5d4acf4a4a2ff9e0a2bd5f51b3a5"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 36px; height: auto;" data-block-id="214647899ce313341a9c3807b4da8a14"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<pre style="text-align: center;"><span style="font-size:1.0em">Brief_plan.py</span></pre>
+</div></div>
+
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 490px; left: 0px; top: 140px;" data-block-id="4234faf42fcf5434d0b9912d4173a3cb"><div class="sl-block-content notranslate" data-highlight-theme="xcode" data-code-frame="osx" style="z-index: 11; font-size: 130%;"><pre class="python"><code data-line-numbers="1|4|5-6|8-11|12-14" data-fragment-index="0">research = ResearchStatus.get()
+
+while True:
+  while research != "porting complete":
+    research.more()
+    time.sleep(0)
+
+  # Is it valid with observation data?
+  if research.valid_with_data():
+    research.go_to_next_phase()
+    break
+  else:
+    research = ResearchStatus.error()
+    continue</code></pre></div></div></section><section data-id="1bcbe59d6ec5c98968eeb55a83655254"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-block-id="8b175cc1303046b60c88d617055f3628"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Current status</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 80px; top: 350px;" data-block-id="04c015a4995526f03dc48f26ef937cf8"><div class="sl-block-style" style="z-index: 11; opacity: 0.5;"><div class="sl-block-content" data-line-x1="0" data-line-y1="0" data-line-x2="800" data-line-y2="0" data-line-color="#0000ff" data-line-start-type="circle" data-line-end-type="circle" style="z-index: 11;" data-line-width="5px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="800" height="1" viewbox="0 0 800 1"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="8" y1="0.5" x2="793.0703125" y2="0.5"></line><line stroke="#0000ff" stroke-width="5" x1="8" y1="0.5" x2="793.0703125" y2="0.5"></line><ellipse rx="7.5" ry="7.5" cx="7.5" cy="0" fill="#0000ff"></ellipse><ellipse rx="7.5" ry="7.5" cx="792.5703125" cy="0" fill="#0000ff"></ellipse></svg></div></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 160px; top: 350px;" data-block-id="810834a59a79b0b4f4ab5cf97c04facc"><div class="sl-block-content fragment" data-line-x1="0" data-line-y1="70" data-line-x2="0" data-line-y2="0" data-line-color="#000000" data-line-start-type="none" data-line-end-type="circle" style="z-index: 12;" data-fragment-index="0"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="1" height="70" viewbox="0 0 1 70"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="0" y1="70" x2="0" y2="3"></line><line stroke="#000000" stroke-width="2" x1="0" y1="70" x2="0" y2="3"></line><ellipse rx="3" ry="3" cx="0" cy="3" fill="#000000"></ellipse></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 160px; left: 80px; top: 420px;" data-block-id="2a3c7a61ae5a54cf9fc7a8e638b78f9c"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; line-height: 1.04;" data-fragment-index="0" data-has-line-height="">
+<p><strong><span style="font-size:0.7em">Describe Neutron star </span></strong></p>
+
+<p><strong><span style="font-size:0.7em">via TOV</span></strong></p>
+</div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 240px; top: 280px;" data-block-id="a0ce562ea8d3d0fe4c72523bd937efdd"><div class="sl-block-content fragment" data-line-x1="0" data-line-y1="70" data-line-x2="0" data-line-y2="0" data-line-color="#000000" data-line-start-type="circle" data-line-end-type="none" style="z-index: 14;" data-fragment-index="1"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="1" height="70" viewbox="0 0 1 70"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="0" y1="67" x2="0" y2="0"></line><line stroke="#000000" stroke-width="2" x1="0" y1="67" x2="0" y2="0"></line><ellipse rx="3" ry="3" cx="0" cy="67" fill="#000000"></ellipse></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 160px; left: 160px; top: 210px;" data-block-id="99743c7c9f8698cad35ffc773d837407"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;" data-fragment-index="1">
+<p><strong><span style="font-size:0.7em">Understand Fermi gas theory</span></strong></p>
+</div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 560px; top: 350px;" data-block-id="17ff5cceba0fd884933fd65a8e222af0"><div class="sl-block-content fragment" data-line-x1="0" data-line-y1="0" data-line-x2="0" data-line-y2="70" data-line-color="#000000" data-line-start-type="circle" data-line-end-type="none" style="z-index: 16;" data-fragment-index="2"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="1" height="70" viewbox="0 0 1 70"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="0" y1="3" x2="0" y2="70"></line><line stroke="#000000" stroke-width="2" x1="0" y1="3" x2="0" y2="70"></line><ellipse rx="3" ry="3" cx="0" cy="3" fill="#000000"></ellipse></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 160px; left: 479px; top: 420px;" data-block-id="6d704863cd503ecf2ed1a8fc1d653423"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17;" data-fragment-index="2">
+<p><span style="font-size:0.7em">Complete porting of NSCool</span></p>
+</div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 718px; top: 280px;" data-block-id="3a7c58b5fade200b2bb87037eb88c8e0"><div class="sl-block-content fragment" data-line-x1="0" data-line-y1="70" data-line-x2="0" data-line-y2="0" data-line-color="#000000" data-line-start-type="circle" data-line-end-type="none" style="z-index: 18;" data-fragment-index="3"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="1" height="70" viewbox="0 0 1 70"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="0" y1="67" x2="0" y2="0"></line><line stroke="#000000" stroke-width="2" x1="0" y1="67" x2="0" y2="0"></line><ellipse rx="3" ry="3" cx="0" cy="67" fill="#000000"></ellipse></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 160px; left: 640px; top: 207px;" data-block-id="7d6f1e0218559955f90ca3e91f65187b"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 19;" data-fragment-index="3">
+<p><span style="font-size:0.7em">Test with observed data</span></p>
+</div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 880px; top: 350px;" data-block-id="f4f4e625bf32b2ab62e36205d2d08542"><div class="sl-block-content fragment" data-line-x1="0" data-line-y1="0" data-line-x2="0" data-line-y2="70" data-line-color="#000000" data-line-start-type="circle" data-line-end-type="none" style="z-index: 20;" data-fragment-index="4"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="1" height="70" viewbox="0 0 1 70"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="0" y1="3" x2="0" y2="70"></line><line stroke="#000000" stroke-width="2" x1="0" y1="3" x2="0" y2="70"></line><ellipse rx="3" ry="3" cx="0" cy="3" fill="#000000"></ellipse></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 160px; left: 800px; top: 420.5px;" data-block-id="e31cafe2a9997d5be91884226398aeff"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 21;" data-fragment-index="4">
+<p><span style="font-size:0.7em">Start particle physics related research</span></p>
+</div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 368px; top: 357px;" data-block-id="4896c8837da4a750c843b84530352631"><div class="sl-block-content fragment" data-line-x1="0" data-line-y1="55.5" data-line-x2="0" data-line-y2="0" data-line-color="#ff0000" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 22;" data-line-width="3px" data-fragment-index="5"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="1" height="55.5" viewbox="0 0 1 55.5"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="0.5" y1="56" x2="0.5" y2="2.75"></line><line stroke="#ff0000" stroke-width="3" x1="0.5" y1="56" x2="0.5" y2="2.75"></line><path style="fill: rgba(0,0,0,0);" stroke="#ff0000" stroke-width="3" transform="translate(0,2.25) rotate(0)" d="M 6.75 6.75 L 0 0 L -6.75 6.75"></path></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 160px; left: 288px; top: 412.5px;" data-block-id="e940f1b65a73c135e45cf2515658bd37"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 23;" data-fragment-index="5">
+<p><strong><span style="font-size:0.7em">Current status</span></strong></p>
+</div></div></section><section data-id="210f742cff5029807efa481578fc2f8e"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-block-id="8137bf3a75ea48d0a52561fcc1673bde"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>expectation</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 140px;" data-block-id="697c34d84b212d51e9876fc478adfd65"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; line-height: 1.82;" data-has-line-height="">
+<ul>
+	<li>Can understand cooling process of Neutron star.</li>
+	<li>Have effective research framework which contains following properties.
+	<ul>
+		<li>Reduce error between theory &amp; simulation.</li>
+		<li>Do not have to suffer with architecture dependencies.</li>
+		<li>More safe &amp; more fast.</li>
+		<li>Complete documentation.</li>
+		<li>Easy to use.</li>
+	</ul>
+	</li>
+</ul>
+</div></div></section><section data-id="81bd54cc8305649c0a9034fea5279a79"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-block-id="02c1d900b099b2dbde929b1cc47361b9"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>references</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 140px;" data-block-id="78595b4a8a8ad44081b0da9695e718bf"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li>Astrophysics Books
+	<ul>
+		<li>
+<span style="font-size:0.9em">Stellar evolution</span>
+		<ul>
+			<li>
+<span style="font-size:0.7em">Prialnik, D. (2000). </span><em><span style="font-size:0.7em">An introduction to the theory of stellar structure and evolution. </span></em><span style="font-size:0.7em">Cambridge: Cambridge University Press. </span>
+</li>
+		</ul>
+		</li>
+		<li>
+<span style="font-size:0.9em">Compact Star</span>
+		<ul>
+			<li><span style="font-size:0.7em">Glendenning, N. K. (1997). <em>Compact stars: Nuclear physics, particle physics, and general relativity</em>. New York: Springer. </span></li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+	<li>
+<span style="font-size:1.0em">Articles</span>
+	<ul>
+		<li>
+<span style="font-size:0.9em">Neutron Star Cooling</span>
+		<ul>
+			<li>
+			<p><span style="font-size:0.7em">Potekhin, Alexander Y., José A. Pons, and Dany Page.<em> Neutron Stars—Cooling and Transport</em>. Space Science Reviews 191.1-4 (2015): 239–291. Crossref. Web.</span></p>
+			</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+</ul>
+</div></div></section><section data-background-color="rgb(46,26,33)" data-background-image="neutron-saga/c788381bd00f22a3a25fcc4e02f0b133.jpg" data-background-size="contain" data-id="3becbcb440b8e30b86a964145ffc215d"><div class="sl-block" data-block-type="text" style="width: 864px; left: 80px; top: 70px; height: auto;" data-block-id="8d2739945630787eca7ad8e143bb5b38"><div class="sl-block-content" data-placeholder-tag="h1" style="font-size: 200%; text-align: left; z-index: 10;" data-placeholder-text="Text">
+<h1><span style="color:#FFFFFF">Thank you</span></h1>
+
+<h1><span style="color:#FFFFFF">for</span></h1>
+
+<h1>
+<span style="color:#FFFFFF">Listening</span><br>
+ </h1>
+</div></div></section>
+			</div>
+		</div>
+
+		<script>
+			var SLConfig = {"deck": {"id":1678559,"slug":"neutron-saga","title":"Bird's-Eye View of NSCool","description":"","width":960,"height":700,"margin":0.05,"visibility":"all","published_at":"2019-12-23T07:04:50.797Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/706fc8672528b92151815596fc4c0ea2/thumb.jpg?1633900786","view_count":9,"user":{"id":1198239,"username":"axect","name":"","description":"","thumbnail_url":"https://www.gravatar.com/avatar/cda8e3c26bf8569f56759c20f93835ac?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","account_type":"enterprise","team_id":1998,"settings":{"id":4349006,"present_controls":true,"present_upsizing":true,"present_pointer":true,"present_notes":true,"default_deck_tag_id":null},"membership":{"role":"member","manager":false,"activated":true}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"overpass2","theme_color":"white-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":false,"rolling_links":false,"center":false,"shuffle":false,"should_loop":false,"share_notes":false,"slide_number":true,"slide_count":23,"rtl":false,"version":2,"collaborative":null,"deck_user_editor_limit":null,"data_updated_at":1577084428279,"font_typekit":null,"font_google":null,"time_limit":null,"navigation_mode":"default","upsizing_enabled":true,"notes":{"df7df8da3985282236275854170e460b":"Hello, I'm Tae Geun Kim in Yonsei HEP-COSMO the great lab in Yonsei University.\nI truly appreciate the opportunity to come Saga university. It is a great experience for me. (It's trivial)\nThen let's start presentation.","fb9d8374b18dc9766dfbadc632911134":"Here is the table of contents.\nMy original plan was spending lots of time for introducing neutron star, but it was already done by Prof. Tachibana.\nSo, I'll skip introducing of Neutron stars, and start with basic stellar structure equation.\nAnd next, I use General relativity to generalize previous equations.\nAnd introduce some computation processes \u0026 tools and finally suggest some plans \u0026 expectations of my project.","612ab0491be3f1ff95d6c6963fb49019":"First, I'll introduce the stellar structure equation which is one of the foundations for astronomy.\nThis beautiful picture is the combined image of Cassiopeia A neutron star.","afea1ad971b2d11f2444edc0d8d3483c":"Before introducing stellar structure, there is very important question.\nWhat is a star?\nThe top of christmas tree?\nor Starmie in Pokemon?\nor so cute Kirby?\nIn astronomy, we define a star as the object which satisfies below two conditions.\nFirst, it should generate energy itself via nuclear fusion.\nSecond, it should be bounded by self-gravity.\nAnd for most of stars, there is third condition - Hydrostatic equilibrium.","d2b83709649e845d234102fa8efc22ad":"Then now, there is also important question.\nThen how to describe a star?\nIn astronomy, we use stellar structure equations to describe a star usually. There are four sub-equations in stellar structure equation.\nAnd there is one more important equation to describe the star - Equation of state. But it is also explained by prof tachibana. So, I'll skip this. ","0e4fe5bc0cb22bce07f1cc1ef272a60b":"Conservation is trivial.","9693d0c08b47a61be7ab5dea22dca97f":"Next one is hydrostatic equilibrium. It seems little bit complex, but it's simple. It means the equilibrium of radiation pressure \u0026 gravitational force. So, firstly we obtain equation of motion \u0026 let's put zero acceleration. Then we can get hydrostatic equilibrium equation.","d295de6582ae49ec18022479576f5d7a":"From 1st law of thermodynamics \u0026 mass conservation, we can find total energy change. q denotes nuclear energy releases ratio \u0026 F denotes power of heat flow.\nWith some tricks we get equation of total energy change.\nAnd especially for Neutron star, there is no nuclear fusion in star, thus, we get different equation. It is called Cooling equation.","9ffff4a82c292605a16527c9f15af08e":"Now, time to journey with General Relativity.","55eec0e9edbaa5d4a8529736df33a5ff":"To work in General relativistic frame, first we should define what metric we use. Neutron star seems static, spherical symmetric star with rapid-rotation. But, this time, we consider non-rotating neutron star for convenience. (Also, Cas A is slowly-rotating Neutron star)\nThus, choosing this metric is reasonable. (Phi, Lambda) are just for radial contributions.\nAfter metric determination, there is systematic computation processes. We can calculate connection coefficient (a.k.a Christoffel symbol), Riemann curvature tensor, Ricci tensor and Einstein tensor.\nOf course, you can obtain these with your hand, but it's more comfortable with computation tools. I use Sagemanifold package to obtain this.\n\nFrom energy-momentum conservation, we can get this equation \u0026 from components of einstein equation. we get these equations.","cb70b65477b6e83bb4acafb47a4919a4":"Combine all equations of previous slides, then we can write below equations.\nThese equation is called Tolman-Oppenheimer-Volkoff equation. (And it already appeared in Prof. Tachibana's lecture)","5c0cec9d29f1c2b119b97abae030f8ac":"Now, let's compare both schemes - newtonian versus general realtivity.\nAnd we can validate both are same by non-relativistic approximation. (speed of light to infinity). Can't you see the speed of light in TOV equation? It is only visible for good kids.\nOf course I used geometric unit (c=G=1) to describe equation simple.\nAnd there are two equation pairs. Energy transport \u0026 Energy generation.","924dea74b3ec92348ef92b51b439b23c":"Now, let's get down to the ERA of computation.","19434ef40260fe31aa32eef4487dc0c3":"Here are the overview of computation process for neutron star cooling.\nFirst, we should set initial condition. Usually our initial condition is core energy-mass density. Second, choose proper equation of states. Then we can relate density and pressure.\nThird, solve TOV equation numerically. Then we obtain whole structure information of neutron star.\nNext, we obtain whole effective emissivity. For young star, it could be a neutrino, for old star, it could be photon.\nFinally, numerically solve system of differential equations with previous computed data, then we can obtain temperature \u0026 luminosity. That's it.","2b1441142fe363cf708e11f3587c80ab":"There are too many things to do computation. For example, there are lots of neutrino emission processes. So, the computation code usually composed by at least 10000 line of codes.","f8eb47ba73a8cb3c1ccb290dfc9f7e1d":"Fortunately, there are two famous neutron star cooling codes.\nFirst one is NSCool made by Dany Page. And second one is dStar made by Edward F. Brown. Two are great experts in neutron star cooling. \nPros of NSCool is stand-alone. It has no external dependencies. And already have experiences working with particle physics by Koichi Hamaguchi in Tokyo university. And first cons of NSCool is too old. Old means for syntax and code style. It uses Fortran 77 language and also 1970's code style. Thus, reading code is difficult. And also NSCool contains some errors \u0026 some deprecated codes. Also there is no any documentations.\n\nAnd for dStar, first pros is reliable. It built on MESA - the famous stellar evolution code. Thus, if there is a bug, then it would be fixed soon by many astronomers. And it uses modern fortran syntax, so it's easy to read \u0026 easy to optimize. And dstar is truely opensource. We can contribute it on a Github. But there are some risks to use this code for my project. To use this code, we should study MESA first. And until now, nobody used this code for particle physics related research.","afd7e3fdbe79bd2e4f1be194322b6de4":"Currently, my main process is porting NSCool.\nSince old syntax \u0026 no updates of NSCool, there are still errors \u0026 risks in there. So, if we use this effectively, then it would better to port NSCool to effective modern platform - Rust programming language.\n\nMy process is as follows.\nFor much side-effect or buggy subroutine, I implement Rust function by raw coding.\nAnd for not much side-effects or trivial subroutine, I just use foreign function interface. It's effective enough.","c4ae5d4acf4a4a2ff9e0a2bd5f51b3a5":" I summarized my research process by python format.\nFirst, get my research status. (It is usually done by professor)\nIf porting is not completed, then more and more research with no sleep. If completed, then check validity with observation data. Okay, then let's go to next phase. If not, get back to first part."}}};
+
+
+			// Use local fonts
+			SLConfig.fonts_url = 'lib/fonts/';
+		</script>
+
+		<script src="lib/reveal.js"></script>
+		<script src="lib/reveal-plugins.js"></script>
+		<script src="lib/offline.js"></script>
+
+		<!-- Initialize the presentation -->
+		<script>
+			Reveal.initialize({
+				width: 960,
+				height: 700,
+				margin: 0.05,
+				
+
+				hash: true,
+				controls: true,
+				progress: true,
+				mouseWheel: false,
+				showNotes: false,
+				slideNumber: true,
+				fragmentInURL: true,
+
+				autoSlide: 0,
+				autoSlideStoppable: true,
+
+				autoAnimateMatcher: SL.deck.AutoAnimate.matcher,
+
+				center: false,
+				shuffle: false,
+				loop: false,
+				rtl: false,
+				navigationMode: "default",
+
+				transition: "slide",
+				backgroundTransition: "slide",
+
+				highlight: {
+					escapeHTML: false
+				},
+
+				plugins: [ RevealZoom, RevealNotes, RevealMarkdown, RevealHighlight ]
+			});
+		</script>
+
+		
+
+	</body>
+</html>

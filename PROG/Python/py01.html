@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+	<html class="sl-root decks export offline loaded">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Python 01 - Basic Syntax</title>
+
+		<meta name="description" content="Python 01 Basic Syntax">
+
+		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
+
+		<!-- Team CSS -->
+		<style id="global-css-output" type="text/css">
+			.reveal {
+  /*.slides h1, .slides h2 { 
+ font-family: "Amatic SC", cursive;
+}
+
+
+.slides h3 {
+  font-family: "WindSong", cursive;
+}
+
+
+.slides h3 {
+  font-family: 'Sacramento', cursive;
+}
+
+
+@font-face {
+	font-family: 'UhBeemysen';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeemysen.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.slides {
+  font-family: "UhBeemysen";
+}
+*/
+}
+
+		</style>
+
+
+		<!-- User CSS -->
+		<style id="user-css-output" type="text/css">
+			.reveal .slides ul li {
+  font-family: 'Fira Sans';
+}
+.reveal .slides ol li {
+  font-family: 'Fira Sans';
+}
+.reveal .slides p {
+  font-family: 'Fira Sans';
+}
+.reveal .slides pre {
+  font-family: 'Ubuntu Mono';
+}
+.reveal .slides table td {
+  font-family: 'Ubuntu Mono';
+}
+.reveal .slides table tr {
+  font-family: 'Fira Sans';
+}
+
+		</style>
+	</head>
+	<body class="reveal-viewport theme-font-overpass2 theme-color-white-blue">
+		<div class="reveal">
+			<div class="slides">
+				<section data-id="00450703ac772ac50cdd3383cc6bf7fc"><div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 140px; height: auto;" data-block-id="dcb2d3c50b050e5aeae5c7cb9310a289"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Python<br>
+01-Basic Syntax</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 420px;" data-block-id="cfb61a1945a2be9723c7ca2468ec017d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 120%;">
+<h3>Tae Geun Kim</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 490px;" data-block-id="6ec1b960d9e204ce241c2ebab2ed4c75"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 90%;">
+<p>Yonsei HEP-COSMO</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 560px;" data-block-id="fe528984e37ade8b5fd320faa13b587f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 90%;">
+<p>@ Jungjin Academy</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 593px;" data-block-id="664fda777cf14ae477dbf154b55055e3"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p><span style="font-size:0.9em">2020.01.11</span></p>
+</div></div></section><section data-id="2132f5e95ab5439e13866269670700fb"><div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 28px; height: auto;" data-block-id="6603b23c77c3ab8d5cb60b3b3ab08c5e"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+<h2>table of contents</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 140px; height: auto;" data-block-id="59479def06f1ebdd7bb4bae01b1cc347"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; line-height: 1.95;" data-has-line-height="">
+<ul>
+	<li class="fragment" data-fragment-index="0">Python Workflow</li>
+	<li class="fragment" data-fragment-index="1">I/O</li>
+	<li class="fragment" data-fragment-index="2">Loop</li>
+	<li class="fragment" data-fragment-index="3">Condition</li>
+</ul>
+</div></div></section><section data-background-color="rgb(122,141,118)" data-id="256360f3f9737d2edfb7aed0601926d6" data-background-image="py01/1d98764781e59197318c3a0b52629fcf.png"><div class="sl-block" data-block-type="text" style="width: 864px; left: 80px; top: 70px; height: auto;" data-block-id="2c3794390cb68434b4d2f95a30b119c6"><div class="sl-block-content" data-placeholder-tag="h1" style="font-size: 200%; text-align: left; z-index: 10; color: rgb(255, 255, 255);" data-placeholder-text="Text">
+<h1>Python<br>
+Workflow</h1>
+</div></div></section><section data-id="3a9b81b6e11cbc7374e63ef995e1a5b0"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-block-id="8b3743526d4ef5f1e3f2772ea390efef"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>read - Eval - Print - Loop</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="image" style="width: 832px; height: 560px; left: 64px; top: 140px; min-width: 1px; min-height: 1px;" data-block-id="89ec2bd9e37f44c4da9766d444ace66b"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="884" data-natural-height="595" data-lazy-loaded="" data-src="py01/83283f36bd9ec9cb24375588999c408a.png"></div></div></section><section data-id="109b1cb06f106c097330b4d3345b5675"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-block-id="1af267c652b54d9380db186ab6395323"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>read - Eval - Print - Loop</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 140px;" data-block-id="02f4f16f2f2accde7e2e93a7b0220799"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><strong>Basic Arithmetic Operator</strong></p>
+</div></div>
+<div class="sl-block" data-block-type="table" style="height: auto; min-width: 120px; width: 800px; left: 80px; top: 210px;" data-block-id="06a91bb5485b6baee4207e4445e8d14f"><div class="sl-block-content" style="z-index: 12; text-align: center;" data-table-cols="2" data-table-rows="7"><table><tbody>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>+</td>
+<td>Addition</td>
+</tr>
+<tr>
+<td>-</td>
+<td>Substraction</td>
+</tr>
+<tr>
+<td>*</td>
+<td>Multiplication</td>
+</tr>
+<tr>
+<td>/</td>
+<td>Division</td>
+</tr>
+<tr>
+<td>**</td>
+<td>Exponent</td>
+</tr>
+<tr>
+<td>%</td>
+<td>Modulo</td>
+</tr>
+</tbody></table></div></div></section><section data-id="38566d10d437048af156717f0f1c6e10"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-block-id="ade437261a043d7617fe992f11049e85"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>read - Eval - Print - Loop</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 140px;" data-block-id="09064697f98c5a84b0c74a21888511dd"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><strong>Basic numerical function</strong></p>
+</div></div>
+<div class="sl-block" data-block-type="table" style="height: auto; width: 800px; left: 80px; top: 350px;" data-block-id="2789d6306304a1a85e48651936937b08"><div class="sl-block-content fragment" style="z-index: 12; text-align: center;" data-table-cols="2" data-table-rows="7" data-fragment-index="1"><table><tbody>
+<tr>
+<th>Function</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>sqrt(x)</td>
+<td>Square Root</td>
+</tr>
+<tr>
+<td>sin(x)</td>
+<td>Sine function</td>
+</tr>
+<tr>
+<td>cos(x)</td>
+<td>Cosine function</td>
+</tr>
+<tr>
+<td>tan(x)</td>
+<td>Tangent function</td>
+</tr>
+<tr>
+<td>log(x)</td>
+<td>Natural Logarithm</td>
+</tr>
+<tr>
+<td>log(x,a)</td>
+<td>Logarithm with base a</td>
+</tr>
+</tbody></table></div></div>
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 70px; left: 80px; top: 210px;" data-block-id="37b816e4b2a3ca8e6655f405f1166063"><div class="sl-block-content notranslate fragment" data-highlight-theme="github-gist" data-code-frame="none" style="z-index: 13; font-size: 140%;" data-fragment-index="0"><pre class="python"><code data-line-numbers="">from math import *</code></pre></div></div></section><section data-id="31be72f781957db101860845e727044e"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-block-id="402f21addc3e5799c85a12dd3de5f2de"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>read - Eval - Print - Loop</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 140px;" data-block-id="44c3c36371bdd67e6c4ecf4f05746e1f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>Quiz #1. Calculate next equation</p>
+</div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 289.5px; top: 276px;" data-block-id="3fd9410170ce080b2bf9d4fe7ceef7f9"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 80%;"><div class="math-input">2^{\log_2{3}} \times \sqrt{\frac{3072}{243}} \div \sqrt{\frac{192}{27}}</div></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 560px;" data-block-id="a849f5ab9b6654573d50ed1c622e6b81"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" data-fragment-index="0">
+<p>Answer: 4</p>
+</div></div></section><section data-id="dcb598d309531aabab9796bcd83446ef"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-block-id="6c3dd27a4a81c9abe021a4247c69bdc0"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>From Source Code</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="image" style="width: 960px; height: 520px; left: 0px; top: 180px; min-width: 1px; min-height: 1px;" data-block-id="037e126f7709e85a0e7c343f8baf4da1"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1920" data-natural-height="1040" data-lazy-loaded="" data-src="py01/c15f4c31432f9cd36db3311a297d5682.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 104px;" data-block-id="d4e821bae595cefc2e0baa71cc0ce6ad"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>1. Open VSCode &gt; WSL &gt; Install Python extension</p>
+</div></div></section><section data-id="7ff2411cb1a8acd2e2677df7d4da04f2"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 28px; height: auto;" data-block-id="75880ee45f6d318786f55c64078fb3f1"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>From Source Code</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 104px;" data-block-id="15c9bd555d5dc9edff7020c9b9443ae0"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>2. Make Project Directory</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 111px; left: 80px; top: 210px;" data-block-id="990d3ec8b1df6515022993739ad69cfd"><div class="sl-block-content notranslate fragment" data-highlight-theme="github-gist" data-code-frame="osx" style="z-index: 12; font-size: 140%;" data-fragment-index="0"><pre class="bash"><code data-line-numbers="">$ mkdir 01_Syntax</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 181px;" data-block-id="f5e2c4f79b1bfd5ad3e5e66b2a1a63b0"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 80%;" data-fragment-index="0">
+<p style="text-align: left;">1) Make Directory</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 391px;" data-block-id="fa1b436e8cfc0744ca8c0c3e5dda5b77"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; font-size: 80%;" data-fragment-index="1">
+<p style="text-align:left">2) Open folder in Code : Ctrl + K, O</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 461px;" data-block-id="3146f90a72b8084bb08a98fa91797321"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; font-size: 80%;" data-fragment-index="2">
+<p style="text-align:left">3) Write 01_hello.py</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 140px; left: 80px; top: 490px;" data-block-id="4817edf7a3b826d07fbea7e4f40db1d0"><div class="sl-block-content notranslate fragment" data-highlight-theme="github-gist" data-code-frame="osx" style="z-index: 16; font-size: 120%;" data-fragment-index="2"><pre class="python"><code data-line-numbers=""># 01_hello.py
+print("Hello, World!")</code></pre></div></div></section><section data-id="35524e3967e49e177ea8b61fe4b39f52"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 28px; height: auto;" data-block-id="ff6e50a17eff8dd5ab0a6a1848eabc3b"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>From Source Code</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 104px;" data-block-id="80f664e60c7efb3990262568f1a66279"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>3. Run with Interpreter</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 140px; left: 80px; top: 210px;" data-block-id="57a0b02e586a9ac643454c8dc7a396e5"><div class="sl-block-content notranslate" data-highlight-theme="github-gist" data-code-frame="osx" style="z-index: 16; font-size: 140%;"><pre class="bash"><code data-line-numbers="">$ python3 01_hello.py</code></pre></div></div></section><section data-id="59b036b94de467a6ac7b3423789fdc33"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 28px; height: auto;" data-block-id="6495cb9d856f47e288d9c2f044009b69"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>From Source Code</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 140px;" data-block-id="c1c7769370c738105537dd3a20992ed1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>Quiz #2. Write source code to Calculate next equation.</p>
+</div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 287.5px; top: 210px;" data-block-id="ee586637ae1381a3ebcd5a59e6517082"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 80%;"><div class="math-input">2^{\log_2{3}} \times \sqrt{\frac{3072}{243}} \div \sqrt{\frac{192}{27}}</div></div></div>
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 280px; left: 80px; top: 350px;" data-block-id="5cb0243ac587471213583681366cd198"><div class="sl-block-content notranslate fragment" data-highlight-theme="github-gist" data-code-frame="osx" style="z-index: 13; font-size: 120%;" data-fragment-index="0"><pre class="python"><code data-line-numbers=""># 02_quiz.py
+from math import *
+
+print(2 ** log(3,2) * sqrt(3072 / 243) / sqrt(192 / 27))</code></pre></div></div></section><section data-background-color="rgb(122,141,118)" data-background-image="py01/1d98764781e59197318c3a0b52629fcf.png" data-id="e26dce92b2fcd05d2e40f5783075af73"><div class="sl-block" data-block-type="text" style="width: 864px; left: 80px; top: 70px; height: auto;" data-block-id="6d8e7bd233b24f74575b611b3d6aa679"><div class="sl-block-content" data-placeholder-tag="h1" style="font-size: 200%; text-align: left; z-index: 10; color: rgb(255, 255, 255);" data-placeholder-text="Text">
+<h1>I/O</h1>
+</div></div></section><section data-id="998959d5bab0444f5193cdd87ed98200"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-block-id="52747b2f98756c76df76775253a5cad9"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>More print</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="code" style="width: 480px; height: 560px; left: 240px; top: 140px;" data-block-id="b193bdcd89b14ea45ba74335222a2785"><div class="sl-block-content notranslate fragment current-visible" data-highlight-theme="github-gist" data-code-frame="osx" style="z-index: 11; font-size: 120%;" data-fragment-index="0"><pre class="python"><code data-line-numbers=""># 1. Print Value
+name = "Tae Geun Kim"
+print("My name is: ", name)
+
+# 2. Print result
+print("2 + 3 = ", 2 + 3)
+
+# 3. Special symbols
+print("My\tname\tis\n", name)
+
+# 4. Float
+print("0.01 = {:.2f}".format(0.011))</code></pre></div></div>
+<div class="sl-block" data-block-type="iframe" style="width: 960px; height: 560px; left: 0px; top: 140px;" data-block-id="ebf213528aec023d6ae45846ba660cc5"><div class="sl-block-content fragment" style="z-index: 12;" data-fragment-index="1"><iframe webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" sandbox="allow-forms allow-scripts allow-popups allow-same-origin allow-pointer-lock" data-src="https://pyformat.info/" allow="autoplay"></iframe></div></div></section><section data-id="aa655ebbdf267f0cda8395535b425d54"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-block-id="8cfe5dbec8541fcce879d05addbe1e00"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Input</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 490px; left: 79px; top: 140px;" data-block-id="03d8faa5f2b136516ba56fb993a6b037"><div class="sl-block-content notranslate" data-highlight-theme="github-gist" data-code-frame="osx" style="z-index: 11; font-size: 140%;"><pre class="python"><code data-line-numbers=""># 03_input.py
+name = input("What's your name? : ")
+print("Your name is", name)</code></pre></div></div></section><section data-id="eacbe5626d608b47e7a70c8eb9ce36ea"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-block-id="ce24514c5134d7a6794087e8bf398e99"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Input is string</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 490px; left: 79px; top: 140px;" data-block-id="b437886d35febc2b74fb987c1f767279"><div class="sl-block-content notranslate" data-highlight-theme="github-gist" data-code-frame="osx" style="z-index: 11; font-size: 140%;"><pre class="python"><code data-line-numbers=""># 04_str.py
+number = input("Input 2! : ")
+print(3 + int(number))</code></pre></div></div></section><section data-id="59440aeabbe91c9f9e8cb62d91240f23"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-block-id="ec89057872e93530cb26c40ae0d69917"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>basic types</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="table" style="height: auto; min-width: 120px; width: 800px; left: 80px; top: 210px;" data-block-id="ed0716f656785b2551d2ca1ebc69b5dd"><div class="sl-block-content fragment" style="z-index: 11; text-align: center; font-size: 90%;" data-table-cols="2" data-table-rows="4" data-fragment-index="0"><table><tbody>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>str</td>
+<td>String</td>
+</tr>
+<tr>
+<td>int</td>
+<td>Integer</td>
+</tr>
+<tr>
+<td>float</td>
+<td>Floating Point number</td>
+</tr>
+</tbody></table></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 140px;" data-block-id="881d3caae40b86eadc3904405a3a1b83"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>Three basic types in Python</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 490px;" data-block-id="c77e14c39a824a430197561cb94c9ea8"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" data-fragment-index="1">
+<p>1 + 'a' = ?</p>
+</div></div></section><section data-background-color="rgb(122,141,118)" data-background-image="py01/1d98764781e59197318c3a0b52629fcf.png" data-id="9128b6d1f2f49b2d8f0e6be9bf7f5ba3"><div class="sl-block" data-block-type="text" style="width: 864px; left: 80px; top: 70px; height: auto;" data-block-id="f47505b636a392dd40a0e348b42f9ec3"><div class="sl-block-content" data-placeholder-tag="h1" style="font-size: 200%; text-align: left; z-index: 10; color: rgb(255, 255, 255);" data-placeholder-text="Text">
+<h1>Loop</h1>
+</div></div></section><section data-id="f49ba2916c356a0b0101dc27de878c88"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-block-id="bfb9530c769504ab5f8abcd30d5701f6"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<p>For Loop</p>
+</div></div>
+
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 210px; left: 81px; top: 140px;" data-block-id="22d75c0cca3f22d3c39372a2ad02f210"><div class="sl-block-content notranslate" data-highlight-theme="github-gist" data-code-frame="osx" style="z-index: 11; font-size: 150%; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s;" data-animation-type="fade-in"><pre class="python"><code data-line-numbers=""># 08_for_print.py
+for i in range(1, 11):
+    print("i = ", i)</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 420px;" data-block-id="24f86184220b9e3145d062d78407f8ea"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; line-height: 1.56;" data-has-line-height="">
+<ul>
+	<li class="fragment" data-fragment-index="0">
+	<pre>i : 변수</pre>
+	</li>
+	<li class="fragment" data-fragment-index="1">
+	<pre>range(a, b) : a 이상 b 미만</pre>
+	</li>
+	<li class="fragment" data-fragment-index="2">
+	<pre>for i in range(a, b): 
+i를 a부터 b미만까지 바꿔가면서 반복</pre>
+	</li>
+</ul>
+</div></div></section><section data-id="99611d658b67b0577d45c524c00f0741"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-block-id="1acf88fb5d9527cc72594ec23afef9d1"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<p>For Loop (example)</p>
+</div></div>
+
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 210px; left: 80px; top: 140px;" data-block-id="3d68c3e1a4807bc1e0b21d8087db6755"><div class="sl-block-content notranslate" data-highlight-theme="github-gist" data-code-frame="osx" style="z-index: 11; font-size: 150%; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s;" data-animation-type="fade-in"><pre class="python"><code data-line-numbers=""># 09_for_example.py
+s = 0
+for i in range(1, 6):
+    s = s + i
+print(s)</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 400px; left: 80px; top: 420px;" data-block-id="17a6006f78b1e80e48e7e154e234f256"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; line-height: 1.56;" data-has-line-height="">
+<ul>
+	<li class="fragment" data-fragment-index="0">s = 0</li>
+	<li class="fragment" data-fragment-index="1">i = 1</li>
+	<li class="fragment" data-fragment-index="2">s = 0 + 1</li>
+	<li class="fragment" data-fragment-index="3">i = 2</li>
+	<li class="fragment" data-fragment-index="4">s = (0+1) + 2</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 400px; left: 480px; top: 420px;" data-block-id="9bb4a890c326a12d4b8e10764da67d5f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; line-height: 1.56;" data-has-line-height="">
+<ul>
+	<li class="fragment" data-fragment-index="5">i = 3</li>
+	<li class="fragment" data-fragment-index="6">s = (0+1+2) + 3</li>
+	<li class="fragment" data-fragment-index="7">i = 4</li>
+	<li class="fragment" data-fragment-index="8">s = (0+1+2+3) + 4</li>
+	<li class="fragment" data-fragment-index="9">i = 5</li>
+	<li class="fragment" data-fragment-index="10">s = (0+1+2+3+4) + 5</li>
+</ul>
+</div></div></section><section data-id="76cb0fe27c7a3cfa61a1381d25b9e663"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-block-id="d96f167cd55d46ecdd64c3e2e9262a64"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<p>For Loop (example 2)</p>
+</div></div>
+
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 210px; left: 79px; top: 140px;" data-block-id="66062ada6b8eba0bcf385c1c55c5b6f8"><div class="sl-block-content notranslate" data-highlight-theme="github-gist" data-code-frame="osx" style="z-index: 11; font-size: 150%; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s;" data-animation-type="scale-up"><pre class="python"><code data-line-numbers=""># 10_for_example2.py
+s = 0
+for i in range(1, 6):
+    s += i
+print(s)</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 801px; left: 79px; top: 420px;" data-block-id="06d0c609676809b53adc876e7730ec56"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" data-fragment-index="0">
+<pre style="text-align:center">s = s + i 는 s += i 와 같다.</pre>
+</div></div></section><section data-id="e71d35a59a8ab1ff15764f871a21723f"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-block-id="85c5994ce8542583066393495a00dc52"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<p>For Loop (Quiz)</p>
+</div></div>
+
+<div class="sl-block" data-block-type="code" style="width: 801px; height: 140px; left: 79px; top: 140px;" data-block-id="78d94c24c7286dc89c4a795bdb2ee2c3"><div class="sl-block-content notranslate" data-highlight-theme="github-gist" data-code-frame="osx" style="z-index: 11; font-size: 150%; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s;" data-animation-type="scale-up"><pre class="python"><code data-line-numbers=""># 11_for_quiz.py
+# 
+# Quiz : Calculate 1 + 3 + 5 + 7 + 9 + ... + 99 = ?</code></pre></div></div>
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 420px; left: 80px; top: 280px;" data-block-id="0dc662f3610704a62a3a6f79be920efc"><div class="sl-block-content notranslate fragment" data-highlight-theme="github-gist" data-code-frame="osx" style="z-index: 12; font-size: 150%; border-width: 1px;" data-fragment-index="0"><pre class="python"><code data-line-numbers=""># 11_for_quiz.py
+s = 0
+for i in range(1, 51):
+    s += 2 * i - 1
+print(s)
+
+# or
+s = 0
+for i in range(1, 101):
+    if i % 2 == 1:
+        s += i
+print(s)</code></pre></div></div></section><section data-background-color="rgb(122,141,118)" data-background-image="py01/1d98764781e59197318c3a0b52629fcf.png" data-id="07e9b65847ad1670e200032b9561f8df"><div class="sl-block" data-block-type="text" style="width: 864px; left: 80px; top: 70px; height: auto;" data-block-id="54c4ea2442c7e5e55c44e5b109665939"><div class="sl-block-content" data-placeholder-tag="h1" style="font-size: 200%; text-align: left; z-index: 10; color: rgb(255, 255, 255);" data-placeholder-text="Text">
+<h1>Condition</h1>
+</div></div></section><section data-id="3b7b11687019b0a0573ee9186631a7af"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-block-id="ba2f4f4c56c9a0dbd226880cc83455d0"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Boolean</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 480px; left: 240px; top: 122px;" data-block-id="758063e498ce3956cf1930710dfa8dda"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>True or False</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 210px; left: 82px; top: 210px;" data-block-id="28c44f32ffb7a60b97be7f205202b3d2"><div class="sl-block-content notranslate" data-highlight-theme="github-gist" data-code-frame="osx" style="z-index: 12; font-size: 150%; transition-duration: 0.6s; transition-delay: 0.6s;" data-animation-type="scale-up"><pre class="python"><code data-line-numbers=""># 12_bool.py
+a = True
+b = False
+print(a)
+print(b)</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 490px;" data-block-id="d525adc66d157be478efadc7e6610c4c"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" data-fragment-index="0">
+<pre style="text-align: center;">True, False : Boolean Type</pre>
+</div></div></section><section data-id="df6076f6fb67cdbf67cd3c068e11d428"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-block-id="69271b2868727db38230344b0157a321"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Boolean Operation</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 350px; left: 83px; top: 210px;" data-block-id="652a8b60ad146d66dafe161e33fd5597"><div class="sl-block-content notranslate" data-highlight-theme="github-gist" data-code-frame="osx" style="z-index: 11; font-size: 150%; transition-duration: 0.6s; transition-delay: 0.6s;" data-animation-type="scale-up"><pre class="python"><code data-line-numbers=""># 13_bool_ops.py
+a = True
+b = False
+print(a and a)
+print(a or a)
+print(a and b)
+print(a or b)
+print(b and b)
+print(b or b)</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 123px;" data-block-id="9e764d3619de543d34f7d5d63fc17c90"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<pre style="text-align: center;">and, or</pre>
+</div></div></section><section data-id="f8d6e4ef9bf384a34f15923c4d34790c"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-block-id="80414480bfad839a30deba8e76526b90"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>IF statement</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 280px; left: 80px; top: 210px;" data-block-id="02bc5311540475d980ddd972936302ba"><div class="sl-block-content notranslate" data-highlight-theme="github-gist" data-code-frame="osx" style="z-index: 11; font-size: 150%; transition-duration: 0.6s; transition-delay: 0.6s;" data-animation-type="scale-up"><pre class="python"><code data-line-numbers=""># 14_if.py
+a = True
+if a:
+    print("a is True")
+else:
+    print("a is False")</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 123px;" data-block-id="38fc73599fe67d99e5e27dfa06c0b78b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<pre style="text-align:center">if True:</pre>
+</div></div></section><section data-id="17f609c46d17bf746f92ff016d0f853c"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-block-id="0789c4a5e7db8e58361719ffc708e638"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>IF statement</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 350px; left: 80px; top: 210px;" data-block-id="739e1ede28badc7988aabcf052dda5bb"><div class="sl-block-content notranslate" data-highlight-theme="github-gist" data-code-frame="osx" style="z-index: 11; font-size: 150%; transition-duration: 0.6s; transition-delay: 0.6s;" data-animation-type="scale-up"><pre class="python"><code data-line-numbers=""># 15_elif.py
+age = 18
+if age == 17:
+    print("고1 입니다.")
+elif age == 18:
+    print("고2 입니다.")
+else:
+    print("늙었습니다.")</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 123px;" data-block-id="6890bb3c2c0381b32b9d932876e032a4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<pre style="text-align:center">elif True:</pre>
+</div></div></section><section data-background-color="rgb(122,141,118)" data-background-image="py01/1d98764781e59197318c3a0b52629fcf.png" data-id="4e149d07c87bab8aefbaa0e5fa7e479d"><div class="sl-block" data-block-type="text" style="width: 864px; left: 80px; top: 70px; height: auto;" data-block-id="238efe1158f86774655d53d3d38c6254"><div class="sl-block-content" data-placeholder-tag="h1" style="font-size: 200%; text-align: left; z-index: 10; color: rgb(255, 255, 255);" data-placeholder-text="Text">
+<h1>Loop with<br>
+condition</h1>
+</div></div></section><section data-id="11916bedc15b70cec064e19d5dc76869"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-block-id="202649796828e0ceea9444ea8199d417"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Break</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 640px; left: 160px; top: 122px;" data-block-id="2dc7303317465015e3b67ca9ca2a8173"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>Q. i를 1부터 100까지 변경하면서 5까지만 출력하기.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 350px; left: 80px; top: 210px;" data-block-id="68bf4789b614cf10b4c47c5db46f3ae3"><div class="sl-block-content notranslate fragment" data-highlight-theme="github-gist" data-code-frame="osx" style="z-index: 12; font-size: 150%;" data-fragment-index="0"><pre class="python"><code data-line-numbers=""># 16_for_if.py
+for i in range(1, 101):
+    if i &gt; 5:
+        break
+    else:
+        print(i)</code></pre></div></div></section><section data-id="a1542a948e540368e8920afdaf912643"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-block-id="2d706a388cea030b7223066a7951c10c"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>continue</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 640px; left: 160px; top: 122px;" data-block-id="306208e656e579afe293b585fc224401"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>Q. 1부터 100까지 3의 배수만 모두 더하면?</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 350px; left: 78px; top: 210px;" data-block-id="a6cebddd35342061a8ca84d087ad58e7"><div class="sl-block-content notranslate fragment" data-highlight-theme="github-gist" data-code-frame="osx" style="z-index: 12; font-size: 150%;" data-fragment-index="0"><pre class="python"><code data-line-numbers=""># 17_collect_3.py
+s = 0
+for i in range(1, 101):
+    if i % 3 == 0:
+        s += i
+    else:
+        continue
+print(s)</code></pre></div></div></section>
+			</div>
+		</div>
+
+		<script>
+			var SLConfig = {"deck": {"id":1683723,"slug":"py01","title":"Python 01 - Basic Syntax","description":"Python 01 Basic Syntax","width":960,"height":700,"margin":0.05,"visibility":"all","published_at":"2020-01-04T04:18:24.614Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/6a8bfbed8639e645d9de43100961cd0d/thumb.jpg?1578671201","view_count":27,"user":{"id":1198239,"username":"axect","name":"","description":"","thumbnail_url":"https://www.gravatar.com/avatar/cda8e3c26bf8569f56759c20f93835ac?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","account_type":"enterprise","team_id":1998,"settings":{"id":4349006,"present_controls":true,"present_upsizing":true,"present_pointer":true,"present_notes":true,"default_deck_tag_id":null},"membership":{"role":"member","manager":false,"activated":true}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"overpass2","theme_color":"white-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":false,"rolling_links":false,"center":false,"shuffle":false,"should_loop":false,"share_notes":false,"slide_number":true,"slide_count":29,"rtl":false,"version":2,"collaborative":null,"deck_user_editor_limit":null,"data_updated_at":1578720954213,"font_typekit":"","font_google":"Fira Sans, Ubuntu Mono, Fira Code","time_limit":null,"navigation_mode":"default","upsizing_enabled":true,"notes":{}}};
+
+
+			// Use local fonts
+			SLConfig.fonts_url = 'lib/fonts/';
+		</script>
+
+		<script src="lib/reveal.js"></script>
+		<script src="lib/reveal-plugins.js"></script>
+		<script src="lib/offline.js"></script>
+
+		<!-- Initialize the presentation -->
+		<script>
+			Reveal.initialize({
+				width: 960,
+				height: 700,
+				margin: 0.05,
+				
+
+				hash: true,
+				controls: true,
+				progress: true,
+				mouseWheel: false,
+				showNotes: false,
+				slideNumber: true,
+				fragmentInURL: true,
+
+				autoSlide: 0,
+				autoSlideStoppable: true,
+
+				autoAnimateMatcher: SL.deck.AutoAnimate.matcher,
+
+				center: false,
+				shuffle: false,
+				loop: false,
+				rtl: false,
+				navigationMode: "default",
+
+				transition: "slide",
+				backgroundTransition: "slide",
+
+				highlight: {
+					escapeHTML: false
+				},
+
+				plugins: [ RevealZoom, RevealNotes, RevealMarkdown, RevealHighlight ]
+			});
+		</script>
+
+		
+
+	</body>
+</html>

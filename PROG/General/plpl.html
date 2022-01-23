@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+	<html class="sl-root decks export offline loaded">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>PL2020 - Programming Languages</title>
+
+		<meta name="description" content="Programming Lecture 2020 - Programming Language">
+
+		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
+
+		<!-- Team CSS -->
+		<style id="global-css-output" type="text/css">
+			.reveal {
+  /*.slides h1, .slides h2 { 
+ font-family: "Amatic SC", cursive;
+}
+
+
+.slides h3 {
+  font-family: "WindSong", cursive;
+}
+
+
+.slides h3 {
+  font-family: 'Sacramento', cursive;
+}
+
+
+@font-face {
+	font-family: 'UhBeemysen';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeemysen.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.slides {
+  font-family: "UhBeemysen";
+}
+*/
+}
+
+		</style>
+
+
+		<!-- User CSS -->
+		<style id="user-css-output" type="text/css">
+			.reveal .slides h1 {
+  font-family: "Anonymous Pro";
+}
+.reveal .slides h2 {
+  font-family: "Anonymous Pro";
+}
+.reveal .slides h3 {
+  font-family: "Anonymous Pro";
+}
+.reveal .slides p {
+  font-family: "Oxygen";
+}
+.reveal .slides ul {
+  font-family: "Oxygen";
+}
+.reveal .slides ol {
+  font-family: "Oxygen";
+}
+
+		</style>
+	</head>
+	<body class="reveal-viewport theme-font-overpass2 theme-color-white-blue">
+		<div class="reveal">
+			<div class="slides">
+				<section data-id="12dc1544a4a1d4149c3248f7238017fb" data-auto-animate=""><div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 70px; height: auto;" data-block-id="09905b32e53bb402a65cf2bc26d9f412" data-name="text-c03501"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Programming Lecture 2020<br>
+: Programming Languages</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 376px;" data-block-id="6b3ea6b527c4d6dfd2b9aaabaf1c986c" data-name="text-32546a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 120%;">
+<h3>Tae Geun Kim</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 490px;" data-block-id="ffbe9500456db150e1e3d12796e0bbfc" data-name="text-a145ae"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 90%;">
+<p>Yonsei HEP-COSMO</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 560px;" data-block-id="33273930754bdcab462d83a8325aa06b" data-name="text-1a4da0"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 90%;">
+<p>@ Jungjin Academy</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 597px;" data-block-id="371d960b1762385fcf52d7729af56c80" data-name="text-c835ef"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; font-size: 90%;">
+<p>2020.04.18</p>
+</div></div></section><section data-id="29e839cbbae2ef71007eaf4dba353983"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-block-id="acfbcc5b423334adab423230e24c784e"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Table of Contents</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 140px;" data-name="text-1a5e44" data-block-id="01973909f29718e32c09b6c7217d366f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; line-height: 1.82;" data-has-line-height="">
+<ul>
+	<li>Programming Languages</li>
+	<li>Go</li>
+	<li>Rust</li>
+</ul>
+</div></div></section><section data-background-size="contain" data-id="d103df9dfab0310eabd1150d8f215af2" data-background-image="plpl/e2b58d8f1fd6140a4c03013220608465.jpg"><div class="sl-block" data-block-type="text" style="width: 864px; left: 26px; top: 70px; height: auto;" data-block-id="ab0db65406ffc5ba26daeb9fe2c9d29a"><div class="sl-block-content" data-placeholder-tag="h1" style="text-align: left; z-index: 10; color: rgb(255, 255, 255); font-size: 200%;" data-placeholder-text="Text">
+<h1><span style="font-size:1.0em">Programming Languages</span></h1>
+
+<h1> </h1>
+</div></div></section><section data-id="8c3eac43effabd109409147078ebdd41"><div class="sl-block" data-block-type="image" style="width: 700px; height: 700px; left: 130px; top: 0px; min-width: 1px; min-height: 1px;" data-name="image-291d0e" data-block-id="5d0c377e352bc9866b57a7c5b50174be"><div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="1000" data-natural-height="1000" data-lazy-loaded="" data-src="plpl/a7edcbc694c7cf0475ba7ef3426bec06.jpg"></div></div></section><section data-id="094d115230deefc52016a3b9cd5e886e"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-name="text-c35a5a" data-block-id="09c7bdf6f0b0af2bcce2bc2a6261791d"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Classified by purpose</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 140px;" data-name="text-53c5c7" data-block-id="1ee300b795a56eec742b7ee67481b7b3"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; line-height: 1.82;" data-has-line-height="">
+<p>We can classify programming languages by purpose</p>
+
+<ul>
+	<li>Web : Javascript, Typescript, Purescript, Elm</li>
+	<li>Game : C#, C++</li>
+	<li>Android : Kotlin, Java, Scala, Javascript</li>
+	<li>Apple : Swift, Javascript</li>
+	<li>AI / Machine Learning : Python, R</li>
+	<li>Data science : R, Python, Scala</li>
+	<li>Server : C/C++, C#, Java, Scala, Kotlin, Go, Rust, Javascript</li>
+	<li>Simulation : C/C++, Fortran</li>
+</ul>
+</div></div></section><section data-id="fc84c289d2575f9a20070aa2b30cbfb7"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-name="text-c35a5a" data-block-id="b01b13fc3106fefa286c748f3719c0f5"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Classified by paradigm</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 140px;" data-name="text-53c5c7" data-block-id="6269465c6da16f90b32e887bae72370f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; line-height: 1.82;" data-has-line-height="">
+<p>We can classify programming languages by paradigm</p>
+
+<ul>
+	<li>Procedural (절차적) : C, Fortran, Pascal</li>
+	<li>OOP (객체지향) : C++, Java, C#, Python, Go and etc.</li>
+	<li>Functional (함수형) : Haskell, F#, Lisp, OCaml, Elixir and etc.</li>
+	<li>OOP + FP : Scala, Rust, D, Kotlin, Swift and etc.</li>
+</ul>
+</div></div></section><section data-id="79247c51954da3b866a24197fb4cb101"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-name="text-c35a5a" data-block-id="a17dd7f8b0b89f9a25ca1834fdbe2485"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Classified by Implementation</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 140px;" data-name="text-53c5c7" data-block-id="c95618774ac26b4ef865526c79913979"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; line-height: 1.82;" data-has-line-height="">
+<ul>
+	<li>Native Compiled Language : C/C++, D, Rust, Haskell, Go</li>
+	<li>Use Virtual Machine : Java, Scala, Kotlin, C#, Erlang, Elixir</li>
+	<li>Interpreted Language : Python, Ruby, Javascript</li>
+</ul>
+</div></div></section><section data-id="9827b5f57d8b7bad154d95a6feb119ba"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-name="text-c35a5a" data-block-id="e510f093cd6b762c2f60416b3ecdc3e5"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Classified by Feature</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 140px;" data-name="text-53c5c7" data-block-id="3f2991b152e5bb82abf80745a80cc535"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; line-height: 1.82;" data-has-line-height="">
+<ul>
+	<li>Easy to programming : Python, Ruby</li>
+	<li>High-Performance (C-level) : Rust, C/C++, Fortran, (Nim, Crystal)</li>
+	<li>High-Performance (Java-level) : Java, C#, D, Go, Haskell, Julia, Swift</li>
+	<li>Parallel : Go, Rust, Kotlin, Swift, Chapel, D, Julia</li>
+	<li>Plot : R, Python, Javascript</li>
+</ul>
+</div></div></section><section data-id="9750964f98623be9aaafe673c9d3fc1d" data-background-image="plpl/ee9b4bfa0182ef452eee8321316369e6.png" data-background-color="rgb(211,241,244)" data-background-size="contain"><div class="sl-block" data-block-type="text" style="width: 864px; left: 26px; top: 70px; height: auto;" data-block-id="daadfe10de27d222be94c512ceda6161"><div class="sl-block-content" data-placeholder-tag="h1" style="text-align: left; z-index: 10; color: rgb(0, 0, 0); font-size: 200%;" data-placeholder-text="Text">
+<h1><span style="font-size:1.0em">Go</span></h1>
+
+<h1> </h1>
+</div></div></section><section data-id="aa54ebdfab42e31fe3eedadbd5d076ab"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-name="text-c35a5a" data-block-id="2c3dc9bafe5b04c9908eb75040b8c057"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Go</h2>
+</div></div>
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 108px;" data-name="text-260b16" data-block-id="0c5bd5b249b7da8157462900b2e68bf1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; line-height: 1.56;" data-has-line-height="">
+<ul>
+	<li>Made by Google at 2009</li>
+	<li>Object Oriented Programming Language</li>
+	<li>Compiled Language</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 420px; left: 0px; top: 280px;" data-name="code-4ac143" data-block-id="35d26d330da0b88b9b3291dbff479986"><div class="sl-block-content notranslate" data-highlight-theme="github-gist" data-code-frame="none" style="z-index: 12; font-size: 140%;"><pre class="go"><code data-line-numbers="">// 10_pl/go/01_hello.go
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello, World!")
+}</code></pre></div></div></section><section data-id="2be0714c83a82a17fde27c62385f3033"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-name="text-c35a5a" data-block-id="2a1baf6c6201e09ea60ed50c60645c63"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Go</h2>
+</div></div>
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 108px;" data-name="text-260b16" data-block-id="31de6a270ee99e6782a1945da4f5e278"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; line-height: 1.56;" data-has-line-height="">
+<ul>
+	<li>Philosophy : Simplicity and Pragmatism</li>
+</ul>
+
+<p> </p>
+
+<p>There are only 25 keywords.</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 547px; height: 249px; left: 206.5px; top: 350px; min-width: 1px; min-height: 1px;" data-name="image-578f35" data-block-id="66c65a457415d14c5189173187769659"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="547" data-natural-height="249" data-lazy-loaded="" data-src="plpl/f66c1714cab47488d4b6fd315ff9f496.png"></div></div></section><section data-id="fc22b8cb68e626a716cac0a3061bfdcb"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-name="text-c35a5a" data-block-id="b6940c849f4bbca6d851627f416e83da"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Basic Type</h2>
+</div></div>
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 420px; left: 0px; top: 140px;" data-name="code-4ac143" data-block-id="50a86270ccd6ae4ce658aa6be0776fe0"><div class="sl-block-content notranslate" data-highlight-theme="github-gist" data-code-frame="none" style="z-index: 12; font-size: 140%;"><pre class="go"><code data-line-numbers="">// 10_pl/go/02_type.go
+package main
+
+import "fmt"
+
+func main() {
+    var x int = 2
+    var y float64 = 3.0
+    var z string = "hi"
+    var a bool = true
+    var b bool = false
+    var i uint = 3
+
+    fmt.Println(x, y, z, a, b, i)
+}
+</code></pre></div></div></section><section data-id="00d5f907c9545f4cc0c8c9c94539cd97"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-name="text-c35a5a" data-block-id="a6fa7b39df62659132f77f3224d1f5ef"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Short Declaration</h2>
+</div></div>
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 420px; left: 0px; top: 140px;" data-name="code-4ac143" data-block-id="60e5d506bca2bf0831d4d4c1231fd622"><div class="sl-block-content notranslate" data-highlight-theme="github-gist" data-code-frame="none" style="z-index: 11; font-size: 140%;"><pre class="go"><code data-line-numbers="">// 10_pl/go/03_short.go
+package main
+
+import "fmt"
+
+func main() {
+    x := 1
+    y := 2.0
+    z := "hi"
+    a := true
+    b := false
+    i := 3
+    fmt.Println(x, y, z, a, b, i)
+    fmt.Printf("%T %T %T %T %T %T\n", x, y, z, a, b, i)
+}
+</code></pre></div></div></section><section data-id="5f229ce8147b08479805c02735d75139"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-name="text-c35a5a" data-block-id="fbf6dbb24604cc300c9eb5d884b4b11f"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Function</h2>
+</div></div>
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 490px; left: 0px; top: 140px;" data-name="code-4ac143" data-block-id="ef5b88d0e8748ec6196e7a63499d4346"><div class="sl-block-content notranslate" data-highlight-theme="github-gist" data-code-frame="none" style="z-index: 11; font-size: 140%;"><pre class="go"><code data-line-numbers="">// 10_pl/go/04_func.go
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println(Add(1, 2))
+    fmt.Println(Add_f64(1.0, 2.0))
+}
+
+func Add(x, y int) int {
+    return x + y
+}
+
+func Add_f64(x, y float64) float64 {
+    return x + y
+}</code></pre></div></div></section><section data-id="f3459670c92dbc925383fd9b044754d6"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-name="text-c35a5a" data-block-id="1b2aec233ad0ecca8a3905dc4ab60ec0"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>For Loop</h2>
+</div></div>
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 490px; left: 0px; top: 140px;" data-name="code-4ac143" data-block-id="71921c996d36bf240e9fbb7facd06d3f"><div class="sl-block-content notranslate" data-highlight-theme="github-gist" data-code-frame="none" style="z-index: 11; font-size: 140%;"><pre class="go"><code data-line-numbers="">// 10_pl/go/05_for.go
+package main
+
+import "fmt"
+
+func main() {
+    s := 0
+    // Start, Condition, Change
+    for i := 0; i &lt;= 10; i++ {
+        s += i
+    }
+    fmt.Println(s)
+}
+</code></pre></div></div></section><section data-id="3bc0d8302d493d9321636c12719e79fe"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-name="text-c35a5a" data-block-id="67136ee4925639e4154ef06cdfac6ede"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>While Loop</h2>
+</div></div>
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 490px; left: 0px; top: 140px;" data-name="code-4ac143" data-block-id="0a26029b4d4282bd852f93d01f0cf592"><div class="sl-block-content notranslate" data-highlight-theme="github-gist" data-code-frame="none" style="z-index: 11; font-size: 140%;"><pre class="go"><code data-line-numbers="">// 10_pl/go/06_while.go
+package main
+
+import "fmt"
+
+func main() {
+    s := 1
+    // Only Condition
+    for s &lt;= 60 {
+        s += s
+    }
+    fmt.Println(s)
+}
+</code></pre></div></div></section><section data-id="f638754963daad6e7d49477fe1cf12d2"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-name="text-c35a5a" data-block-id="53ec8363808020df814744112b8543ff"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>IF</h2>
+</div></div>
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 560px; left: 0px; top: 140px;" data-name="code-4ac143" data-block-id="c02e5586063130f494e4b3a848bcf126"><div class="sl-block-content notranslate" data-highlight-theme="github-gist" data-code-frame="none" style="z-index: 11; font-size: 140%;"><pre class="go"><code data-line-numbers="">// 10_pl/go/07_if.go
+package main
+
+import "fmt"
+
+func main() {
+    s := EvenSum(100)
+    fmt.Println(s)
+}
+
+func EvenSum(n int) int {
+    s := 0
+    for i:=1; i&lt;=n; i++ {
+        if i % 2 == 0 {
+            s += i
+        }
+    }
+    return s
+}
+</code></pre></div></div></section><section data-id="e95efb798ca4222530fc19dd84d9d725"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-name="text-c35a5a" data-block-id="59777031dac6a58f36a45a3e0e7c12d6"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>IF / ELSE</h2>
+</div></div>
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 560px; left: 0px; top: 140px;" data-name="code-4ac143" data-block-id="fe7d0bab377008ac274665db55ed8d47"><div class="sl-block-content notranslate" data-highlight-theme="github-gist" data-code-frame="none" style="z-index: 11; font-size: 140%;"><pre class="go"><code data-line-numbers="">// 10_pl/go/08_else.go
+package main
+
+import "fmt"
+
+func main() {
+    s := EvenSum(100)
+    fmt.Println(s)
+}
+
+func EvenSum(n int) int {
+    s := 0
+    for i:=1; i&lt;=n; i++ {
+        if i % 2 == 0 {
+            s += i
+        } else {
+            continue
+        }
+    }
+    return s
+}</code></pre></div></div></section><section data-id="9465fe63671c4ab1322a7c7f07e989fd"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-name="text-c35a5a" data-block-id="45c8a8958c75e27a19d25031cb51271f"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Quiz</h2>
+</div></div>
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 122px;" data-name="text-f14e3a" data-block-id="21877ea3d9db61fdbb7a4b7b606014bb"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>수열 \(a_n\)이 다음과 같이 정의되었을 때, 질문에 답하시오.<br>
+(단, \([x]\)는 \(x\) 보다 크지 않은 최대의 정수)</p>
+</div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 291.5px; top: 243px;" data-name="math-5c7416" data-block-id="7c7d171f89af80eba82102a882b963d9"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 60%;"><div class="math-input">\begin{aligned}
+a_1 &amp;= 91 \\
+a_{n+1} &amp;= \left[\dfrac{a_{n}}{2}\right] \qquad (n\text{은 짝수})\\
+a_{n+1} &amp;= a_{n} + 1\qquad (n\text{은 홀수})
+\end{aligned}</div></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 420px;" data-name="text-d2d101" data-block-id="02f5544a2eb5e902625fa0ecd89fe246"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; line-height: 1.56;" data-has-line-height="">
+<ol>
+	<li>\(a_{6}\)을 구하시오.</li>
+	<li>\(a_n\)이 1이 될 때의 \(n\)값을 구하시오.</li>
+	<li>\(a_n\)이 1이 될 때까지의 합 \(S_n\)을 구하시오.</li>
+</ol>
+</div></div></section><section data-id="35fe02b8b6d8f47814898f3c84294167"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-name="text-c35a5a" data-block-id="98270b5ebd0ef7b33be1726aa7b3cd66"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Answer</h2>
+</div></div>
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 630px; left: 0px; top: 70px;" data-name="code-4ac143" data-block-id="62e0f9e034009ee7ca4a7f73032090a0"><div class="sl-block-content notranslate" data-highlight-theme="github-gist" data-code-frame="none" style="z-index: 11; font-size: 110%;"><pre class="go"><code data-line-numbers="">// 10_pl/go/09_quiz.go
+package main
+
+import "fmt"
+
+func main() {
+    a1, _ := seq(6)
+    fmt.Println(a1)
+    _, s := seq(100)
+    fmt.Println(s)
+}
+
+func seq(n int) (int, int) {
+    a := 91
+    s := 0
+    for i:=1; i&lt;n; i++ {
+        if i%2 == 0 {
+            a = a / 2
+        } else {
+            a += 1
+        }
+        s += a
+        if a == 1 {
+            fmt.Println(i)
+            return a, s
+        }
+    }
+    return a, s
+}</code></pre></div></div></section><section data-id="8870494cf4b8ccf9fbb91e4d4ac48029"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-name="text-c35a5a" data-block-id="88a79d695007b2127c25edf7c94e8caf"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Scan</h2>
+</div></div>
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 560px; left: 0px; top: 140px;" data-name="code-4ac143" data-block-id="34b9baf287be3f9fb0ed0c3724f2ea3f"><div class="sl-block-content notranslate" data-highlight-theme="github-gist" data-code-frame="none" style="z-index: 11; font-size: 140%;"><pre class="go"><code data-line-numbers="">// 10_pl/go/10_scan.go
+package main
+
+import "fmt"
+
+func main() {
+    var x int
+    fmt.Print("&gt; ")
+    n, msg := fmt.Scanln(&amp;x)
+    fmt.Println(n, x)
+    fmt.Println(msg) // Error message
+}
+</code></pre></div></div></section><section data-id="d154ab786bb231b4806a182d05aafb6c"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-name="text-c35a5a" data-block-id="41e06a8a5aa19395c1bb07fb68ad2c74"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Channel</h2>
+</div></div>
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 627px; left: 0px; top: 73px;" data-name="code-4ac143" data-block-id="6e1eafe216f2033349e6cfde1277d83c"><div class="sl-block-content notranslate" data-highlight-theme="github-gist" data-code-frame="none" style="z-index: 11;"><pre class="go"><code data-line-numbers="">// 10_pl/go/11_chan.go
+package main
+
+import "fmt"
+
+func main() {
+    // Make channel
+    c := make(chan int, 100)
+
+    // Send channel
+    for i:=0; i&lt;100; i++ {
+        s := sum(1000000)
+        c &lt;- s
+    }
+    close(c)
+
+    // Receive channel
+    s := 0
+    for j := range c {
+        s += j
+    }
+    fmt.Println(s)
+}
+
+func sum(n int) int {
+    s := 0
+    for i:=1; i&lt;=n; i++ {
+        s += i
+    }
+    return s
+}
+
+</code></pre></div></div></section><section data-id="3d7544a1aa4e41cba25a70bd94bdfcc2"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-name="text-c35a5a" data-block-id="4ed6c16a79d76049074995037137da79"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Project#1</h2>
+</div></div>
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 140px;" data-name="text-540a9f" data-block-id="d461bf8d8e6f6f448c4cebb68e65c3fb"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>Make Up-Down game with Go.</p>
+</div></div></section><section data-id="3f25002490ba6ea9f09224739419bf80"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-name="text-c35a5a" data-block-id="5d9d2639a80d58e76c5f3463779e375b"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Homework#1</h2>
+</div></div>
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 140px;" data-name="text-540a9f" data-block-id="f6e488db2255959c24dc8d1c0e03a084"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>Study <a href="https://go-tour-kr.appspot.com/#1" target="_blank">Tour of Go</a></p>
+</div></div></section><section data-id="ec1584fb06fcce159e39bb92bfa51cd1"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-name="text-c35a5a" data-block-id="db5f2a0b196ec414d47ec4265912ea26"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Project#2 (Homework#2)</h2>
+</div></div>
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 140px;" data-name="text-540a9f" data-block-id="96c39712100523bcf82abe92d3b41c45"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>Write Lotto with Go.</p>
+
+<p>(Link: <a href="https://amaretto.slides.com/axect/pr01#/10" target="_blank">Lotto</a>)</p>
+</div></div></section>
+			</div>
+		</div>
+
+		<script>
+			var SLConfig = {"deck": {"id":1768456,"slug":"plpl","title":"PL2020 - Programming Languages","description":"Programming Lecture 2020 - Programming Language","width":960,"height":700,"margin":0.05,"visibility":"all","published_at":"2020-04-17T16:48:05.439Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/0c537c27c4f40c940df4222f0a2e7fd7/thumb.jpg?1587149053","view_count":11,"user":{"id":1198239,"username":"axect","name":"","description":"","thumbnail_url":"https://www.gravatar.com/avatar/cda8e3c26bf8569f56759c20f93835ac?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","account_type":"enterprise","team_id":1998,"settings":{"id":4349006,"present_controls":true,"present_upsizing":true,"present_pointer":true,"present_notes":true,"default_deck_tag_id":null},"membership":{"role":"member","manager":false,"activated":true}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"overpass2","theme_color":"white-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":false,"rolling_links":false,"center":false,"shuffle":false,"should_loop":false,"share_notes":false,"slide_number":true,"slide_count":25,"rtl":false,"version":2,"collaborative":false,"deck_user_editor_limit":null,"data_updated_at":1587183259309,"font_typekit":"","font_google":"Signika, Ubuntu, Anonymous Pro, Fira Mono, Oxygen, B612 Mono, Noto Serif KR","time_limit":null,"navigation_mode":"default","upsizing_enabled":true,"notes":{}}};
+
+
+			// Use local fonts
+			SLConfig.fonts_url = 'lib/fonts/';
+		</script>
+
+		<script src="lib/reveal.js"></script>
+		<script src="lib/reveal-plugins.js"></script>
+		<script src="lib/offline.js"></script>
+
+		<!-- Initialize the presentation -->
+		<script>
+			Reveal.initialize({
+				width: 960,
+				height: 700,
+				margin: 0.05,
+				
+
+				hash: true,
+				controls: true,
+				progress: true,
+				mouseWheel: false,
+				showNotes: false,
+				slideNumber: true,
+				fragmentInURL: true,
+
+				autoSlide: 0,
+				autoSlideStoppable: true,
+
+				autoAnimateMatcher: SL.deck.AutoAnimate.matcher,
+
+				center: false,
+				shuffle: false,
+				loop: false,
+				rtl: false,
+				navigationMode: "default",
+
+				transition: "slide",
+				backgroundTransition: "slide",
+
+				highlight: {
+					escapeHTML: false
+				},
+
+				plugins: [ RevealZoom, RevealNotes, RevealMarkdown, RevealHighlight ]
+			});
+		</script>
+
+		
+
+	</body>
+</html>

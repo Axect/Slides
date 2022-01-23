@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+	<html class="sl-root decks export offline loaded">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Python 03 - Mathematics</title>
+
+		<meta name="description" content="With Highschool mathematics">
+
+		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
+
+		<!-- Team CSS -->
+		<style id="global-css-output" type="text/css">
+			.reveal {
+  /*.slides h1, .slides h2 { 
+ font-family: "Amatic SC", cursive;
+}
+
+
+.slides h3 {
+  font-family: "WindSong", cursive;
+}
+
+
+.slides h3 {
+  font-family: 'Sacramento', cursive;
+}
+
+
+@font-face {
+	font-family: 'UhBeemysen';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeemysen.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.slides {
+  font-family: "UhBeemysen";
+}
+*/
+}
+
+		</style>
+
+
+		<!-- User CSS -->
+		<style id="user-css-output" type="text/css">
+			.reveal .slides h1 {
+  font-family: "Caveat";
+}
+.reveal .slides h2 {
+  font-family: "Caveat";
+}
+.reveal .slides p {
+  font-family: "Signika";
+}
+.reveal .slides ul {
+  font-family: "Signika";
+}
+.reveal .slides ol {
+  font-family: "Signika";
+}
+
+		</style>
+	</head>
+	<body class="reveal-viewport theme-font-montserrat theme-color-white-blue">
+		<div class="reveal">
+			<div class="slides">
+				<section data-id="d53a01da6f0fdc4d5830a719e88dc8d5"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 140px; height: auto;" data-block-id="a03a4a616510a27a2db8775faa5ca031"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10; font-size: 80%;" dir="ui">
+<h1>Python 03 - Mathematics</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 640px; left: 160px; top: 420px;" data-block-id="994c8308c593b6b45730e088a437c32d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><strong>Tae Geun Kim</strong></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 490px;" data-block-id="94325affcbb342a0343c9c7fa0a59681"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>@ Jungjin Academy</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 640px; left: 160px; top: 594px;" data-block-id="a92e9b5fc8e9569d01617783ecd4f686"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>2020.02.08</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 218px;" data-block-id="cd0acffa7d71da2688618fbbd3fc2acd"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; font-size: 70%;">
+<h2>via Highschool Mathematics</h2>
+</div></div></section><section data-id="747e5d9e1f555f9b25ce31682e66bf12"><div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 81px; height: auto;" data-block-id="ad97e4e86e4483b78072e0d0ebf5cede"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 80%;">
+<h2>Table of Contents</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 210px; height: auto;" data-block-id="0c71b5bff964de16fb8ae8f452f2f867"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; line-height: 1.82;" data-has-line-height="">
+<ul>
+	<li class="fragment" data-fragment-index="0">Quadratic root formula - Tuple</li>
+	<li class="fragment" data-fragment-index="1">Discriminant - Class</li>
+</ul>
+</div></div></section><section data-id="5de344da8c1ac317ea3776330089533a" data-background-image="py03/86f6d9a6dcfbf645bb7dd138fce66b1a.png" data-background-color="rgb(38,42,50)"><div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 70px; height: auto;" data-block-id="8ada22fbecb7a913c1a7d89ba1bbae2f"><div class="sl-block-content" data-placeholder-tag="h1" style="text-align: left; z-index: 10; color: rgb(201, 218, 248);" data-placeholder-text="Text">
+<h1><strong>Quadratic Root formula<br>
+: Tuple</strong></h1>
+</div></div></section><section data-id="94644e425b37970c124ec3ca8ef58e15"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 11px; height: auto;" data-block-id="143a8224bdd29f6c9293c98910a2ee52"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 80%;">
+<h2>Quadratic Equation</h2>
+</div></div>
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 140px;" data-block-id="8167ec38341ac62aca58dc700f1ff4d2"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>\(ax^2 + bx + c = 0\)<br>
+\(\Rightarrow ~~ x ~=~ ?\)</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 280px;" data-block-id="c3063db684c6d42e97b6a869f650b703"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" data-fragment-index="0">
+<p>\(\displaystyle x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}\)</p>
+</div></div></section><section data-id="85ef89d7a09455929fdeb4c7c724a933"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 11px; height: auto;" data-block-id="84a5ae092c082ae23f8d23371c2ffc48"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 80%;">
+<h2>Quadratic Equation</h2>
+</div></div>
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 102px;" data-block-id="9765983d4bc2d309e498bad3eecbf29a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>\(\displaystyle x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}\)</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 280px; left: 80px; top: 210px;" data-block-id="b49ffdcaeded8ab11cc0a483d4ab259a"><div class="sl-block-content notranslate fragment" data-highlight-theme="monokai-sublime" data-code-frame="osx" style="z-index: 12; font-size: 140%;" data-fragment-index="0"><pre class="python"><code data-line-numbers=""># Math/01_positive_root.py
+from math import sqrt
+
+def positive_root(a, b, c):
+    return (-b + sqrt(b**2 - 4*a*c)) / (2*a)
+  
+print(positive_root(1, 2, 1))
+print(positive_root(1, 2, -3))</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 490px;" data-block-id="657dc1dc876d9d47706ba9c7c58d1606"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" data-fragment-index="1">
+<p>How to return multiple variables?</p>
+</div></div></section><section data-id="5ebf40f329d5aedd22ad699b3f5dcff9"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 11px; height: auto;" data-block-id="a64e7aba37d20d9fc4769213bf37d2fa"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 80%;">
+<h2>Tuple</h2>
+</div></div>
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 140px;" data-block-id="cb5a8f404bfffbb7197989bc85fa9732"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; line-height: 1.56;" data-has-line-height="">
+<p>(a, b) : Tuple</p>
+
+<ul>
+	<li class="fragment" data-fragment-index="0">A = (a,b) -&gt; A[0] = a, A[1] = b</li>
+	<li class="fragment" data-fragment-index="1">(x, y) = (a, b) -&gt; x = a, y = b</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 809px; height: 350px; left: 80px; top: 350px;" data-block-id="c90e0e78673dfe6c47359f281892464b"><div class="sl-block-content notranslate fragment" data-highlight-theme="monokai-sublime" data-code-frame="osx" style="z-index: 12; font-size: 140%;" data-fragment-index="2"><pre class="python"><code data-line-numbers=""># Math/02_tuple.py
+
+(x, y) = (1, 2)
+(x, y) = (y, x+y)
+
+print(x)
+print(y)</code></pre></div></div></section><section data-id="f188f342ecc2bef4d800cf99d2e36ae4"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 11px; height: auto;" data-block-id="984fbaae072f74927c89f42006b262a9"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 80%;">
+<h2>Quadratic Root formula</h2>
+</div></div>
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 140px;" data-block-id="1521979b1e7f82a4a425df3646154fe2"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; line-height: 1.56;" data-has-line-height="">
+<p>\(\displaystyle x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}\)</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 809px; height: 350px; left: 75.5px; top: 280px;" data-block-id="1c0ab3f0993802a6acf2df74df94d738"><div class="sl-block-content notranslate" data-highlight-theme="monokai-sublime" data-code-frame="osx" style="z-index: 12; font-size: 140%;"><pre class="python"><code data-line-numbers=""># Math/03_quad.py
+from math import sqrt
+
+def quad(a,b,c):
+    D = b**2 - 4*a*c
+    return ((-b + sqrt(D)) / (2*a), (-b - sqrt(D)) / (2*a))
+  
+print(quad(1,2,-3))
+print(quad(1,2,1))
+print(quad(1,2,3))</code></pre></div></div></section><section data-background-color="rgb(38,42,50)" data-background-image="py03/86f6d9a6dcfbf645bb7dd138fce66b1a.png" data-id="fdcf7400a28c6a13c5adf22ba103ae06"><div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 70px; height: auto;" data-block-id="37bc365ab581f23092ebfb5f8eaef1fc"><div class="sl-block-content" data-placeholder-tag="h1" style="text-align: left; z-index: 10; color: rgb(201, 218, 248);" data-placeholder-text="Text">
+<h1><strong>Discriminant<br>
+: Class</strong></h1>
+</div></div></section><section data-id="c7f66aa95f5cf310b6fab452c765761c"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 11px; height: auto;" data-block-id="c5d11de4f4474ce0412cce816dfc1275"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 80%;">
+<h2>Discriminant</h2>
+</div></div>
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 140px;" data-block-id="8b4b6be292e98b69a9b2b9ec668b8f4a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; line-height: 1.56;" data-has-line-height="">
+<p>\( D = b^2 - 4ac\)</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 809px; height: 420px; left: 75.5px; top: 210px;" data-block-id="0a1b34c3fae85f211f2e0da4f72366d1"><div class="sl-block-content notranslate" data-highlight-theme="monokai-sublime" data-code-frame="osx" style="z-index: 12; font-size: 140%;"><pre class="python"><code data-line-numbers=""># Math/04_discr_1.py
+def D(a, b, c):
+    d = b**2 - 4*a*c
+    if d &gt; 0:
+        print("서로 다른 두 실근")
+    elif d == 0:
+        print("중근")
+    else:
+        print("서로 다른 두 허근")
+        
+D(1,2,-3)
+D(1,2,1)
+D(1,2,3)</code></pre></div></div></section><section data-id="b9a80a387a8e04bd51b58d99b5c24585"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 11px; height: auto;" data-block-id="1b7a360ba96a4a6dfc647750017ebf05"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 80%;">
+<h2>Discriminant</h2>
+</div></div>
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 140px;" data-block-id="337af9bb6af6856cfc496ad69f2f8c25"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; line-height: 1.56;" data-has-line-height="">
+<p>\( D = b^2 - 4ac\)</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 809px; height: 420px; left: 75.5px; top: 210px;" data-block-id="a477798c2e132fd82fa5eb523acff97b"><div class="sl-block-content notranslate" data-highlight-theme="monokai-sublime" data-code-frame="osx" style="z-index: 12; font-size: 140%;"><pre class="python"><code data-line-numbers=""># Math/04_discr_2.py
+def D(a, b, c):
+    d = b**2 - 4*a*c
+    if d &gt; 0:
+        return "real"
+    elif d == 0:
+        return "repeated"
+    else:
+        return "complex"
+        
+print(D(1,2,-3))
+print(D(1,2,1))
+print(D(1,2,3))</code></pre></div></div></section><section data-id="d81b30c78a6e3012d9197c89a37852ea"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 11px; height: auto;" data-block-id="0adb1b4c498c7da4432745a37be1b650"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 80%;">
+<h2>Discriminant</h2>
+</div></div>
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 140px;" data-block-id="4e1ed6e500b3487e6fae4fb82695bd9e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; line-height: 1.56;" data-has-line-height="">
+<p>\( D = b^2 - 4ac\)</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 809px; height: 420px; left: 75.5px; top: 210px;" data-block-id="6b59778518d5a8615e69ccf4f331409d"><div class="sl-block-content notranslate" data-highlight-theme="monokai-sublime" data-code-frame="osx" style="z-index: 12; font-size: 140%;"><pre class="python"><code data-line-numbers=""># Math/04_discr_3.py
+def D(a, b, c):
+    d = b**2 - 4*a*c
+    if d &gt; 0:
+        return 1
+    elif d == 0:
+        return 0
+    else:
+        return -1
+        
+print(D(1,2,-3))
+print(D(1,2,1))
+print(D(1,2,3))</code></pre></div></div></section><section data-id="e996785c8da3f877a1c00d43ce119bd3"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 11px; height: auto;" data-block-id="5971e7dbcd79de5108d577b370f63c6b"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 80%;">
+<h2>Discriminant</h2>
+</div></div>
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 140px;" data-block-id="ce57833e554767b5d0899860c3a5d895"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; line-height: 1.82;" data-has-line-height="">
+<ul>
+	<li class="fragment" data-fragment-index="0">Print : Useful, but can't handle condition</li>
+	<li class="fragment" data-fragment-index="1">String : Easy, but there are lots of error</li>
+	<li class="fragment" data-fragment-index="2">Int : Easy, but there are lots of error</li>
+	<li class="fragment" data-fragment-index="3">bool: Can't handle multiple conditions</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 420px;" data-block-id="4087086e31e805e0a29f57b44c606630"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; line-height: 1.82;" data-has-line-height="" data-fragment-index="4">
+<p>\( \Rightarrow \) Class!</p>
+
+<ul>
+</ul>
+</div></div></section><section data-id="9f39935f7ff3b1e264eab286ebf2afb0"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 11px; height: auto;" data-block-id="54d17ddfec51aebd9c7745013c7ca1b1"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 80%;">
+<h2>Class</h2>
+</div></div>
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 350px; left: 80px; top: 105px;" data-block-id="95ee1a12e91fc950e14bb7ce7e080e6f"><div class="sl-block-content notranslate fragment" data-highlight-theme="monokai-sublime" data-code-frame="osx" style="z-index: 11; font-size: 140%;" data-fragment-index="0"><pre class="python"><code data-line-numbers=""># Math/05_class_1.py
+class People:
+    # Initializer
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        
+gd = People("길동", 18)
+print(gd.name)
+print(gd.age)</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 490px;" data-block-id="51eef1c8ac56420ccb9f348d8359db30"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 90%; line-height: 1.56;" data-has-line-height="">
+<ul>
+	<li class="fragment" data-fragment-index="1">Class는 일종의 타입</li>
+	<li class="fragment" data-fragment-index="2">
+	<pre>__init__은 initializer의 약자로 생성자를 의미</pre>
+	</li>
+	<li class="fragment" data-fragment-index="3">Class안에 있는 함수를 method라고 부름</li>
+	<li class="fragment" data-fragment-index="3">self는 Class 자기 자신을 부르는 키워드</li>
+</ul>
+</div></div></section><section data-id="c89b0066a8df52ff166996c42deefd17"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 11px; height: auto;" data-block-id="101335d8ae2cb065fc96c6130ccea7c8"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 80%;">
+<h2>Class</h2>
+</div></div>
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 455px; left: 80px; top: 105px;" data-block-id="705e56b3d21b44418e5dae5832f98d4d"><div class="sl-block-content notranslate" data-highlight-theme="monokai-sublime" data-code-frame="osx" style="z-index: 11; font-size: 140%;"><pre class="python"><code data-line-numbers=""># Math/05_class_2.py
+class People:
+    # Initializer
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        
+    def call_name(self):
+        print(self.name)
+        
+gd = People("길동", 18)
+gd.call_name()</code></pre></div></div></section><section data-id="bb56fe518fb162c399db54a056bce8b1"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 11px; height: auto;" data-block-id="96a1c5e72527541adcf69109801c6184"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 80%;">
+<h2>Discriminant as Class</h2>
+</div></div>
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 809px; height: 630px; left: 75.5px; top: 70px;" data-block-id="51fac77552e4a1e89c958000a4749ad3"><div class="sl-block-content notranslate" data-highlight-theme="monokai-sublime" data-code-frame="osx" style="z-index: 11; font-size: 140%;"><pre class="python"><code data-line-numbers=""># Math/06_discr_class.py
+class Discriminator:
+    # Initializer
+    def __init__(self, a, b, c):
+        self.D = b**2 - 4*a*c
+    
+    def is_real(self):
+        return self.D &gt; 0
+    
+    def is_repeated(self):
+        return self.D == 0
+      
+    def is_complex(self):
+        return self.D &lt; 0
+      
+d = Discriminator(1, 2, -1)
+
+print(d.is_real())
+print(d.is_repeated())
+print(d.is_complex())</code></pre></div></div></section><section data-id="7e352808f72dd6f3479889c673535a13"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 11px; height: auto;" data-block-id="5a69b7f89de508aa9197f66cb0de6d36"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 80%;">
+<h2>Linear Equation</h2>
+</div></div>
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 630px; left: 80px; top: 70px;" data-block-id="c663961b37a00b9459cd618f0f254606"><div class="sl-block-content notranslate" data-highlight-theme="monokai-sublime" data-code-frame="osx" style="z-index: 11; font-size: 140%;"><pre class="python"><code data-line-numbers=""># Math/07_linear.py
+class Linear:
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
+    
+    def slope(self):
+        return self.a
+    
+    def x_intercept(self):
+        return -self.b / self.a
+      
+    def y_intercept(self):
+        return self.b
+      
+l = Linear(2, 1)
+
+print(l.slope())
+print(l.x_intercept())
+print(l.y_intercept())</code></pre></div></div></section><section data-id="8205e6a0ba32142e65e0b59f738e607c"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 11px; height: auto;" data-block-id="b68b62046c98e24156cbc73c314e2064"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 80%;">
+<h2>Quadratic equation</h2>
+</div></div>
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 560px; left: 80px; top: 70px;" data-block-id="295f4530eab0830eacc9573752db0ab2"><div class="sl-block-content notranslate" data-highlight-theme="monokai-sublime" data-code-frame="osx" style="z-index: 11; font-size: 140%;"><pre class="python"><code data-line-numbers=""># Math/08_quad.py
+class Quad:
+    def __init__(self, a, b, c):
+      
+    def D(self):
+      
+    def root(self):
+      
+    def print_root(self):
+      
+q1 = Quad(1, 2, 3)
+q2 = Quad(1, 2, 1)
+q3 = Quad(1, 2, -1)
+
+q1.print_root()
+q2.print_root()
+q3.print_root()</code></pre></div></div></section>
+			</div>
+		</div>
+
+		<script>
+			var SLConfig = {"deck": {"id":1712079,"slug":"py03","title":"Python 03 - Mathematics","description":"With Highschool mathematics","width":960,"height":700,"margin":0.05,"visibility":"all","published_at":"2020-02-08T03:25:18.635Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/b71e4e4b7d759e997571707dbbfacaca/thumb.jpg?1581132430","view_count":14,"user":{"id":1198239,"username":"axect","name":"","description":"","thumbnail_url":"https://www.gravatar.com/avatar/cda8e3c26bf8569f56759c20f93835ac?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","account_type":"enterprise","team_id":1998,"settings":{"id":4349006,"present_controls":true,"present_upsizing":true,"present_pointer":true,"present_notes":true,"default_deck_tag_id":null},"membership":{"role":"member","manager":false,"activated":true}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"montserrat","theme_color":"white-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":false,"rolling_links":false,"center":false,"shuffle":false,"should_loop":false,"share_notes":false,"slide_number":true,"slide_count":17,"rtl":false,"version":2,"collaborative":false,"deck_user_editor_limit":null,"data_updated_at":1581138097096,"font_typekit":"","font_google":"Caveat, Kalam, Permanent Marker, Signika, Righteous, Baloo","time_limit":null,"navigation_mode":"default","upsizing_enabled":true,"notes":{}}};
+
+
+			// Use local fonts
+			SLConfig.fonts_url = 'lib/fonts/';
+		</script>
+
+		<script src="lib/reveal.js"></script>
+		<script src="lib/reveal-plugins.js"></script>
+		<script src="lib/offline.js"></script>
+
+		<!-- Initialize the presentation -->
+		<script>
+			Reveal.initialize({
+				width: 960,
+				height: 700,
+				margin: 0.05,
+				
+
+				hash: true,
+				controls: true,
+				progress: true,
+				mouseWheel: false,
+				showNotes: false,
+				slideNumber: true,
+				fragmentInURL: true,
+
+				autoSlide: 0,
+				autoSlideStoppable: true,
+
+				autoAnimateMatcher: SL.deck.AutoAnimate.matcher,
+
+				center: false,
+				shuffle: false,
+				loop: false,
+				rtl: false,
+				navigationMode: "default",
+
+				transition: "slide",
+				backgroundTransition: "slide",
+
+				highlight: {
+					escapeHTML: false
+				},
+
+				plugins: [ RevealZoom, RevealNotes, RevealMarkdown, RevealHighlight ]
+			});
+		</script>
+
+		
+
+	</body>
+</html>

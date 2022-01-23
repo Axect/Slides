@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+	<html class="sl-root decks export offline loaded">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Machine Learning with Neutron Star</title>
+
+		<meta name="description" content="Presentation for PHY 8060">
+
+		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
+
+		<!-- Team CSS -->
+		<style id="global-css-output" type="text/css">
+			.reveal {
+  /*.slides h1, .slides h2 { 
+ font-family: "Amatic SC", cursive;
+}
+
+
+.slides h3 {
+  font-family: "WindSong", cursive;
+}
+
+
+.slides h3 {
+  font-family: 'Sacramento', cursive;
+}
+
+
+@font-face {
+	font-family: 'UhBeemysen';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeemysen.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.slides {
+  font-family: "UhBeemysen";
+}
+*/
+}
+
+		</style>
+
+
+		<!-- User CSS -->
+		<style id="user-css-output" type="text/css">
+			.reveal .slides h1 {
+  font-family: "Anonymous Pro";
+}
+.reveal .slides h2 {
+  font-family: "Anonymous Pro";
+}
+.reveal .slides h3 {
+  font-family: "Anonymous Pro";
+}
+.reveal .slides p {
+  font-family: "Oxygen";
+}
+.reveal .slides ul {
+  font-family: "Oxygen";
+}
+.reveal .slides ol {
+  font-family: "Oxygen";
+}
+
+		</style>
+	</head>
+	<body class="reveal-viewport theme-font-overpass2 theme-color-white-blue">
+		<div class="reveal">
+			<div class="slides">
+				<section data-id="12dc1544a4a1d4149c3248f7238017fb" data-auto-animate=""><div class="sl-block" data-block-type="text" style="width: 960px; left: 160px; top: 80px; height: auto;" data-block-id="09905b32e53bb402a65cf2bc26d9f412" data-name="text-c03501"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>machine learning<br>
+with<br>
+neutron star</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 340px; top: 432px;" data-block-id="6b3ea6b527c4d6dfd2b9aaabaf1c986c" data-name="text-32546a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 120%;">
+<h3>Tae Geun Kim</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 340px; top: 500px;" data-block-id="ffbe9500456db150e1e3d12796e0bbfc" data-name="text-a145ae"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 90%;">
+<p>Yonsei HEP-COSMO</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 340px; top: 615px;" data-block-id="33273930754bdcab462d83a8325aa06b" data-name="text-1a4da0"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 90%;">
+<p>@ Elementary Particle Physics II Pre-Final</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 340px; top: 648px;" data-block-id="371d960b1762385fcf52d7729af56c80" data-name="text-c835ef"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; font-size: 90%;">
+<p>2020.06.12</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 160px; top: 324px;" data-name="text-51c4df" data-block-id="eae782cb8d0edc1369e56df4d3183d4f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<h3>Introduce Neutron star /<br>
+Review &amp; enhance arXiv: 1903.03400</h3>
+</div></div></section><section data-id="29e839cbbae2ef71007eaf4dba353983"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 41px; height: auto;" data-block-id="acfbcc5b423334adab423230e24c784e"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Table of Contents</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 240px; top: 150px;" data-name="text-1a5e44" data-block-id="01973909f29718e32c09b6c7217d366f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; line-height: 1.82;" data-has-line-height="">
+<ul>
+	<li>
+<strong>Introduction</strong>
+	<ul>
+		<li>Neutron Star 101</li>
+		<li>Describe neutron star</li>
+	</ul>
+	</li>
+	<li>
+<strong>Project</strong>
+	<ul>
+		<li>Data generation</li>
+		<li>Bayesian</li>
+		<li>Neural Network</li>
+	</ul>
+	</li>
+</ul>
+</div></div></section><section data-background-color="rgb(46,26,33)" data-background-image="ml_with_ns/c788381bd00f22a3a25fcc4e02f0b133.jpg" data-background-size="contain" data-id="d103df9dfab0310eabd1150d8f215af2"><div class="sl-block" data-block-type="text" style="width: 864px; left: 160px; top: 72px; height: auto;" data-block-id="ab0db65406ffc5ba26daeb9fe2c9d29a"><div class="sl-block-content" data-placeholder-tag="h1" style="font-size: 200%; text-align: left; z-index: 10;" data-placeholder-text="Text">
+<h1>
+<span style="color:#FFFFFF">Neutron star<br>
+101</span><br>
+ </h1>
+</div></div></section><section data-id="b6c8ba8c9da8870077babbae93b1abdf"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 41px; height: auto;" data-name="text-c35a5a" data-block-id="7a8d7f71526c7cb81e621e1fea5ad734"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Type II Supernova</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 720px; left: 560px; top: 144px;" data-name="text-53c5c7" data-block-id="f07fd0ac6a3bef0401b5c0e8326d9b92"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li>The star with a mass of \(12 \sim 40M_{\odot}\) can generate iron with Silicon-burning process.<br>
+	 </li>
+	<li>If the mass of iron core reaches <strong>Chandrasekhar limit  </strong>(\(1.44M_{\odot}\)), electron degeneracy is no longer sufficient to counter the gravitational compression.<br>
+	 </li>
+	<li>Iron core collapses very fast (\(0.23 c\))<br>
+	\(\Rightarrow~ T \simeq 10^{11}K\)<br>
+	\(\Rightarrow\) Electron capture<br>
+	\(\Rightarrow\) Iron becomes neutron &amp; suddenly stop gravitational collapse by neutron degeneracy<br>
+	\(\Rightarrow\) Shockwave occurs<br>
+	\(\Rightarrow\) Supernova explosion</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 480px; height: 478.936px; left: 0px; top: 144px; min-width: 1px; min-height: 1px;" data-name="image-1735ff" data-block-id="cfe6e152bbdad75741504e2177b0dcdf"><div class="sl-block-content" style="z-index: 12; border-width: 1px; border-color: rgb(255, 255, 255);"><img style="" data-natural-width="1353" data-natural-height="1350" data-lazy-loaded="" data-src="ml_with_ns/30be6108d0c9958b150e9d67ffcad8d1.png"></div></div></section><section data-id="094d115230deefc52016a3b9cd5e886e"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 41px; height: auto;" data-name="text-c35a5a" data-block-id="09c7bdf6f0b0af2bcce2bc2a6261791d"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Neutron star 101</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 640px; left: 320px; top: 144px;" data-name="text-53c5c7" data-block-id="1ee300b795a56eec742b7ee67481b7b3"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li>Radius ~ \(10\text{km}\)<br>
+	 </li>
+	<li>Mass ~ \(1.3 \sim 2.2 M_{\odot}\)<br>
+	 </li>
+	<li>Predicted at 1931, Discovered at 1967<br>
+	 </li>
+	<li>Known 2600+<br>
+	 </li>
+	<li>Core density ~ \(10^{15}\text{g}/\text{cm}^3\)<br>
+	 </li>
+	<li>Spin \(\leq 716 \text{Hz}\) (42690 rpm)</li>
+</ul>
+</div></div></section><section data-id="06ab46bbe0f6fe4ac67161b237ee8d93"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="1cce4330fdaf13ac2baa07bd1674c888"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Basic structure of neutron star</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 640px; left: 560px; top: 101px;" data-name="text-f1df89" data-block-id="8eb394799edb3ba3dca6c361cd2256ac"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; line-height: 1.56;" data-has-line-height="">
+<ul>
+	<li class="fragment" data-fragment-index="0">
+<strong>Atmosphere</strong> (\(\sim 10\text{cm}\))<br>
+	: Consist of very thin fluid/gas.<br>
+	 </li>
+	<li class="fragment" data-fragment-index="1">
+<strong>Envelope</strong> (\(\sim 100\text{m}\))<br>
+	: Consist of lattice of \(\text{Fe}\). At bottom of envelope (\(\rho \sim 10^{6}\text{g}/\text{cm}^3\)) the electrons and protons start recombining in inverse \(\beta\)-decay.<br>
+	 </li>
+	<li class="fragment" data-fragment-index="2">Crust (\(\sim 1\text{km}\))<br>
+	: At \(\rho \sim 3\times 10^{11}\text{g}/\text{cm}^3\), the nuclei gets unstable and the free neutrons are emitted<br>
+	- <strong>neutron drip</strong>
+</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 522.621px; height: 648px; left: 0px; top: 72px; min-width: 1px; min-height: 1px;" data-name="image-6837b9" data-block-id="746712b84a62a7e37114597538e5f9de"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="842" data-natural-height="1044" data-lazy-loaded="" data-src="ml_with_ns/6f9c665981db4e9ff7d6a352441b4fe8.png"></div></div></section><section data-id="1f711fe91a9be6b0d4b1275c8aac9303"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="f803ed456669ea8b129d30feaeb609cf"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>basic structure of neutron star</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 720px; left: 560px; top: 101px;" data-name="text-f1df89" data-block-id="9f59232db34ac6c605e0d778f38920c2"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; line-height: 1.56;" data-has-line-height="">
+<ul>
+	<li class="fragment" data-fragment-index="0">
+<strong>Outer core</strong> (\(\sim 10\text{km}\))<br>
+	: The density range \(0.5\rho_0 \leq \rho \leq 2\rho_0\).<span style="font-size:0.9em"> (\(\rho_0\): nuclear density)<br>
+	<span style="font-size:1.0em">Contains most of the stellar mass, composed of neutrons with an admixture of protons &amp; leptons (\(npe\mu\) matter)<br>
+	The neutrons and protons constitute a strongly interacting Fermi liquid and can become <strong>superfluid</strong>.</span></span><br>
+	 </li>
+	<li class="fragment" data-fragment-index="1">
+<strong>Inner core</strong> (\(?\))<br>
+	: Occur for only massive neutron star, compositions &amp; properties are not well known. There are some proposed theoretical models.</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 522.621px; height: 648px; left: 0px; top: 72px; min-width: 1px; min-height: 1px;" data-name="image-6837b9" data-block-id="728c15952209035800f01d518e65343d"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="842" data-natural-height="1044" data-lazy-loaded="" data-src="ml_with_ns/6f9c665981db4e9ff7d6a352441b4fe8.png"></div></div></section><section data-background-color="rgb(46,26,33)" data-background-image="ml_with_ns/c788381bd00f22a3a25fcc4e02f0b133.jpg" data-background-size="contain" data-id="9125adbb8b6b50e33cec136a43f6288a"><div class="sl-block" data-block-type="text" style="width: 864px; left: 160px; top: 72px; height: auto;" data-block-id="c6053342c7c3ed9cb474b8cfb885a34e"><div class="sl-block-content" data-placeholder-tag="h1" style="font-size: 200%; text-align: left; z-index: 10;" data-placeholder-text="Text">
+<h1>
+<span style="color:#FFFFFF">describe<br>
+neutron star</span><br>
+ </h1>
+</div></div></section><section data-id="e6cb865c4a4c3f57886f9c87b106dafa"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-block-id="5f8c429cb7cf6d7919940b8db9ecac06"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 12;">
+<h2>Stellar structure Equations</h2>
+</div></div>
+
+
+
+
+
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 786.339px; top: 269.5px;" data-block-id="34b799d0b124c84cfff40894909c13fa" data-name="math-8aa294"><div class="sl-block-content notranslate" style="z-index: 18; font-size: 50%;"><div class="math-input">\begin{aligned}
+&amp;F_g = - \dfrac{Gm\Delta m}{r^2},~~ \Delta m = \rho(r) dr dS \\
+&amp;F_P = P(r)dS - P(r+dr)dS = - \dfrac{dP}{dr}dr dS \\
+\Rightarrow~&amp; \Delta m \ddot{r} = F_g + F_P \\
+\Rightarrow~&amp;\ddot{r} = - \dfrac{Gm}{r^2} - \left(\dfrac{1}{\rho}\right)\dfrac{\partial P}{\partial r}
+\end{aligned}</div></div></div>
+<div class="sl-block" data-block-type="image" style="width: 362.677px; height: 294px; left: 423.662px; top: 269.5px; min-width: 1px; min-height: 1px;" data-block-id="d9a4299803e38aa0bd9c9e08a117a3ff" data-name="image-e5aead"><div class="sl-block-content" style="z-index: 19;"><img style="" data-natural-width="940" data-natural-height="762" data-lazy-loaded="" data-src="ml_with_ns/abab4ed263e9f9c4942abd9f04de00a9.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 480px; left: 605px; top: 144px;" data-block-id="ace2e1a23618ea56662a2f222b5d6231" data-name="text-4f76ec"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20;">
+<p><strong>Hydrostatic Equilibrium</strong></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 480px; left: 800px; top: 518.5px;" data-block-id="e1952cfc04d8785d0e6f3a6e1a8aeebb" data-name="text-93336b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 21;">
+<p>If \( \ddot{r} \) = 0</p>
+</div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 949.839px; top: 587px;" data-block-id="7e891cad395d5de0b69f8dfcecce259c" data-name="math-f60241"><div class="sl-block-content notranslate" style="z-index: 22; font-size: 50%; border-style: solid; border-width: 2px; padding: 3px; border-color: rgb(0, 0, 255);"><div class="math-input">\dfrac{dP}{dr} = - \rho \dfrac{Gm}{r^2}</div></div></div>
+<div class="sl-block sl-block-group" data-block-type="group" data-name="group-5d9e70" data-block-id="daffe3a11ca6090c713a8a5300debc0f" style="width: auto; height: auto;"><div class="sl-block-content sl-block-group-content" style="transform-origin: 200.375px 274px 0px; z-index: 13;">
+<div class="sl-block" data-block-type="text" style="height: auto; width: 400.75px; left: 0px; top: 144px;" data-block-id="5dec4676461539b17cef96a27721d959"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; border-width: 1px;">
+<p><strong>Conservation of Mass</strong></p>
+</div></div>
+<div class="sl-block sl-block-group" data-block-type="group" data-name="group-c2f640" data-block-id="8c615cb63141f8d7dc70f6ad3d788927" style="width: auto; height: auto;"><div class="sl-block-content sl-block-group-content" style="transform-origin: 200.375px 346px 0px; z-index: 15;">
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 20.625px; top: 288px;" data-block-id="d5ceb892ec11be3b4d887bf258e45680"><div class="sl-block-content notranslate" style="z-index: 16; font-size: 60%; border-width: 1px;"><div class="math-input">\begin{aligned}
+&amp;dm = 4\pi r^2 \rho dr \\
+\Rightarrow ~&amp;\dfrac{dm}{dr} = 4\pi r^2 \rho
+\end{aligned}</div></div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 269.125px; top: 324px;" data-block-id="04ac70ae8805e4bb8cb69904171bd8df"><div class="sl-block-content notranslate" style="z-index: 17; font-size: 60%; border-width: 1px;"><div class="math-input">\delta dm = 0</div></div></div>
+</div></div>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="width: 400.75px; height: 607px; left: 0px; top: 113px;" data-name="shape-d1dd39" data-block-id="e64e3e9638c952dc8c43d0c4219f557a"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 10;" data-shape-corner-radius="4px" data-shape-stroke-color="#888888" data-shape-stroke-width="3px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 401 607"><defs><clippath id="shape-mask-2-1591918268212"><rect width="400.75" height="607" rx="4" ry="4" fill="rgba(0, 0, 0, 0)" stroke="#888888" stroke-width="6"></rect></clippath></defs><rect width="400.75" height="607" rx="4" ry="4" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#888888" stroke-width="6" clip-path="url(#shape-mask-2-1591918268212)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 880.75px; height: 607px; left: 399.25px; top: 113px;" data-block-id="189820898a6d394a9c6e4da384951c89" data-name="shape-732347"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 11;" data-shape-corner-radius="4px" data-shape-stroke-color="#888888" data-shape-stroke-width="3px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 881 607"><defs><clippath id="shape-mask-3-1591918300774"><rect width="880.75" height="607" rx="4" ry="4" fill="rgba(0, 0, 0, 0)" stroke="#888888" stroke-width="6"></rect></clippath></defs><rect width="880.75" height="607" rx="4" ry="4" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#888888" stroke-width="6" clip-path="url(#shape-mask-3-1591918300774)"></rect></svg></div></div></section><section data-id="06a45f3fca69fae179878d393b36cb21"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="045ca105f9d71ed004b20e2e7ce917ee"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>describe neutron star</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 160px; top: 150px;" data-name="text-b81b4d" data-block-id="7eec784fc189c60a98710ffc3190f884"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; line-height: 1.56; font-size: 90%;" data-has-line-height="">
+<ul>
+	<li>Neutron star is one of the densest stellar object.<br>
+	\(\Rightarrow\) To describe NS, we need <strong>General relativity.</strong><br>
+	\(\Rightarrow\) <strong>Tolman-Oppenheimer-Volkoff equation.</strong><br>
+	 </li>
+	<li>NS is very cold object. (After 1 month, \(T \sim \text{keV}\) while \(\mu \simeq E_F \sim \text{GeV} \))<br>
+	\(\Rightarrow\) To describe inner structure of NS, we need <strong>Low temperature Nuclear physics.</strong><br>
+	\(\Rightarrow\) <strong>Equation of State.</strong><br>
+	 </li>
+	<li>But in NS, relative change in the metric over the average distance of baryons is exceedingly small.<br>
+	\(\Rightarrow\) To describe interaction in NS, we need <strong>Quantum Chromodynamics</strong>.<br>
+	\(\Rightarrow\) <strong>Walecka model</strong>
+</li>
+</ul>
+</div></div></section><section data-id="58db24c0737202d83f020040dd2ca898"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-block-id="2eab64ccad57a856b1a0b3bf4ab877df"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>setup geometry</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 160px; top: 144px;" data-block-id="860f957f7bd317587bfa373d37f656e5"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 90%;" data-fragment-index="0">
+<p>For static, non-rotating and spherical symmetric star, we can write metric as follows</p>
+</div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 405.5px; top: 192px;" data-block-id="2899f04fc24154fced26633c297731b5"><div class="sl-block-content notranslate fragment" style="z-index: 12; font-size: 60%;" data-fragment-index="0"><div class="math-input">ds^2 = -e^{2\Phi(r)}dt^2 + e^{2\Lambda(r)}dr^2 + r^2 d\Omega^2</div></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 160px; top: 284px;" data-block-id="af1e964d0502c61459eb7c4b28e7038e"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 90%; line-height: 1.56;" data-fragment-index="1" data-has-line-height="">
+<p>Consider <em>perfect fluid </em>matter.<br>
+From energy-momentum conservation (\(\nabla_\nu T^{\mu\nu} = 0 \)), we can obtain next equation.</p>
+</div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 534.5px; top: 406.5px;" data-block-id="1cf862d925c0c6968de7348c3ff25024"><div class="sl-block-content notranslate fragment" style="z-index: 14; font-size: 50%;" data-fragment-index="1"><div class="math-input">\dfrac{dP}{dr} = - (\rho + P) \dfrac{d\Phi}{dr}</div></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 560px; left: 0px; top: 487.5px;" data-block-id="ac559cb7f1048ad299bd7d7205fcf1aa"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; font-size: 90%;" data-fragment-index="2">
+<p>From Einstein equation for (\(r \leq R,\, G_{00} = 8\pi T_{00}\)),</p>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 560px; left: 720px; top: 484.75px;" data-block-id="6ebed69c74eedb5588df37018faab9e6" data-name="text-626cb9"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16; font-size: 90%;" data-fragment-index="3">
+<p>From Einstein equation for (\(r \leq R,\, G_{11} = 8\pi T_{11}\)),</p>
+</div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 68px; top: 544.25px;" data-block-id="2d450304cfde81b6ace47f8c2a4adce1" data-name="math-eae8ea"><div class="sl-block-content notranslate fragment" style="z-index: 17; font-size: 50%;" data-fragment-index="2"><div class="math-input">\dfrac{d}{dr} \left[r(1 - e^{-2\Lambda}) \right] = 8\pi r^2 \rho(r) = 2 \dfrac{dm(r)}{dr}</div></div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 180.5px; top: 612px;" data-block-id="92d25aa6e89d1ec29c73529348efe8cb" data-name="math-22bf05"><div class="sl-block-content notranslate fragment" style="z-index: 18; font-size: 50%;" data-fragment-index="2"><div class="math-input">\displaystyle \therefore e^{-2\Lambda} = 1 - \frac{2m(r)}{r}</div></div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 885px; top: 578px;" data-block-id="50c370d27646c7d2f8b9a9720234b6d2" data-name="math-765b41"><div class="sl-block-content notranslate fragment" style="z-index: 19; font-size: 50%;" data-fragment-index="3"><div class="math-input">\displaystyle \frac{d\Phi}{dr} = \frac{m(r) + 4\pi r^3 P}{r^2(1 - \frac{2m(r)}{r})}</div></div></div></section><section data-id="9059ef6b547c50bc3c8944abd93662cc"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-block-id="1be7681726e39c0894896feacab454b3"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Tolman-oppenheimer-volkoff equation</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 309px; top: 274px;" data-block-id="4e941ac8f02d890ba2166766035fc9c4"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 60%;"><div class="math-input">\begin{aligned}
+\dfrac{dm}{dr} &amp;= 4\pi r^2 \rho \\
+\dfrac{dP}{dr} &amp;= - \dfrac{\rho m}{r^2} \left( 1 + \dfrac{P}{\rho}\right) \left(1 + \dfrac{4\pi P r^3}{m}\right) \left(1 - \frac{2m}{r} \right)^{-1}
+\end{aligned}</div></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 160px; top: 171px;" data-block-id="0169da0209276504aebf7bac4242a4de"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>Combine all equations of previous slides, then we can get next equations.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 1120px; left: 80px; top: 540px;" data-block-id="04bea5eed2b7dd0df44e0d3ab5e5d6bf"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>These equation is called <em>Tolman-Oppenheimer-Volkoff equation</em>. (TOV equation)</p>
+</div></div></section><section data-id="9d3858dea7f9de67cb0d876b0123d44c"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-block-id="6353da67f02711019fac5ceb3d8269c5"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 12;">
+<h2>Newtonian <em>VS</em> General Relativity</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 521.5px; top: 288px;" data-block-id="76414c46643cb4d817f438bf3b9034c4"><div class="sl-block-content notranslate" style="z-index: 13; font-size: 65%;"><div class="math-input">\begin{aligned}
+\dfrac{dm}{dr} &amp;= 4\pi r^2 \rho \\
+\dfrac{dP}{dr} &amp;= - \dfrac{\rho m}{r^2} \left( 1 + \dfrac{P}{\rho}\right) \left(1 + \dfrac{4\pi P r^3}{m}\right) \left(1 - \frac{2m}{r} \right)^{-1}
+\end{aligned}</div></div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 151px; top: 288px;" data-block-id="a8c8e7c17450c1b3cd7187ff5d556185"><div class="sl-block-content notranslate" style="z-index: 14; font-size: 65%;"><div class="math-input">\begin{aligned}
+\dfrac{dm}{dr} &amp;= 4\pi r^2 \rho \\
+\dfrac{dP}{dr} &amp;= - \dfrac{\rho m}{r^2}
+\end{aligned}</div></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 480px; left: 0px; top: 161px;" data-block-id="c1c89e59fab2d3b3cedcca9d08d8f512"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p><strong>Newtonian</strong></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 480px; top: 161px;" data-block-id="16ac9bc17f191b657e1e0066a21ba014"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;">
+<p><strong>General Relativity</strong></p>
+</div></div>
+
+
+<div class="sl-block" data-block-type="shape" style="width: 480px; height: 504px; left: 0px; top: 144px;" data-name="shape-d626ee" data-block-id="82fcc1fc4b5f817218f2f8bf24a18c46"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 11;" data-shape-corner-radius="4px" data-shape-stroke-color="#aaaaaa" data-shape-stroke-width="3px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 480 504"><defs><clippath id="shape-mask-4-1591919745157"><rect width="480" height="504" rx="4" ry="4" fill="rgba(0, 0, 0, 0)" stroke="#aaaaaa" stroke-width="6"></rect></clippath></defs><rect width="480" height="504" rx="4" ry="4" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#aaaaaa" stroke-width="6" clip-path="url(#shape-mask-4-1591919745157)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 800px; height: 504px; left: 480px; top: 144px;" data-block-id="30d66151c19c841fcc9382f6233a1d33" data-name="shape-102447"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 10;" data-shape-corner-radius="4px" data-shape-stroke-color="#aaaaaa" data-shape-stroke-width="3px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 800 504"><defs><clippath id="shape-mask-5-1591919788531"><rect width="800" height="504" rx="4" ry="4" fill="rgba(0, 0, 0, 0)" stroke="#aaaaaa" stroke-width="6"></rect></clippath></defs><rect width="800" height="504" rx="4" ry="4" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#aaaaaa" stroke-width="6" clip-path="url(#shape-mask-5-1591919788531)"></rect></svg></div></div></section><section data-id="f9c7af497fff256240f4bafef9bf4815"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="a6e975efffbb75bb0bf0f464faf01b97"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Need conditions</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 240px; top: 150px;" data-name="text-b7f197" data-block-id="a09d7ea43cf5eb5bc14f864042be555b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>There are one free parameter &amp; one undetermined function.<br>
+ </p>
+
+<ul>
+	<li>Core density : \(\rho_{\text{core}}\)<br>
+	 </li>
+	<li>Equation of State : \(P = P(\rho)\)<br>
+	 </li>
+</ul>
+
+<p>To solve TOV equation completely, we need these quantities.</p>
+</div></div></section><section data-id="78c728bf8d2a7417aa70b33efff77d3a"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="de53c670e45e91bc28f475ec140803a9"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Equation of statE</h2>
+</div></div>
+
+<div class="sl-block sl-block-group" data-block-type="group" data-name="group-00c081" data-block-id="6d2d1ece8417d16002dcfb1c77bdd42b" style="width: auto; height: auto;"><div class="sl-block-content sl-block-group-content" style="transform-origin: 640px 394.518px 0px; z-index: 11;">
+<div class="sl-block" data-block-type="image" style="width: 960px; height: 469.036px; left: 160px; top: 170px; min-width: 1px; min-height: 1px;" data-name="image-ab3f49" data-block-id="55ccc5c1fe916b6a8bcf5acbe0585961"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1795" data-natural-height="877" data-lazy-loaded="" data-src="ml_with_ns/f8ac278357d81823ac6ba68eea9df252.jpg"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 160px; top: 150px;" data-name="text-2ab5c8" data-block-id="b9322f219e1d5d3cdb1b7a3143a22ece"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 60%;">
+<pre style="text-align: center;">Fan Ji, Quarks and Compact Stars 2019</pre>
+</div></div>
+</div></div></section><section data-id="d77d4aebc4eaaf3606111c2ea0ce5e80"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="3c25ab17b4b445cbfd82a31f960a8273"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Equation of statE</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="image" style="width: 560px; height: 572.27px; left: 0px; top: 144px;" data-name="image-bfb861" data-block-id="e2785490ea5e9e0a96a84f2cdf1dc3e7"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1141" data-natural-height="1166" data-src="ml_with_ns/76b0a6786455cfb204edc2639ff46e15.jpg"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 560px; left: 0px; top: 124px;" data-name="text-89772a" data-block-id="a81ea73caa1936e4a8ea869f6f20eaae"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 60%;">
+<pre style="text-align:center">Ozel &amp; Freire (2016)</pre>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 720px; left: 560px; top: 144px;" data-name="text-f62d33" data-block-id="636146cd1b684096518caf6b27304333"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; line-height: 1.43;" data-has-line-height="">
+<ul>
+	<li>There are lots of EoS candidates:
+	<ul>
+		<li>Non-unified EoS
+		<ul>
+			<li>
+			<pre><strong>APR </strong><span style="font-size:0.5em">(A. Akmal, V. R. Pandharipande, and D. G. Ravenhall Phys. Rev. C 58, 1804)
+
+</span></pre>
+			</li>
+		</ul>
+		</li>
+		<li>
+		<p><span style="font-size:1.0em">Unified EoS</span></p>
+
+		<ul>
+			<li>
+			<pre><span style="font-size:1.0em"><strong>FPS</strong> </span><span style="font-size:0.5em">(Pandharipande, Ravenhall (1989))</span></pre>
+			</li>
+			<li>
+			<pre><span style="font-size:1.0em"><strong>SLy</strong> </span><span style="font-size:0.5em">(Pouchin, Haensel (2001))</span></pre>
+			</li>
+			<li>
+			<pre><span style="font-size:1.0em"><strong>BSk</strong> </span><span style="font-size:0.5em">(Gorierly et al. (2010); Pearson et al. (2011))</span></pre>
+			</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+</ul>
+</div></div></section><section data-id="0b1f6348ae0eafdb6ac24a14cc1ff633"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="a0a73d1dcb7ddf6a470032006538833a"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Solve tov equation</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 720px; left: 0px; top: 144px;" data-name="text-a36c9c" data-block-id="67cb4c52c81b321502b7a11e8b662f0f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li>Insert \(\rho_c\) and set proper stop condition (\(P=0\))<br>
+	 </li>
+	<li>Choose one of the EoS (APR, SLy, BSk and etc.)
+	<ul>
+		<li>Bring the EoS table</li>
+		<li>Use EoS as spline or interpolation<br>
+		 </li>
+	</ul>
+	</li>
+	<li>Numerically solve TOV equation (RK4, GL4 and etc.)<br>
+	 </li>
+	<li>Get \(\rho(r), P(r), m(r)\)</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 888px; height: 532.8px; left: 0px; top: 72px;" data-name="image-5540ab" data-block-id="b08c43408f3beae3ea0fcd6b24eb9ad2"><div class="sl-block-content fragment current-visible" style="z-index: 12;" data-fragment-index="0"><img style="" data-natural-width="2250" data-natural-height="1350" data-src="ml_with_ns/927bd6ff541dc0bcd7902ec34b1809bd.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 888px; height: 532.8px; left: 392px; top: 72px;" data-name="image-6d7210" data-block-id="a77d194e52289b27c95a98c3d891440c"><div class="sl-block-content fragment current-visible" style="z-index: 13;" data-fragment-index="1"><img style="" data-natural-width="2250" data-natural-height="1350" data-src="ml_with_ns/217667d3c6a1413fe9d2fd7d9fde74b6.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 888px; height: 532.8px; left: 0px; top: 72px;" data-name="image-d2dab1" data-block-id="5df2890a820ca9ca87c513e25529718d"><div class="sl-block-content fragment current-visible" style="z-index: 14;" data-fragment-index="2"><img style="" data-natural-width="2250" data-natural-height="1350" data-src="ml_with_ns/efc102cfbcdf92d475353f03b1c67aac.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 888px; height: 532.8px; left: 392px; top: 72px;" data-name="image-75298e" data-block-id="abe21cac74fb7a77650f4b61d44474cd"><div class="sl-block-content fragment" style="z-index: 15;" data-fragment-index="3"><img style="" data-natural-width="2250" data-natural-height="1350" data-src="ml_with_ns/42ef27b0a61206cba0c4318bf638238c.png"></div></div></section><section data-id="0f37b7f9e6da69c4278054378f449fb1"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="828bd50d25d7c9f3f7e917b7291461ec"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;" dir="ui">
+<h2>M-R relation</h2>
+</div></div>
+
+<div class="sl-block sl-block-group" data-block-type="group" data-name="group-9a10ec" data-block-id="02905f00c37b044f728937b633047f2d" style="width: auto; height: auto;"><div class="sl-block-content sl-block-group-content" style="transform-origin: 640.001px 422px 0px; z-index: 11;">
+<div class="sl-block" data-block-type="image" style="width: 746.667px; height: 560px; left: 266.667px; top: 150px; min-width: 1px; min-height: 1px;" data-name="image-ba0dcb" data-block-id="50093474439ae647bb9c69e31065e34a"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1200" data-natural-height="900" data-lazy-loaded="" data-src="ml_with_ns/8fde99496a7c576763c3f43a4945178f.jpg"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 746.667px; left: 266.667px; top: 134px;" data-name="text-89af1f" data-block-id="5ec7f5877f605e85927ea29ca2f25d86"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 50%;">
+<pre style="text-align: center;">http://ibutsky.blogspot.com</pre>
+</div></div>
+</div></div></section><section data-id="ad715f1fe92dde1722ad5e9df3a80822"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="e8cc7d5aebe1c63714921227fa6c4c64"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;" dir="ui">
+<h2>Observation of M-R relation</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 1120px; left: 80px; top: 144px;" data-name="text-f4496f" data-block-id="5b0925ddfc11b1404921e953a9db1149"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>To be filled</p>
+</div></div></section><section data-background-color="rgb(46,26,33)" data-background-image="ml_with_ns/c788381bd00f22a3a25fcc4e02f0b133.jpg" data-background-size="contain" data-id="48e9863290a904f0b9a718fc6462ee92"><div class="sl-block" data-block-type="text" style="width: 864px; left: 160px; top: 72px; height: auto;" data-block-id="f87e83f1804e213989fe4a3587f1db9a"><div class="sl-block-content" data-placeholder-tag="h1" style="font-size: 200%; text-align: left; z-index: 10;" data-placeholder-text="Text">
+<h1>
+<span style="color:#FFFFFF">Data generation</span><br>
+ </h1>
+</div></div></section><section data-id="f71393dd0df1fc179fd3bc34732e942d"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="1b39be6b02f8fff33e5ca33ad30c575e"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>M-R relation data</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="image" style="width: 640px; height: 554.741px; left: 0px; top: 144px;" data-name="image-99bcd5" data-block-id="97b7b30bc5fd99aaf198e7c2bfb639ed"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1141" data-natural-height="989" data-src="ml_with_ns/da9c6e88cfd3544afbab6071b70e408e.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 640px; left: 640px; top: 288px;" data-name="text-3bcf9a" data-block-id="bcbed78259e378b786b2e9c5ca03df2b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<ul>
+	<li>
+	<p>Xtreme Astrophysics Group (Univ. of Arizona)<br>
+	<span style="font-size:0.7em">Link: <a href="http://xtreme.as.arizona.edu/NeutronStars/" target="_blank">http://xtreme.as.arizona.edu/NeutronStars/</a></span><br>
+	 </p>
+	</li>
+	<li>The form of data is given by meshgrid<br>
+	(Mass vs Radius vs Posterior probability)</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 640px; left: 0px; top: 124px;" data-name="text-d73449" data-block-id="39f0b1f1927555703288d6cab79fef19"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 60%;">
+<pre style="text-align:center">Ozel &amp; Freire (2016)</pre>
+</div></div></section><section data-id="0d977c117ae13bd964b47f0de226b7d4"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="dca3e98843a7460ba20161462769c79b"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>M-R relation data</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="image" style="width: 560px; height: 420px; left: 720px; top: 144px;" data-name="image-83c243" data-block-id="61453e36b18fc75cc079dc4121132dd9"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1800" data-natural-height="1350" data-src="ml_with_ns/dad4dc4b7b1f68d52e4c1c984a23213f.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 720px; height: 432px; left: 0px; top: 144px;" data-name="image-12d25e" data-block-id="675f6c7717886cba075da6d97e4b314a"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="2250" data-natural-height="1350" data-src="ml_with_ns/f748d68a45aa81606527679cc769d6e9.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 720px; left: 0px; top: 108px;" data-name="text-8dcb8a" data-block-id="27890197ef80effd20d67701ea681007"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>Contour plot of given data</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 560px; left: 720px; top: 108px;" data-block-id="517f5c456ab8320f2f5f829ffe850b71" data-name="text-503a89"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p>Decompose to two marginal distributions</p>
+</div></div></section><section data-id="53bb3ce0d967ed80d36e9ece0b2ee42a"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="3e4c95160ade57f7e3cd81c1cc767500"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Parameter</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 1120px; left: 80px; top: 144px;" data-name="text-2f6f5d" data-block-id="afa71aea01aec709057fc1d4b90681e0"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li>There are only 14 measured neutron stars<br>
+	 </li>
+	<li>Decompose 2D distribution to two marginal distributions<br>
+	 </li>
+	<li>Do Gaussian fitting for each distributions - get \(m, \sigma^2\)</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 1120px; left: 80px; top: 458px;" data-name="text-45d7be" data-block-id="8d29633dfb44e1bbafd2974af28af586"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>\(\therefore 2 \times 2 \times 14 = 56\) parameters</p>
+</div></div></section><section data-id="fbc5fe78d2a8e486b461f16cc0e0ab63"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="9b58fcc390858003fc9d5984175cf3ad"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Data generation - 1.EoS generation</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 1120px; left: 80px; top: 144px;" data-name="text-2f6f5d" data-block-id="c39f0c3bf5abc38c3e4eaef2ff8b69b3"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li>Divide \(\rho\) interval \([\rho_0, 8\rho_0]\)  into 5 pieces<br>
+	 </li>
+	<li>Randomly (but causally) choose average sound velocity in each segment<br>
+	: \(\epsilon &lt; c^2_{s,i} &lt; 1-\epsilon~\text{where}~ c=1, ~\epsilon = 0.01\)<br>
+	 </li>
+	<li>Calculate pressure node points : \(p_i = p_{i-1} + c^2_{s,i} (\rho_i - \rho_{i-1})\)<br>
+	 </li>
+	<li>Use SLy4 for \(\rho \leq \rho_0\) region \(\Rightarrow~p_0 = p(\rho_0)\)<br>
+	 </li>
+	<li>For \(\rho &gt; \rho_0\), interpolate by piecewise polytrope function.<br>
+	: \(P(\rho) = K_i \rho^{\Gamma_i}\) for \(\rho_{i-1} &lt; \rho &lt; \rho_i\)</li>
+</ul>
+</div></div></section><section data-id="efec3247b577ac58226c302c5b1e7dfc"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="475fe2809ced35164b26778c8f64bb1f"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Data generation - 2. extract data points</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="image" style="width: 956.725px; height: 626.4px; left: 161.638px; top: 84px;" data-name="image-a53eb1" data-block-id="a5a7f8d1bea099b38e39b42d5f980a32"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1257" data-natural-height="823" data-src="ml_with_ns/b34734ae4e864b40f95168134829fb49.png"></div></div></section><section data-id="e2d83ab96ba30420b702c82b4fefa25d"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="39427eb0d2e86a4c4b3c893fb623f868"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Main process (Plan - Not yet implemented)</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 240px; top: 144px;" data-name="text-a02e76" data-block-id="e1b076f05ca8494154a2086faae0283b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li>Estimate with Bayesian optimization (Supervised)<br>
+	 </li>
+	<li>Estimate with MLP (&lt;- Paper)<br>
+	 </li>
+	<li>And more advanced algorithms (&lt;- Enhancement)</li>
+</ul>
+</div></div></section><section data-id="4f343760a5dd027bbdfd50606733c0d2"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="44c16055d8860188337231d05bc15ba4"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Goal (This project)</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="image" style="width: 827.792px; height: 532.8px; left: 226.104px; top: 144px;" data-name="image-1f34ef" data-block-id="f59e5b07591eb941d22d9bb439537427"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="912" data-natural-height="587" data-src="ml_with_ns/a0b74ebb72b0d00ba91250f0947fe548.png"></div></div></section><section data-id="450473f398c2c48cd6ec2834d3ac1e64"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="6d314f71e28cd2d9dac9ee6e11c9c895"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Goal (Research)</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="image" style="width: 527.547px; height: 532.8px; left: 362.227px; top: 144px;" data-name="image-a66b3a" data-block-id="6f70e1b213512843ea31866ddd6e8275"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="703" data-natural-height="710" data-src="ml_with_ns/6c011fd62864597f75429a3e9760875e.png"></div></div></section>
+			</div>
+		</div>
+
+		<script>
+			var SLConfig = {"deck": {"id":1806539,"slug":"ml_with_ns","title":"Machine Learning with Neutron Star","description":"Presentation for PHY 8060","width":1280,"height":720,"margin":0.05,"visibility":"team","published_at":"2020-06-03T17:56:42.050Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/783b594487693715ba9e4ed142f2d7b2/thumb.jpg?1591925326","view_count":1,"user":{"id":1198239,"username":"axect","name":"","description":"","thumbnail_url":"https://www.gravatar.com/avatar/cda8e3c26bf8569f56759c20f93835ac?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","account_type":"enterprise","team_id":1998,"settings":{"id":4349006,"present_controls":true,"present_upsizing":true,"present_pointer":true,"present_notes":true,"default_deck_tag_id":null},"membership":{"role":"member","manager":false,"activated":true}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"overpass2","theme_color":"white-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":false,"rolling_links":false,"center":false,"shuffle":false,"should_loop":false,"share_notes":false,"slide_number":true,"slide_count":28,"rtl":false,"version":2,"collaborative":false,"deck_user_editor_limit":null,"data_updated_at":1591926379568,"font_typekit":"","font_google":"Signika, Ubuntu, Anonymous Pro, Fira Mono, Oxygen, B612 Mono","time_limit":null,"navigation_mode":"default","upsizing_enabled":true,"notes":{"e6cb865c4a4c3f57886f9c87b106dafa":"Conservation is trivial.","fac5d55f86fb62636dbb9775c9fa12c2":"Next one is hydrostatic equilibrium. It seems little bit complex, but it's simple. It means the equilibrium of radiation pressure \u0026 gravitational force. So, firstly we obtain equation of motion \u0026 let's put zero acceleration. Then we can get hydrostatic equilibrium equation.","58db24c0737202d83f020040dd2ca898":"To work in General relativistic frame, first we should define what metric we use. Neutron star seems static, spherical symmetric star with rapid-rotation. But, this time, we consider non-rotating neutron star for convenience. (Also, Cas A is slowly-rotating Neutron star)\nThus, choosing this metric is reasonable. (Phi, Lambda) are just for radial contributions.\nAfter metric determination, there is systematic computation processes. We can calculate connection coefficient (a.k.a Christoffel symbol), Riemann curvature tensor, Ricci tensor and Einstein tensor.\nOf course, you can obtain these with your hand, but it's more comfortable with computation tools. I use Sagemanifold package to obtain this.\n\nFrom energy-momentum conservation, we can get this equation \u0026 from components of einstein equation. we get these equations.","9059ef6b547c50bc3c8944abd93662cc":"Combine all equations of previous slides, then we can write below equations.\nThese equation is called Tolman-Oppenheimer-Volkoff equation. (And it already appeared in Prof. Tachibana's lecture)","9d3858dea7f9de67cb0d876b0123d44c":"Now, let's compare both schemes - newtonian versus general realtivity.\nAnd we can validate both are same by non-relativistic approximation. (speed of light to infinity). Can't you see the speed of light in TOV equation? It is only visible for good kids.\nOf course I used geometric unit (c=G=1) to describe equation simple.\nAnd there are two equation pairs. Energy transport \u0026 Energy generation."}}};
+
+
+			// Use local fonts
+			SLConfig.fonts_url = 'lib/fonts/';
+		</script>
+
+		<script src="lib/reveal.js"></script>
+		<script src="lib/reveal-plugins.js"></script>
+		<script src="lib/offline.js"></script>
+
+		<!-- Initialize the presentation -->
+		<script>
+			Reveal.initialize({
+				width: 1280,
+				height: 720,
+				margin: 0.05,
+				
+
+				hash: true,
+				controls: true,
+				progress: true,
+				mouseWheel: false,
+				showNotes: false,
+				slideNumber: true,
+				fragmentInURL: true,
+
+				autoSlide: 0,
+				autoSlideStoppable: true,
+
+				autoAnimateMatcher: SL.deck.AutoAnimate.matcher,
+
+				center: false,
+				shuffle: false,
+				loop: false,
+				rtl: false,
+				navigationMode: "default",
+
+				transition: "slide",
+				backgroundTransition: "slide",
+
+				highlight: {
+					escapeHTML: false
+				},
+
+				plugins: [ RevealZoom, RevealNotes, RevealMarkdown, RevealHighlight ]
+			});
+		</script>
+
+		
+
+	</body>
+</html>

@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+	<html class="sl-root decks export offline loaded">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Machine Learning with Neutron Star (Implements)</title>
+
+		<meta name="description" content="Presentation for PHY 8060">
+
+		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
+
+		<!-- Team CSS -->
+		<style id="global-css-output" type="text/css">
+			.reveal {
+  /*.slides h1, .slides h2 { 
+ font-family: "Amatic SC", cursive;
+}
+
+
+.slides h3 {
+  font-family: "WindSong", cursive;
+}
+
+
+.slides h3 {
+  font-family: 'Sacramento', cursive;
+}
+
+
+@font-face {
+	font-family: 'UhBeemysen';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeemysen.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.slides {
+  font-family: "UhBeemysen";
+}
+*/
+}
+
+		</style>
+
+
+		<!-- User CSS -->
+		<style id="user-css-output" type="text/css">
+			.reveal .slides h1 {
+  font-family: "Anonymous Pro";
+}
+.reveal .slides h2 {
+  font-family: "Anonymous Pro";
+}
+.reveal .slides h3 {
+  font-family: "Anonymous Pro";
+}
+.reveal .slides p {
+  font-family: "Oxygen";
+}
+.reveal .slides ul {
+  font-family: "Oxygen";
+}
+.reveal .slides ol {
+  font-family: "Oxygen";
+}
+
+		</style>
+	</head>
+	<body class="reveal-viewport theme-font-overpass2 theme-color-white-blue">
+		<div class="reveal">
+			<div class="slides">
+				<section data-id="12dc1544a4a1d4149c3248f7238017fb" data-auto-animate=""><div class="sl-block" data-block-type="text" style="width: 960px; left: 160px; top: 80px; height: auto;" data-block-id="09905b32e53bb402a65cf2bc26d9f412" data-name="text-c03501"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>machine learning<br>
+with<br>
+neutron star</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 340px; top: 432px;" data-block-id="6b3ea6b527c4d6dfd2b9aaabaf1c986c" data-name="text-32546a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 120%;">
+<h3>Tae Geun Kim</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 340px; top: 500px;" data-block-id="ffbe9500456db150e1e3d12796e0bbfc" data-name="text-a145ae"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 90%;">
+<p>Yonsei HEP-COSMO</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 340px; top: 615px;" data-block-id="33273930754bdcab462d83a8325aa06b" data-name="text-1a4da0"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 90%;">
+<p>@ Elementary Particle Physics II Final</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 340px; top: 648px;" data-block-id="371d960b1762385fcf52d7729af56c80" data-name="text-c835ef"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; font-size: 90%;">
+<p>2020.06.19</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 160px; top: 324px;" data-name="text-51c4df" data-block-id="eae782cb8d0edc1369e56df4d3183d4f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<h3>Introduce Neutron star /<br>
+Review &amp; enhance arXiv: 1903.03400</h3>
+</div></div></section><section data-id="29e839cbbae2ef71007eaf4dba353983"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 41px; height: auto;" data-block-id="acfbcc5b423334adab423230e24c784e"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Table of Contents</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 240px; top: 150px;" data-name="text-1a5e44" data-block-id="01973909f29718e32c09b6c7217d366f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; line-height: 1.82;" data-has-line-height="">
+<ul>
+	<li class="fragment fade-out" data-fragment-index="0">
+<strong>Introduction</strong>
+	<ul>
+		<li class="visible">Neutron Star 101</li>
+		<li class="visible">Describe neutron star</li>
+	</ul>
+	</li>
+	<li class="visible">
+<strong>Project</strong>
+	<ul>
+		<li>Data generation</li>
+		<li>Bayesian</li>
+		<li>Neural Network</li>
+	</ul>
+	</li>
+</ul>
+</div></div></section><section data-background-color="rgb(46,26,33)" data-background-image="ml_ns_impl/c788381bd00f22a3a25fcc4e02f0b133.jpg" data-background-size="contain" data-id="9125adbb8b6b50e33cec136a43f6288a"><div class="sl-block" data-block-type="text" style="width: 864px; left: 160px; top: 72px; height: auto;" data-block-id="c6053342c7c3ed9cb474b8cfb885a34e"><div class="sl-block-content" data-placeholder-tag="h1" style="font-size: 200%; text-align: left; z-index: 10;" data-placeholder-text="Text">
+<h1>
+<span style="color:#FFFFFF">describe<br>
+neutron star</span><br>
+ </h1>
+</div></div></section><section data-id="06a45f3fca69fae179878d393b36cb21"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="045ca105f9d71ed004b20e2e7ce917ee"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>describe neutron star</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 160px; top: 150px;" data-name="text-b81b4d" data-block-id="7eec784fc189c60a98710ffc3190f884"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; line-height: 1.56; font-size: 90%;" data-has-line-height="">
+<ul>
+	<li>Neutron star is one of the densest stellar object.<br>
+	\(\Rightarrow\) To describe NS, we need <strong>General relativity.</strong><br>
+	\(\Rightarrow\) <strong>Tolman-Oppenheimer-Volkoff equation.</strong><br>
+	 </li>
+	<li>NS is very cold object. (After 1 month, \(T \sim \text{keV}\) while \(\mu \simeq E_F \sim \text{GeV} \))<br>
+	\(\Rightarrow\) To describe inner structure of NS, we need <strong>Low temperature Nuclear physics.</strong><br>
+	\(\Rightarrow\) <strong>Equation of State.</strong><br>
+	 </li>
+	<li>But in NS, relative change in the metric over the average distance of baryons is exceedingly small.<br>
+	\(\Rightarrow\) To describe interaction in NS, we need <strong>Quantum Chromodynamics</strong>.<br>
+	\(\Rightarrow\) <strong>Walecka model</strong>
+</li>
+</ul>
+</div></div></section><section data-id="9059ef6b547c50bc3c8944abd93662cc"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-block-id="1be7681726e39c0894896feacab454b3"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Tolman-oppenheimer-volkoff equation</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 309px; top: 274px;" data-block-id="4e941ac8f02d890ba2166766035fc9c4"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 60%;"><div class="math-input">\begin{aligned}
+\dfrac{dm}{dr} &amp;= 4\pi r^2 \rho \\
+\dfrac{dP}{dr} &amp;= - \dfrac{\rho m}{r^2} \left( 1 + \dfrac{P}{\rho}\right) \left(1 + \dfrac{4\pi P r^3}{m}\right) \left(1 - \frac{2m}{r} \right)^{-1}
+\end{aligned}</div></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 160px; top: 171px;" data-block-id="0169da0209276504aebf7bac4242a4de"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>Combine all equations of previous slides, then we can get next equations.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 1120px; left: 80px; top: 540px;" data-block-id="04bea5eed2b7dd0df44e0d3ab5e5d6bf"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>These equation is called <em>Tolman-Oppenheimer-Volkoff equation</em>. (TOV equation)</p>
+</div></div></section><section data-id="f9c7af497fff256240f4bafef9bf4815"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="a6e975efffbb75bb0bf0f464faf01b97"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Need conditions</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 240px; top: 150px;" data-name="text-b7f197" data-block-id="a09d7ea43cf5eb5bc14f864042be555b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>There are one free parameter &amp; one undetermined function.<br>
+ </p>
+
+<ul>
+	<li>Core density : \(\rho_{\text{core}}\)<br>
+	 </li>
+	<li>Equation of State : \(P = P(\rho)\)<br>
+	 </li>
+</ul>
+
+<p>To solve TOV equation completely, we need these quantities.</p>
+</div></div></section><section data-id="0f37b7f9e6da69c4278054378f449fb1"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="828bd50d25d7c9f3f7e917b7291461ec"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;" dir="ui">
+<h2>M-R relation</h2>
+</div></div>
+
+<div class="sl-block sl-block-group" data-block-type="group" data-name="group-9a10ec" data-block-id="02905f00c37b044f728937b633047f2d" style="width: auto; height: auto;"><div class="sl-block-content sl-block-group-content" style="transform-origin: 640.001px 422px 0px; z-index: 11;">
+<div class="sl-block" data-block-type="image" style="width: 746.667px; height: 560px; left: 266.667px; top: 150px; min-width: 1px; min-height: 1px;" data-name="image-ba0dcb" data-block-id="50093474439ae647bb9c69e31065e34a"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1200" data-natural-height="900" data-lazy-loaded="" data-src="ml_ns_impl/8fde99496a7c576763c3f43a4945178f.jpg"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 746.667px; left: 266.667px; top: 134px;" data-name="text-89af1f" data-block-id="5ec7f5877f605e85927ea29ca2f25d86"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 50%;">
+<pre style="text-align: center;">http://ibutsky.blogspot.com</pre>
+</div></div>
+</div></div></section><section data-background-color="rgb(46,26,33)" data-background-image="ml_ns_impl/c788381bd00f22a3a25fcc4e02f0b133.jpg" data-background-size="contain" data-id="48e9863290a904f0b9a718fc6462ee92"><div class="sl-block" data-block-type="text" style="width: 864px; left: 160px; top: 72px; height: auto;" data-block-id="f87e83f1804e213989fe4a3587f1db9a"><div class="sl-block-content" data-placeholder-tag="h1" style="font-size: 200%; text-align: left; z-index: 10;" data-placeholder-text="Text">
+<h1>
+<span style="color:#FFFFFF">Data generation</span><br>
+ </h1>
+</div></div></section><section data-id="f71393dd0df1fc179fd3bc34732e942d"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="1b39be6b02f8fff33e5ca33ad30c575e"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>M-R relation data</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="image" style="width: 640px; height: 554.741px; left: 0px; top: 144px; min-width: 1px; min-height: 1px;" data-name="image-99bcd5" data-block-id="97b7b30bc5fd99aaf198e7c2bfb639ed"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1141" data-natural-height="989" data-lazy-loaded="" data-src="ml_ns_impl/da9c6e88cfd3544afbab6071b70e408e.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 640px; left: 640px; top: 288px;" data-name="text-3bcf9a" data-block-id="bcbed78259e378b786b2e9c5ca03df2b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<ul>
+	<li>
+	<p>Xtreme Astrophysics Group (Univ. of Arizona)<br>
+	<span style="font-size:0.7em">Link: <a href="http://xtreme.as.arizona.edu/NeutronStars/" target="_blank">http://xtreme.as.arizona.edu/NeutronStars/</a></span><br>
+	 </p>
+	</li>
+	<li>The form of data is given by meshgrid<br>
+	(Mass vs Radius vs Posterior probability)</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 640px; left: 0px; top: 124px;" data-name="text-d73449" data-block-id="39f0b1f1927555703288d6cab79fef19"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 60%;">
+<pre style="text-align:center">Ozel &amp; Freire (2016)</pre>
+</div></div></section><section data-id="0d977c117ae13bd964b47f0de226b7d4"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="dca3e98843a7460ba20161462769c79b"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>M-R relation data</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="image" style="width: 560px; height: 420px; left: 720px; top: 144px; min-width: 1px; min-height: 1px;" data-name="image-83c243" data-block-id="61453e36b18fc75cc079dc4121132dd9"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1800" data-natural-height="1350" data-lazy-loaded="" data-src="ml_ns_impl/dad4dc4b7b1f68d52e4c1c984a23213f.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 720px; height: 432px; left: 0px; top: 144px; min-width: 1px; min-height: 1px;" data-name="image-12d25e" data-block-id="675f6c7717886cba075da6d97e4b314a"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="2250" data-natural-height="1350" data-lazy-loaded="" data-src="ml_ns_impl/f748d68a45aa81606527679cc769d6e9.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 720px; left: 0px; top: 108px;" data-name="text-8dcb8a" data-block-id="27890197ef80effd20d67701ea681007"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>Contour plot of given data</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 560px; left: 720px; top: 108px;" data-block-id="517f5c456ab8320f2f5f829ffe850b71" data-name="text-503a89"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p>Decompose to two marginal distributions</p>
+</div></div></section><section data-id="53bb3ce0d967ed80d36e9ece0b2ee42a"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="3e4c95160ade57f7e3cd81c1cc767500"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Parameter</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 1120px; left: 80px; top: 144px;" data-name="text-2f6f5d" data-block-id="afa71aea01aec709057fc1d4b90681e0"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li>There are only 14 measured neutron stars<br>
+	 </li>
+	<li>Decompose 2D distribution to two marginal distributions<br>
+	 </li>
+	<li>Do Gaussian fitting for each distributions - get \(m, \sigma^2\)</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 1120px; left: 80px; top: 458px;" data-name="text-45d7be" data-block-id="8d29633dfb44e1bbafd2974af28af586"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>\(\therefore 2 \times 2 \times 14 = 56\) parameters</p>
+</div></div></section><section data-id="fbc5fe78d2a8e486b461f16cc0e0ab63"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="9b58fcc390858003fc9d5984175cf3ad"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Data generation - 1.EoS generation</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 1120px; left: 80px; top: 144px;" data-name="text-2f6f5d" data-block-id="c39f0c3bf5abc38c3e4eaef2ff8b69b3"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li>Divide \(\rho\) interval \([\rho_0, 8\rho_0]\)  into 5 pieces<br>
+	 </li>
+	<li>Randomly (but causally) choose average sound velocity in each segment<br>
+	: \(\epsilon &lt; c^2_{s,i} &lt; 1-\epsilon~\text{where}~ c=1, ~\epsilon = 0.01\)<br>
+	 </li>
+	<li>Calculate pressure node points : \(p_i = p_{i-1} + c^2_{s,i} (\rho_i - \rho_{i-1})\)<br>
+	 </li>
+	<li>Use SLy4 for \(\rho \leq \rho_0\) region \(\Rightarrow~p_0 = p(\rho_0)\)<br>
+	 </li>
+	<li>For \(\rho &gt; \rho_0\), interpolate by piecewise polytrope function.<br>
+	: \(P(\rho) = K_i \rho^{\Gamma_i}\) for \(\rho_{i-1} &lt; \rho &lt; \rho_i\)</li>
+</ul>
+</div></div></section><section data-id="afb8bf8a62b413fe599d536c3208cdb3"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="944ee1e170dc1df446996b957ed7be09"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Data generation - 1.EoS generation</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="image" style="width: 720px; height: 432px; left: 0px; top: 144px; min-width: 1px; min-height: 1px;" data-name="image-194cae" data-block-id="9c637644100ca8ee55e52f71768e1841"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="2250" data-natural-height="1350" data-lazy-loaded="" data-src="ml_ns_impl/527ab723e8004e9df0dc8799fc43df4a.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 560px; left: 720px; top: 144px;" data-name="text-a824f1" data-block-id="94b31dc1a97fcdf1bb62d6154e2b75d0"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<ul>
+	<li>EoS data is given by nodes<br>
+	 </li>
+	<li>Thus, use cubic spline or piecewise-polytrope interpolation<br>
+	 </li>
+	<li>But for spline, singularity occurs<br>
+	<br>
+	\(p = a\rho^3 + b\rho^2 + c\rho + d\)<br>
+	<br>
+	\(\displaystyle\frac{\epsilon}{\rho} = 1 + \int_{0}^{\rho} \frac{p}{\rho'^2}d\rho'\)<br>
+	 </li>
+	<li>Thus, use piecewise polytrope<br>
+	\(p = K_i \rho^{\Gamma_i}\) for each interval</li>
+</ul>
+</div></div></section><section data-id="b109c5d32a4974367f7ecfd98c1b595b"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="b9bda2dd19548e09deeb4d08f5047e59"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Data generation - 1.EoS generation</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="image" style="width: 1044px; height: 626.4px; left: 118px; top: 93.6px; min-width: 1px; min-height: 1px;" data-name="image-2753e4" data-block-id="82c0f946726b4e39dd8155b130607e5e"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="2250" data-natural-height="1350" data-lazy-loaded="" data-src="ml_ns_impl/0325504725d16a66e83bc778ea54c815.png"></div></div></section><section data-id="efec3247b577ac58226c302c5b1e7dfc"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="475fe2809ced35164b26778c8f64bb1f"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Data generation - 2. extract data points</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 72px;" data-name="text-7b250c" data-block-id="2d8f5e74df06030bb2db2313816d770e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li>We have EoS, then we can solve TOV equation<br>
+	 </li>
+	<li>Initial condition: \(\rho_c = 8\rho_0,~m_c = 0,~p_c=0\) at \(r=0\)<br>
+	 </li>
+	<li>Numerically solve (Use Runge-Kutta 4th order method)
+	<ul>
+		<li>For \(\rho \in [8\rho_0, \rho_0]\), use randomly generated EoS</li>
+		<li>For \(\rho \in (\rho_0, 0]\), use piecewise-polytrope interpolation of SLy4</li>
+		<li>If \(p = 0\), then stop</li>
+		<li>Measure \((R, M)\)<br>
+		 </li>
+	</ul>
+	</li>
+	<li>Modify \(\rho_c\) and repeat above
+	<ul>
+		<li>Separate \([8\rho_0, \rho_0]\) to 100 pieces, and solve TOV equation using parallel computation<br>
+		(Rust - rayon + peroxide)</li>
+		<li>Save whole \((R, M)\) data. It is called <strong>genuine M-R curve</strong>
+</li>
+	</ul>
+	</li>
+</ul>
+</div></div></section><section data-id="b747c24cbd5c68aac1bf8115f299cc53"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="71c71ce64d1500da4a425eb9bd1ea659"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Data generation - 2. extract data points</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="image" style="width: 1034px; height: 620.4px; left: 123px; top: 99.6px; min-width: 1px; min-height: 1px;" data-name="image-c717f8" data-block-id="dbee766bacf32c3b0942422c7342efcf"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="2250" data-natural-height="1350" data-lazy-loaded="" data-src="ml_ns_impl/6091a34683e6b4bb91b2537e6639e4d9.png"></div></div></section><section data-id="4a12e8ae4728c0b060ffb841d3f795fc"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="c6a30c8e4cc69485e6804170aeb40386"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Data generation - 2. extract data points</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="image" style="width: 1004px; height: 602.4px; left: 138px; top: 110.6px; min-width: 1px; min-height: 1px;" data-name="image-44f0b0" data-block-id="8a7f91db408749a37015a0ec94306f4c"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="2250" data-natural-height="1350" data-lazy-loaded="" data-src="ml_ns_impl/b5f38319ad1d5668952885aafd2cbe4d.png"></div></div></section><section data-id="0028f52fd14b5aa704ad3b97d4eb7eb1"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="1e9b0acdb23776eaba1d5a85af711ea7"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Data generation - 2. extract data points</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="image" style="width: 985px; height: 591px; left: 147.5px; top: 109.6px; min-width: 1px; min-height: 1px;" data-name="image-f18b03" data-block-id="4b0c5636cfd3da3b46eee12fa751da04"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="2250" data-natural-height="1350" data-lazy-loaded="" data-src="ml_ns_impl/aab1efcb82c665044a4d022d6b53b7d6.png"></div></div></section><section data-id="b4cf3864975d484c88ccffa935f7ee91"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="bf83ad5fe5593edbd39945c49cc9de0a"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Data generation - 2. extract data points</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="image" style="width: 960px; height: 576px; left: 160px; top: 130px;" data-name="image-935d38" data-block-id="7b53b10a6403babfe8051a9a15532a3c"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="2250" data-natural-height="1350" data-src="ml_ns_impl/42ef27b0a61206cba0c4318bf638238c.png"></div></div></section><section data-id="5125d47e612a9b29f6be03a09d043c27"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="211803ebde206b8080e09e9773f8ad11"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Data generation - 2. extract data points</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 144px;" data-name="text-7b250c" data-block-id="7069f5ff42264345aade2e5174ed6ff2"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li>Randomly sample 14 data points along the genuine M-R curve in a region \(M &gt; M_\odot\)<br>
+	(Corresponding to 14 observed neutron stars)<br>
+	\(\Rightarrow ~ (R_i^{(0)}, M_i^{(0)})~~(1\leq i \leq 14)\)<br>
+	 </li>
+	<li>Randomly choose \(\sigma_{M_i} \sim \text{Unif}\,[0, M_\odot),~\sigma_{R_i} \sim \text{Unif}\,[0, 5\text{km})\)<br>
+	\(\Rightarrow\) Take 100 pairs of \((\sigma_{R_i},~\sigma_{M_i})\)<br>
+	 </li>
+	<li>Extract data \(R_i \sim \mathcal{N}(R_i^{(0)}, \sigma_{R_i}^2 ),~M_i \sim \mathcal{N}(M_i^{(0)}, \sigma_{M_i}^2 ) \)<br>
+	\(\Rightarrow\) Take 100 samples<br>
+	 </li>
+	<li>Change EoS (\(c_s^2\)), repeat above process 500 times<br>
+	\(\Rightarrow~ 500 \times (100 \times 100 \times 14 + 5)\) data</li>
+</ul>
+</div></div></section><section data-id="8a5bf7b870238d5a4653c34b0022ef46"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="7c2f9155e2508472114d8ca5d60f874c"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Multi-Layer-perceptron</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="image" style="width: 640px; height: 266.527px; left: 0px; top: 144px;" data-name="image-aec7f5" data-block-id="865bc1dfa28d7defb923dbbf627d8ffa"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1143" data-natural-height="476" data-lazy-loaded="" data-src="ml_ns_impl/e45a7e3e6a193564661d8817b5f7c3de.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 640px; left: 640px; top: 144px;" data-name="text-91a863" data-block-id="8b5bf6e839cadeabeee7c7788c2ed077"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<ul>
+	<li>56 inputs = \(14\times (M_i, R_i, \sigma_{M,i},\sigma_{R,i})\)<br>
+	 </li>
+	<li>5 outputs = \(c_{s,i}^2 ~ (1\leq i \leq 5)\)<br>
+	 </li>
+	<li>Regression problem!</li>
+</ul>
+</div></div></section><section data-id="15f05e92c134173b2ddfa1cd6ab3581e"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="1bbc837a1fc97a7c56ebf0f47ac10cbb"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Multi-Layer-perceptron</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="image" style="width: 640px; height: 266.527px; left: 0px; top: 144px; min-width: 1px; min-height: 1px;" data-name="image-aec7f5" data-block-id="8bf93d769493200310cf2db006eb3ae4"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1143" data-natural-height="476" data-lazy-loaded="" data-src="ml_ns_impl/e45a7e3e6a193564661d8817b5f7c3de.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 640px; left: 640px; top: 144px;" data-name="text-91a863" data-block-id="7e57360880ac252354a188f13d482a30"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<ul>
+	<li>56 inputs = \(14\times (M_i, R_i, \sigma_{M,i},\sigma_{R,i})\)<br>
+	 </li>
+	<li>5 outputs = \(c_{s,i}^2 ~ (1\leq i \leq 5)\)<br>
+	 </li>
+	<li>Regression problem!</li>
+</ul>
+</div></div></section><section data-id="3daf9c773021abe46e2124c13a58eaf7"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="6625af05a52accb0f6ec8b652a499699"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Multi-Layer-perceptron</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="image" style="width: 880px; height: 489.438px; left: 200px; top: 144px;" data-name="image-371b71" data-block-id="78e52998129acb28d2d5c8853757cfd8"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="534" data-natural-height="297" data-src="ml_ns_impl/9dbdc5f48f965b682fb6fb711c2c7832.png"></div></div></section><section data-id="bbfff85c52f6e594a1b348dcabce9ba2"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="82c3df9f1ac68b6672185131150f0d6c"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Multi-Layer-perceptron</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="image" style="width: 499.92px; height: 648px; left: 0px; top: 72px;" data-name="image-5c2441" data-block-id="35fef924031ef11b2422c58ee5ae2a4b"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="422" data-natural-height="547" data-src="ml_ns_impl/d0396f14a048ee83b61ed08476e6839f.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 780.08px; height: 199.736px; left: 499.92px; top: 288px;" data-name="image-06be63" data-block-id="5a004fb7125a440ce98c1a02ab5feb33"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="703" data-natural-height="180" data-src="ml_ns_impl/a124bdc34b07275176b02cdec8eb9cef.png"></div></div></section><section data-id="642b9aef85fa5dfcc5fa8595900a5b25"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="db476f408fa79a707de22b0cd1549fca"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Implementation</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 1120px; left: 80px; top: 144px;" data-name="text-f80484" data-block-id="a92820046e02156429d81643d33548f8"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; line-height: 1.56;" data-has-line-height="">
+<ul>
+	<li>Data pre-processing (TOV solve, parallel computations Data generations)
+	<ul>
+		<li>Language: Rust</li>
+		<li>Library: Peroxide(Numerics), Rayon(Parallel Computation)</li>
+		<li>Data format: netcdf<br>
+		 </li>
+	</ul>
+	</li>
+	<li>Multi layer perceptron
+	<ul>
+		<li>Language: Python</li>
+		<li>Library: Tensorflow + Keras</li>
+	</ul>
+	</li>
+</ul>
+</div></div></section><section data-id="d41575c95325be886b1e3e48faf560ee"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="7cd79cdf8e6c4ceaf8fac8a1136f6411"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Discussion</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 1120px; left: 80px; top: 112px;" data-name="text-f80484" data-block-id="c3db807103cd6e1bd53e538303175a2b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; line-height: 1.56;" data-has-line-height="">
+<ul>
+	<li>More Data
+	<ul>
+		<li>I used only \(100 c_{s,i}^2\) data. Need to generate more data!<br>
+		 </li>
+	</ul>
+	</li>
+	<li>Optimization
+	<ul>
+		<li>In paper, they use Adam optimization with the batch size 1000.<br>
+		 </li>
+	</ul>
+	</li>
+	<li>Loss
+	<ul>
+		<li>In paper, they implement msle loss function.<br>
+		 </li>
+	</ul>
+	</li>
+	<li>More algorithm
+	<ul>
+		<li>Use another machine learning algorithms!</li>
+	</ul>
+	</li>
+</ul>
+</div></div></section><section data-id="4f343760a5dd027bbdfd50606733c0d2"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="44c16055d8860188337231d05bc15ba4"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Goal (This project)</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="image" style="width: 827.792px; height: 532.8px; left: 226.104px; top: 144px; min-width: 1px; min-height: 1px;" data-name="image-1f34ef" data-block-id="f59e5b07591eb941d22d9bb439537427"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="912" data-natural-height="587" data-lazy-loaded="" data-src="ml_ns_impl/a0b74ebb72b0d00ba91250f0947fe548.png"></div></div></section><section data-id="450473f398c2c48cd6ec2834d3ac1e64"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="6d314f71e28cd2d9dac9ee6e11c9c895"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Goal (Research)</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="image" style="width: 527.547px; height: 532.8px; left: 362.227px; top: 144px; min-width: 1px; min-height: 1px;" data-name="image-a66b3a" data-block-id="6f70e1b213512843ea31866ddd6e8275"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="703" data-natural-height="710" data-lazy-loaded="" data-src="ml_ns_impl/6c011fd62864597f75429a3e9760875e.png"></div></div></section>
+			</div>
+		</div>
+
+		<script>
+			var SLConfig = {"deck": {"id":1853485,"slug":"ml_ns_impl","title":"Machine Learning with Neutron Star (Implements)","description":"Presentation for PHY 8060","width":1280,"height":720,"margin":0.05,"visibility":"team","published_at":"2020-06-19T00:24:26.811Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/49869d2d8cd54b3c7f65c0ee7739ea2c/thumb.jpg?1592526292","view_count":0,"user":{"id":1198239,"username":"axect","name":"","description":"","thumbnail_url":"https://www.gravatar.com/avatar/cda8e3c26bf8569f56759c20f93835ac?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","account_type":"enterprise","team_id":1998,"settings":{"id":4349006,"present_controls":true,"present_upsizing":true,"present_pointer":true,"present_notes":true,"default_deck_tag_id":null},"membership":{"role":"member","manager":false,"activated":true}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"overpass2","theme_color":"white-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":false,"rolling_links":false,"center":false,"shuffle":false,"should_loop":false,"share_notes":false,"slide_number":true,"slide_count":28,"rtl":false,"version":2,"collaborative":false,"deck_user_editor_limit":null,"data_updated_at":1592530986302,"font_typekit":"","font_google":"Signika, Ubuntu, Anonymous Pro, Fira Mono, Oxygen, B612 Mono","time_limit":null,"navigation_mode":"default","upsizing_enabled":true,"notes":{"e6cb865c4a4c3f57886f9c87b106dafa":"Conservation is trivial.","fac5d55f86fb62636dbb9775c9fa12c2":"Next one is hydrostatic equilibrium. It seems little bit complex, but it's simple. It means the equilibrium of radiation pressure \u0026 gravitational force. So, firstly we obtain equation of motion \u0026 let's put zero acceleration. Then we can get hydrostatic equilibrium equation.","58db24c0737202d83f020040dd2ca898":"To work in General relativistic frame, first we should define what metric we use. Neutron star seems static, spherical symmetric star with rapid-rotation. But, this time, we consider non-rotating neutron star for convenience. (Also, Cas A is slowly-rotating Neutron star)\nThus, choosing this metric is reasonable. (Phi, Lambda) are just for radial contributions.\nAfter metric determination, there is systematic computation processes. We can calculate connection coefficient (a.k.a Christoffel symbol), Riemann curvature tensor, Ricci tensor and Einstein tensor.\nOf course, you can obtain these with your hand, but it's more comfortable with computation tools. I use Sagemanifold package to obtain this.\n\nFrom energy-momentum conservation, we can get this equation \u0026 from components of einstein equation. we get these equations.","9059ef6b547c50bc3c8944abd93662cc":"Combine all equations of previous slides, then we can write below equations.\nThese equation is called Tolman-Oppenheimer-Volkoff equation. (And it already appeared in Prof. Tachibana's lecture)","9d3858dea7f9de67cb0d876b0123d44c":"Now, let's compare both schemes - newtonian versus general realtivity.\nAnd we can validate both are same by non-relativistic approximation. (speed of light to infinity). Can't you see the speed of light in TOV equation? It is only visible for good kids.\nOf course I used geometric unit (c=G=1) to describe equation simple.\nAnd there are two equation pairs. Energy transport \u0026 Energy generation."}}};
+
+
+			// Use local fonts
+			SLConfig.fonts_url = 'lib/fonts/';
+		</script>
+
+		<script src="lib/reveal.js"></script>
+		<script src="lib/reveal-plugins.js"></script>
+		<script src="lib/offline.js"></script>
+
+		<!-- Initialize the presentation -->
+		<script>
+			Reveal.initialize({
+				width: 1280,
+				height: 720,
+				margin: 0.05,
+				
+
+				hash: true,
+				controls: true,
+				progress: true,
+				mouseWheel: false,
+				showNotes: false,
+				slideNumber: true,
+				fragmentInURL: true,
+
+				autoSlide: 0,
+				autoSlideStoppable: true,
+
+				autoAnimateMatcher: SL.deck.AutoAnimate.matcher,
+
+				center: false,
+				shuffle: false,
+				loop: false,
+				rtl: false,
+				navigationMode: "default",
+
+				transition: "slide",
+				backgroundTransition: "slide",
+
+				highlight: {
+					escapeHTML: false
+				},
+
+				plugins: [ RevealZoom, RevealNotes, RevealMarkdown, RevealHighlight ]
+			});
+		</script>
+
+		
+
+	</body>
+</html>

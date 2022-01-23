@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+	<html class="sl-root decks export offline loaded">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Constraining f(R) with Galaxy morphology</title>
+
+		<meta name="description" content="For Frontiers in Physics">
+
+		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
+
+		<!-- Team CSS -->
+		<style id="global-css-output" type="text/css">
+			.reveal {
+  /*.slides h1, .slides h2 { 
+ font-family: "Amatic SC", cursive;
+}
+
+
+.slides h3 {
+  font-family: "WindSong", cursive;
+}
+
+
+.slides h3 {
+  font-family: 'Sacramento', cursive;
+}
+
+
+@font-face {
+	font-family: 'UhBeemysen';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeemysen.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.slides {
+  font-family: "UhBeemysen";
+}
+*/
+}
+
+		</style>
+
+
+		<!-- User CSS -->
+		<style id="user-css-output" type="text/css">
+			.reveal .slides h1 {
+  font-family: "Patua One";
+}
+.reveal .slides h2 {
+  font-family: "Patua One";
+}
+.reveal .slides h3 {
+  font-family: "Patua One";
+}
+.reveal .slides p {
+  font-family: "Signika";
+}
+.reveal .slides ul {
+  font-family: "Signika";
+}
+.reveal .slides ol {
+  font-family: "Signika";
+}
+
+		</style>
+	</head>
+	<body class="reveal-viewport theme-font-montserrat theme-color-white-blue">
+		<div class="reveal">
+			<div class="slides">
+				<section data-id="12dc1544a4a1d4149c3248f7238017fb" data-auto-animate="" data-auto-animate-easing="cubic-bezier(0.230, 1.000, 0.320, 1.000)"><div class="sl-block" data-block-type="text" style="width: 960px; left: 160px; top: 60px; height: auto;" data-block-id="09905b32e53bb402a65cf2bc26d9f412" data-name="text-c03501"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Constraining \(f(R)\) with<br>
+Galaxy morphology</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 340px; top: 402px;" data-block-id="6b3ea6b527c4d6dfd2b9aaabaf1c986c" data-name="text-32546a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 120%;">
+<h3><span style="font-size:0.7em">Tae Geun Kim</span></h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 320px; top: 541px;" data-block-id="ffbe9500456db150e1e3d12796e0bbfc" data-name="text-a145ae"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 90%;">
+<p>Yonsei HEP-COSMO</p>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 340px; top: 613px;" data-block-id="371d960b1762385fcf52d7729af56c80" data-name="text-c835ef"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 90%;">
+<p>2020.12.09</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 160px; top: 310px;" data-name="text-51c4df" data-block-id="eae782cb8d0edc1369e56df4d3183d4f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<h3>Ref: 2009.08743</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 1596px; top: 381px;" data-name="text-8478b3" data-block-id="da01f31b088f408685042c187a6af102"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; font-size: 80%;">
+<p><strong>Collaboration</strong> with</p>
+
+<p>Yeji Park (Yonsei Univ.)</p>
+
+<p>Sang Chul Hyun (Yonsei Univ.)</p>
+</div></div></section><section data-auto-animate-easing="cubic-bezier(0.230, 1.000, 0.320, 1.000)" data-auto-animate="" data-id="f397ee35cfa62c8a31c56d0e85320882"><div class="sl-block" data-block-type="text" style="width: 960px; left: 160px; top: 60px; height: auto;" data-name="text-c03501" data-block-id="037546a09d9b324519d905a24c157440"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Constraining \(f(R)\) with<br>
+Galaxy morphology</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 400px; left: 160px; top: 432px;" data-name="text-32546a" data-block-id="5cfc1e0f672522a0a6f8ae7824d84d92"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 120%;">
+<h3><span style="font-size:0.7em">Tae Geun Kim</span></h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 340px; top: 558.5px;" data-name="text-a145ae" data-block-id="1f4e1d1a34453c82015f5acbcfc5c986"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 90%;">
+<p>Yonsei HEP-COSMO</p>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 340px; top: 613px;" data-name="text-c835ef" data-block-id="17477971c691616aa47c8b683a0da8a5"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 90%;">
+<p>2020.12.09</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 160px; top: 310px;" data-name="text-51c4df" data-block-id="416e7a5a3c567eb51b0ba6328b074a95"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<h3>Ref: 2009.08743</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 600px; top: 409.5px;" data-name="text-8478b3" data-block-id="b6ffa73ed4321aa86ffe1ec0c6c366ea"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; font-size: 80%;">
+<p><strong>Collaboration</strong> with</p>
+
+<p>Yeji Park (Yonsei Univ.)</p>
+
+<p>Sang Chul Hyun (Yonsei Univ.)</p>
+</div></div></section><section data-id="203a7346bbf0b1aa8f98e7b1366ff7e2"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 35.5px; height: auto;" data-block-id="d49ae35d5e070a243609da96a826ab61"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h3><span style="font-size:1.2em">\(f(R)\) Theory</span></h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 340px; top: 177px;" data-name="text-73637e" data-block-id="eab896ecdb4447276f8c4e3b7d117d72"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>In <strong>GR</strong>, The action is</p>
+</div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 309px; top: 270px;" data-name="math-b40dd5" data-block-id="a7d6bfb65f913869903aae599bc1f0cc"><div class="sl-block-content notranslate" style="z-index: 12;"><div class="math-input">S = \int d^4x \; \sqrt{-g} \left[ \frac{R}{16\pi G_N} + L_m \right]</div></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 340px; top: 406.5px;" data-name="text-cbe5c5" data-block-id="a70220a8885ee2a463ccb470c303887e"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" data-fragment-index="0">
+<p>In <strong>\(f(R)\) theory</strong>, The action is</p>
+</div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 309px; top: 493px;" data-name="math-65b48f" data-block-id="75bda9cc92bdfcc45126e00f337c9e08"><div class="sl-block-content notranslate fragment" style="z-index: 14;" data-fragment-index="0"><div class="math-input">S = \int d^4x \; \sqrt{-g} \left[ \frac{R+f(R)}{16\pi G_N} + L_m \right]</div></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 547px; left: 358px; top: 619.5px;" data-name="text-26e94e" data-block-id="e91be8dfb311637ac3ac6df81fedb9c3"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; border-style: solid; border-width: 2px;" data-fragment-index="0">
+<p style="text-align:left"><em> f(R)</em> is an arbitrary function of Ricci scalar</p>
+</div></div>
+</section><section data-auto-animate-easing="cubic-bezier(0.230, 1.000, 0.320, 1.000)" data-auto-animate="" data-id="0ce074429b22fab172760769bf2a4b3a">
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 240px; top: 144px;" data-name="text-73637e" data-block-id="bc9137c24cff616a35f9fd15635380c9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; text-align: center;">
+<p>The field equation of GR in metric formalism</p>
+</div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 514px; top: 288px;" data-name="math-b40dd5" data-block-id="12aef9c5348189b60564ce071fb2b95f"><div class="sl-block-content notranslate" style="z-index: 11;"><div class="math-input">G_{\mu\nu} = \kappa T_{\mu\nu}</div></div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 772px; top: 432px;" data-name="math-65b48f" data-block-id="c8beaac163f009b906b6548fe4627889"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 70%; border-style: solid; border-width: 2px;"><div class="math-input">  T_{\mu\nu} \equiv - \frac{2}{\sqrt{-g}} \frac{\delta S_M}{\delta g^{\mu\nu}}</div></div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 200px; top: 432px;" data-name="math-45f596" data-block-id="2f7f5d49d75380cbf9b59a354ae70d65"><div class="sl-block-content notranslate" style="z-index: 13; font-size: 70%; border-style: solid; border-width: 2px;"><div class="math-input">G_{\mu\nu} = R_{\mu\nu} - \frac{1}{2} R g_{\mu\nu}</div></div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 562.5px; top: 432px;" data-name="math-b2a095" data-block-id="8fa719ac162ec80b9391c2c6d01a4760"><div class="sl-block-content notranslate" style="z-index: 14; font-size: 70%; border-style: solid; border-width: 2px;"><div class="math-input">\kappa = 8\pi G_N</div></div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 35.5px; height: auto;" data-name="text-356ae6" data-block-id="521a3ce21f8aab38985fb371092bd915"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 15;">
+<h3><span style="font-size:1.2em">\(f(R)\) Theory</span></h3>
+</div></div></section><section data-auto-animate-easing="cubic-bezier(0.230, 1.000, 0.320, 1.000)" data-auto-animate="" data-id="958877ad8fb39b2917e891cc2531adff">
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 240px; top: 144px;" data-name="text-73637e" data-block-id="79ae132d2525a009cce91715186f3cc6"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; text-align: center;">
+<p>The field equation of GR in metric formalism</p>
+</div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 57px; top: 287px;" data-name="math-b40dd5" data-block-id="fcdabaface7c82b6839bf8c308ec5058"><div class="sl-block-content notranslate" style="z-index: 11;"><div class="math-input">G_{\mu\nu} - \frac{1}{2}g_{\mu\nu} f(R) + f_R R_{\mu\nu} + g_{\mu\nu} \square f_R - \nabla_\mu \nabla_\nu f_R = \kappa T_{\mu\nu}</div></div></div>
+
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 18px; top: 432px;" data-name="math-45f596" data-block-id="31323bfc97f5a8f22b07b23420924de8"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 70%; border-style: solid; border-width: 2px;"><div class="math-input">G_{\mu\nu} = R_{\mu\nu} - \frac{1}{2} R g_{\mu\nu}</div></div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 400px; top: 432px;" data-name="math-7be1ed" data-block-id="e3deb118d44241f81b4201c5b4541aa0"><div class="sl-block-content notranslate" style="z-index: 13; font-size: 70%; border-style: solid; border-width: 2px;"><div class="math-input">f_R = \frac{\partial f(R)}{\partial R}</div></div></div>
+
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 35.5px; height: auto;" data-name="text-8375d0" data-block-id="c91cc4235e35af75abc546cce6eae147"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 14;">
+<h3><span style="font-size:1.2em">\(f(R)\) Theory</span></h3>
+</div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 960px; top: 432px;" data-block-id="9e5835c95acbb3b8b97d33f203ffd8d6" data-name="math-55149d"><div class="sl-block-content notranslate" style="z-index: 15; font-size: 70%; border-style: solid; border-width: 2px;"><div class="math-input">  T_{\mu\nu} \equiv - \frac{2}{\sqrt{-g}} \frac{\delta S_M}{\delta g^{\mu\nu}}</div></div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 720px; top: 432px;" data-name="math-b2a095" data-block-id="682ac843dd3cccb22ec0670ca33b3d3f"><div class="sl-block-content notranslate" style="z-index: 16; font-size: 70%; border-style: solid; border-width: 2px;"><div class="math-input">\kappa = 8\pi G_N</div></div></div></section><section data-id="cdd406182d2969a89398af61231ff5a7">
+<div class="sl-block" data-block-type="text" style="height: auto; width: 738px; left: 271px; top: 177px;" data-name="text-73637e" data-block-id="0651fdfe1d86a84b0d1cb04295eb0a13"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p style="text-align:left"><strong>Conditions</strong> for the Viability f(R) dark energy models</p>
+</div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 322px; top: 267px;" data-name="math-b40dd5" data-block-id="8fa8f0925d5eff91ed52708aa4be054b"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 80%;"><div class="math-input">\begin{aligned}
+	&amp;(1)\; f_{R} &gt; 0 \quad \text{for }R \geq R_0 \\
+    &amp;(2)\; f_{RR}\left( = \frac{\partial f_R}{\partial R} \right) &gt;0 \quad \text{for }R \geq R_0 \\
+    &amp;(3)\; f(R) \rightarrow -2\Lambda \quad \text{for }R \gg R_0 \\
+    &amp;(4)\; 0&lt;\frac{Rf_{RR}}{f_R}&lt;1 \quad \text{at } -\frac{Rf_R}{f} =-2
+\end{aligned}</div></div></div>
+
+
+
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 35.5px; height: auto;" data-name="text-423913" data-block-id="dc5543973b450cab7b48c99cbfd87949"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12;">
+<h3><span style="font-size:1.2em">\(f(R)\) Theory</span></h3>
+</div></div></section><section data-auto-animate-easing="cubic-bezier(0.230, 1.000, 0.320, 1.000)" data-auto-animate="" data-id="4f42bb74e7d58ed9e6b3824c1dfe1bca">
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 818px; left: 231px; top: 144px;" data-name="text-ccf82b" data-block-id="802c44639408f5381d5ce4f182790f2c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><strong>Hu-Sawicki Model</strong></p>
+</div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 435px; top: 216px;" data-name="math-b40dd5" data-block-id="dad5cb0f8e418343df3d03a3e87a6a46"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 80%;"><div class="math-input">f(R) =\; -m^2 \frac{c_1 (R/m^2)^n}{c_2(R/m^2)^n + 1}</div></div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 934px; top: 226px;" data-name="math-21da7f" data-block-id="9904853121a0d896af9e41951d2adf78"><div class="sl-block-content notranslate" style="z-index: 13; border-style: solid; border-width: 2px; font-size: 70%;"><div class="math-input">n&gt;0</div></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 974px; left: 153px; top: 334.5px;" data-name="text-b35dbf" data-block-id="7964a2e93a3bdf1df92b3488a1880dfd"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p style="text-align:left">In the limit \( R/m^2 \to \infty \) with taking \( m^2 \equiv \frac{\kappa \bar{\rho}_0}{3}\) <span style="color:#696969"><span style="font-size:0.7em">where \( \bar{\rho}_0 \) is the average density today</span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 240px; top: 402.5px;" data-name="math-d7e995" data-block-id="b29da58967d105a7f96bf92bc85babff"><div class="sl-block-content notranslate" style="z-index: 15;"><div class="math-input">\lim\limits_{m^2/R \rightarrow 0} f(R) \approx\; - \frac{c_1}{c_2}m^2 + \frac{c_1}{c_2^2}m^2 \left( \frac{m^2}{R} \right)^n </div></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 36px; height: 61px; left: 631px; top: 504px;" data-name="shape-9db21d" data-block-id="f1dd3641ee13d2fdd1ceee9e3e056efe"><div class="sl-block-content" data-shape-type="symbol-thin-arrow-up" data-shape-fill-color="rgb(168, 39, 107)" data-shape-stretch="false" style="z-index: 10;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="xMidYMid" viewbox="4.00024938583374 2.0002503395080566 23.999500274658203 27.999752044677734"><g class="shape-element" fill="rgb(168, 39, 107)" data-viewbox="4.00024938583374 2.0002503395080566 23.999500274658203 27.999752044677734"><path d="M27.414 12.586l-10-10c-0.781-0.781-2.047-0.781-2.828 0l-10 10c-0.781 0.781-0.781 2.047 0 2.828s2.047 0.781 2.828 0l6.586-6.586v19.172c0 1.105 0.895 2 2 2s2-0.895 2-2v-19.172l6.586 6.586c0.39 0.39 0.902 0.586 1.414 0.586s1.024-0.195 1.414-0.586c0.781-0.781 0.781-2.047 0-2.828z"></path></g></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 572px; top: 504px;" data-name="line-4cab57" data-block-id="b93865e363f31fecd72ce40ed12550d9"><div class="sl-block-content" data-line-x1="0" data-line-y1="0" data-line-x2="148" data-line-y2="0" data-line-color="#a8276b" data-line-start-type="none" data-line-end-type="none" style="z-index: 16;" data-line-style="solid" data-line-width="4px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="148" height="1" viewbox="0 0 148 1"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="0" y1="0" x2="148" y2="0"></line><line class="line-element" stroke="#a8276b" stroke-width="4" x1="0" y1="0" x2="148" y2="0"></line></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 143px; left: 577px; top: 565px;" data-name="text-2f21d6" data-block-id="c8940b8c4fa4ec1478a990097dfab325"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17; border-style: solid; border-width: 1px;">
+<p>constant</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 35.5px; height: auto;" data-name="text-76e59a" data-block-id="fc8d4b834dadeabb21ef63eda37c923b"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 18;">
+<h3><span style="font-size:1.2em">\(f(R)\) Theory</span></h3>
+</div></div></section><section data-auto-animate-easing="cubic-bezier(0.230, 1.000, 0.320, 1.000)" data-auto-animate="" data-id="64b426bbf48e9a3019c45147944552db">
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 818px; left: 231px; top: 144px;" data-name="text-ccf82b" data-block-id="840247cef78be1688944dea870707184"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p><strong>Hu-Sawicki Model</strong></p>
+</div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 440px; top: 189px;" data-name="math-d7e995" data-block-id="ecd5ae5d5cea67006407d22e76191977"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 50%;"><div class="math-input">\lim\limits_{m^2/R \rightarrow 0} f(R) \approx\; - \frac{c_1}{c_2}m^2 + \frac{c_1}{c_2^2}m^2 \left( \frac{m^2}{R} \right)^n </div></div></div>
+<div class="sl-block" data-block-type="image" style="width: 579.042px; height: 440.134px; left: 350.479px; top: 254.2px; min-width: 1px; min-height: 1px;" data-name="image-0cfdba" data-block-id="bbbdb3019b7ade633107f1db79b3e9f3"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="742" data-natural-height="564" data-lazy-loaded="" data-src="galaxy_morphology_fr/22d7ce4319879689b616c84944aaa844.png"></div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 35.5px; height: auto;" data-name="text-76e59a" data-block-id="484df14c7b1d09f0aaa5cbf8333a0686"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 13;">
+<h3><span style="font-size:1.2em">\(f(R)\) Theory</span></h3>
+</div></div></section><section data-id="d478152871d024b47aea29d53c8c98fe"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 108px; height: auto;" data-block-id="c8a65d4c9483f5221a7022b8528ae859"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10; color: rgb(136, 136, 136);">
+<h3><span style="font-size:0.9em">\(f(R)\) Theory</span></h3>
+</div></div>
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 48px; height: auto;" data-name="text-661b17" data-block-id="47178f125c8c99430d29caf0f36cad3f"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h3><span style="font-size:1.2em">Chameleon Mechanism</span></h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 768px; left: 256px; top: 190.5px;" data-name="text-9a5a8d" data-block-id="4bf7b1a1408d1216cba28dd170a3cac7"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>Modified potential generated by a point mass \(M\)</p>
+</div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 325.5px; top: 270px;" data-name="math-7375fa" data-block-id="bd5cb82cf1e4d412bab0f8c3ac406648"><div class="sl-block-content notranslate" style="z-index: 13;"><div class="math-input">\Phi_{\text{tot}} =\; - \frac{G_N M}{r} \left( 1 + \frac{\Delta G}{G_N} e^{-mr}\right)</div></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 901px; left: 189.5px; top: 381px;" data-name="text-2bcfa9" data-block-id="a5c65278de04df9f2b6c019f52210020"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p>self-screened: \(|\Phi| &gt; |\Phi_c|(m \rightarrow \infty) \)</p>
+
+<p>not self-screened:\(|\Phi| &lt; |\Phi_c|(m \rightarrow 0) \)</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 883px; left: 198.5px; top: 504px;" data-name="text-e78c24" data-block-id="c5f8c28c2b766f1ee48b011903818dd1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p>Unscreened objects with seperation \(r&lt; \lambda_c\) interact through standard gravity and <strong>new force \(\Rightarrow\) called as the fifth force</strong></p>
+</div></div></section><section data-id="9059ef6b547c50bc3c8944abd93662cc"><div class="sl-block" data-block-type="text" style="width: 800px; left: 239px; top: 42px; height: auto;" data-block-id="1be7681726e39c0894896feacab454b3"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h3><span style="font-size:1.2em">Fifth force phenomenology</span></h3>
+</div></div>
+
+
+
+<div class="sl-block" data-block-type="text" data-name="text-d13746" data-block-id="0a825bb3a4c5c27acde66e5212d8c0c6" style="height: auto; width: 960px; left: 159px; top: 144px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>Because of screening mechanism,</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-f289e2" data-block-id="21e488d659df5916cf653c87b6847458" style="height: auto; width: 800px; left: 240px; top: 216px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; line-height: 1.56;" data-has-line-height="">
+<ul>
+	<li>Gas &amp; DM have an acceleration (\(\vec{a_5}\))</li>
+	<li>Stars (usually main sequence) have no acceleration</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="line" data-name="line-eba66c" data-block-id="419b4cac9e0f7b7a1d35aa4339d5cf2a" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 639px; top: 360px;"><div class="sl-block-content" data-line-x1="0" data-line-y1="0" data-line-x2="1" data-line-y2="72" data-line-color="#000000" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 13;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="1" height="72" viewbox="0 0 1 72"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="0" y1="0" x2="0.9722249010184846" y2="70.00019287333089"></line><line class="line-element" stroke="#000000" stroke-width="2" x1="0" y1="0" x2="0.9722249010184846" y2="70.00019287333089"></line><path style="fill: rgba(0,0,0,0);" stroke="#000000" stroke-width="2" transform="translate(0.9722249010184846,70.00019287333089) rotate(179.204)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-97b354" data-block-id="8a144ba1cf0c028eba9cc6172d8a0832" style="height: auto; width: 960px; left: 160px; top: 504px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; line-height: 1.56;" data-has-line-height="">
+<ul>
+	<li>Gas - Star offset</li>
+	<li>Dark matter halo - Galaxy disk offset</li>
+</ul>
+</div></div></section><section data-id="850f12b86ea1ed587b93a7aac0fe59be" data-auto-animate="" data-auto-animate-easing="cubic-bezier(0.230, 1.000, 0.320, 1.000)"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 42px; height: auto;" data-block-id="f980369ef8c17956bec935363a38123e" data-name="text-add839"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h3><span style="font-size:1.2em">Galaxy Warp by fifth force</span></h3>
+</div></div>
+
+
+
+
+
+
+<div class="sl-block" data-block-type="image" style="width: 545.393px; height: 532.8px; left: 14.607px; top: 144px; min-width: 1px; min-height: 1px;" data-name="image-d5a28f" data-block-id="9e79ebb82ffe2545b14d75a17d0e69c4"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="563" data-natural-height="550" data-lazy-loaded="" data-src="galaxy_morphology_fr/013662a3c90530ed962ff7304f252ac5.png"></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-417d31" data-block-id="08d7d650e4180d8f9d506858aecaf9c8" style="height: auto; width: 600px; left: 640px; top: 144px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; line-height: 1.69;" data-has-line-height="">
+<ul>
+	<li style="text-align:left">DM halo - Disk offset generates U-shape Galaxy warp.<br>
+	 </li>
+	<li style="text-align:left">Dark matter acceleration is given as:<br>
+	\(\vec{a}_{\text{DM}} = \vec{a} + \dfrac{\Delta G}{G_N} \vec{a_5}\)<br>
+	 </li>
+	<li style="text-align:left">Galaxy acceleration is given as:<br>
+	\(\vec{a_*} = \vec{a} + G_N \dfrac{M(&lt;r_*)}{r_*^2} \hat{r_*}\) </li>
+</ul>
+</div></div></section><section data-auto-animate-easing="cubic-bezier(0.230, 1.000, 0.320, 1.000)" data-auto-animate="" data-id="1e1f5a1a550e13a92563b85207eaea19"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 42px; height: auto;" data-name="text-add839" data-block-id="1ef7cb1aaa4bf44de8843e7e5d3d6c02"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h3><span style="font-size:1.2em">Galaxy Warp by fifth force</span></h3>
+</div></div>
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" data-name="text-417d31" style="height: auto; width: 600px; left: 0px; top: 144px;" data-block-id="ce9cf71912aee8ec888613ac0551e300"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; line-height: 1.69;" data-has-line-height="">
+<ul>
+	<li>DM halo - Disk offset generates U-shape Galaxy warp.<br>
+	 </li>
+	<li>Dark matter acceleration is given as:<br>
+	\(\vec{a}_{\text{DM}} = \vec{a} + \dfrac{\Delta G}{G_N} \vec{a_5}\)<br>
+	 </li>
+	<li>Galaxy acceleration is given as:<br>
+	\(\vec{a_*} = \vec{a} + G_N \dfrac{M(&lt;r_*)}{r_*^2} \hat{r_*}\) </li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 640px; top: 144px;" data-block-id="cc1202dac02c6a24635550d9f9cff547" data-name="text-59e9b2"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; line-height: 1.69;" data-has-line-height="">
+<ul>
+	<li style="text-align:center" class="fragment" data-fragment-index="0">Finally they move together:</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="math" data-name="math-2e9b7b" data-block-id="50c77756c5f1012eaf49279680176914" style="width: auto; height: auto; left: 776px; top: 238px;"><div class="sl-block-content notranslate fragment" style="z-index: 13; font-size: 60%;" data-fragment-index="1"><div class="math-input">\begin{aligned}
+&amp;\vec{a}_\text{DM} = \vec{a}_* \\
+\Rightarrow ~&amp;G_N \frac{M( &lt; r_*)}{r_*} = \frac{\Delta G}{G_N} \vec{a}_5
+\end{aligned}</div></div></div>
+<div class="sl-block" data-block-type="image" style="width: 545.393px; height: 532.8px; left: -737.393px; top: 115.2px; min-width: 1px; min-height: 1px;" data-name="image-d5a28f" data-block-id="f084fd56088a7eaa885f537cd9cd753a"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="563" data-natural-height="550" data-lazy-loaded="" data-src="galaxy_morphology_fr/013662a3c90530ed962ff7304f252ac5.png"></div></div>
+</section><section data-id="edac318ee55d183317c757cc0ac99475" data-auto-animate="" data-auto-animate-easing="cubic-bezier(0.230, 1.000, 0.320, 1.000)"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 42px; height: auto;" data-name="text-add839" data-block-id="15c14a3d481eaad2e70e06f3de8bf7d6"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h3><span style="font-size:1.2em">Galaxy Warp by fifth force</span></h3>
+</div></div>
+
+
+
+
+
+
+<div class="sl-block" data-block-type="image" style="width: 545.393px; height: 532.8px; left: 14.607px; top: 144px; min-width: 1px; min-height: 1px;" data-name="image-d5a28f" data-block-id="be76b353989994f27e3f4c72ee449314"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="563" data-natural-height="550" data-lazy-loaded="" data-src="galaxy_morphology_fr/013662a3c90530ed962ff7304f252ac5.png"></div></div>
+<div class="sl-block sl-block-group" data-block-type="group" data-name="group-e05468" data-block-id="9760475ea6e04236c1649a1a8da16fe1" style="width: auto; height: auto;"><div class="sl-block-content sl-block-group-content" style="transform-origin: 942px 365.5px; z-index: 12;">
+<div class="sl-block" data-block-type="math" data-name="math-4aeca7" data-block-id="d24a075c248179d428ea6c5222c9bcbb" style="width: auto; height: auto; left: 720px; top: 216px;"><div class="sl-block-content notranslate" style="z-index: 13; font-size: 60%;"><div class="math-input">\begin{aligned}
+&amp;a_{5,z} \frac{\Delta G}{G_N} = a_{h,z} = - a_h \frac{z}{r} \\
+\Rightarrow ~ &amp;z(r) = - a_{5,z} \frac{\Delta G}{G_N^2} \frac{r^3}{M( &lt; r)}
+\end{aligned}</div></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-20a4a6" data-block-id="7ecbaa550c6bed407210bf2e844a6d7e" style="height: auto; width: 320px; left: 640px; top: 144px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<ul>
+	<li>Measure warps :</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 604px; left: 640px; top: 432px;" data-block-id="654b54dcecafd0d2adbb89897bf91612" data-name="text-02d2fb"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<ul>
+	<li>Assume small warp (\(r = \sqrt{x^2 + z^2} \simeq x\))</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 757px; top: 504px;" data-block-id="720deb8ec824b47dcfaa5b4687f60673" data-name="math-3d1478"><div class="sl-block-content notranslate" style="z-index: 16; font-size: 60%;"><div class="math-input">\begin{aligned}
+z(x) = - a_{5,z} \frac{\Delta G}{G_N^2} \frac{|x|^3}{M_{\text{halo}}( &lt; x)}
+\end{aligned}</div></div></div>
+</div></div></section><section data-auto-animate-easing="cubic-bezier(0.230, 1.000, 0.320, 1.000)" data-auto-animate="" data-id="fa51af14abb9df57c81dd06d335f08cf"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 42px; height: auto;" data-name="text-add839" data-block-id="3a4f087f8531bae0e597292b828d8a62"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h3><span style="font-size:1.2em">Galaxy Warp by fifth force</span></h3>
+</div></div>
+
+
+
+
+
+
+<div class="sl-block sl-block-group" data-block-type="group" data-name="group-e05468" style="width: auto; height: auto;" data-block-id="700b3e8e1339ff1b4a8fde70ec04d560"><div class="sl-block-content sl-block-group-content" style="transform-origin: 302px 365.5px; z-index: 11;">
+<div class="sl-block" data-block-type="math" data-name="math-4aeca7" style="width: auto; height: auto; left: 80px; top: 216px;" data-block-id="56f8f28e454eabce287360810a176af5"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 60%;"><div class="math-input">\begin{aligned}
+&amp;a_{5,z} \frac{\Delta G}{G_N} = a_{h,z} = - a_h \frac{z}{r} \\
+\Rightarrow ~ &amp;z(r) = - a_{5,z} \frac{\Delta G}{G_N^2} \frac{r^3}{M( &lt; r)}
+\end{aligned}</div></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-20a4a6" style="height: auto; width: 320px; left: 0px; top: 144px;" data-block-id="995d26f7f5924f01fe9ddf3a9b56eca4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<ul>
+	<li>Measure warps :</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 604px; left: 0px; top: 432px;" data-name="text-02d2fb" data-block-id="868c54a63d1524fb90510623c807bcc2"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<ul>
+	<li>Assume small warp (\(r = \sqrt{x^2 + z^2} \simeq x\))</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 117px; top: 504px;" data-name="math-3d1478" data-block-id="e0450df8f3cae434f50a2a15a8844dde"><div class="sl-block-content notranslate" style="z-index: 15; font-size: 60%;"><div class="math-input">\begin{aligned}
+z(x) = - a_{5,z} \frac{\Delta G}{G_N^2} \frac{|x|^3}{M_{\text{halo}}( &lt; x)}
+\end{aligned}</div></div></div>
+</div></div>
+<div class="sl-block sl-block-group" data-block-type="group" style="width: auto; height: auto;" data-block-id="a80fabfb91971d56eb13c184657c774b" data-name="group-6800a4"><div class="sl-block-content sl-block-group-content" style="transform-origin: 913.5px 244.5px 0px; z-index: 16;">
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 640px; top: 258px;" data-origin-id="56f8f28e454eabce287360810a176af5" data-block-id="a0810b4a436bd419856d81b3c6a0da81" data-name="math-c3fd29"><div class="sl-block-content notranslate fragment" style="z-index: 17; font-size: 60%;" data-fragment-index="0"><div class="math-input">\begin{aligned}
+w_1 = \frac{1}{L_x^3} \int_{-L_x}^{L_x} |x| z'(x) dx \quad (z'(x) = z(x) - \left&lt; z \right&gt; )
+\end{aligned}</div></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 614px; left: 586px; top: 144px;" data-origin-id="995d26f7f5924f01fe9ddf3a9b56eca4" data-block-id="387529d65579dd455ed5bc82c6220710" data-name="text-5c2c52"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 18;">
+<ul>
+	<li class="fragment" data-fragment-index="0">Calculate dimension-less weighted mean :<br>
+	For \(-L_x &lt; x &lt; L_x,\,-L_x b/a &lt; z &lt; L_x b/a\),</li>
+</ul>
+</div></div>
+
+
+</div></div></section><section data-id="a36962d01f652bff80d43d7db46a1462"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 42px; height: auto;" data-name="text-add839" data-block-id="91929599733f09fb8f2b4a2a1befdc6a"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h3><span style="font-size:1.2em">Galaxy Warp (Intensity)</span></h3>
+</div></div>
+
+
+
+
+
+
+<div class="sl-block sl-block-group" data-block-type="group" data-name="group-e05468" style="width: auto; height: auto;" data-block-id="86b28290045457e72430267a3e7381db"><div class="sl-block-content sl-block-group-content" style="transform-origin: 300.5px 341px 0px; z-index: 11;">
+<div class="sl-block" data-block-type="math" data-name="math-4aeca7" style="width: auto; height: auto; left: 160px; top: 216px;" data-block-id="fdf798fafd4091dbe35645e05de203d3"><div class="sl-block-content notranslate" style="z-index: 16; font-size: 60%;"><div class="math-input">\begin{aligned}
+\bar{z}(x) = \frac{\sum_{z=-L_z}^{z=L_z} zI(x,z)}{\sum_{z=-L_Z}^{z=L_z} I(x,z)}
+\end{aligned}</div></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-20a4a6" style="height: auto; width: 441px; left: 80px; top: 144px;" data-block-id="79e45b7b1a72b28726ad683315d4c2c9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17;">
+<ul>
+	<li>Intensity weighted mean:</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 320px; left: 80px; top: 365.5px;" data-name="text-02d2fb" data-block-id="594096596b0742542f7bd8546fc8e3f2"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 18;">
+<ul>
+	<li>Total mean of \(z\)</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 160px; top: 432px;" data-name="math-3d1478" data-block-id="e2a376ae46b24980ee09c10733c61500"><div class="sl-block-content notranslate" style="z-index: 19; font-size: 60%;"><div class="math-input">\begin{aligned}
+\left&lt; z \right&gt; = \frac{1}{2L_x} \sum_{x=-L_x}^{x=L_x} \bar{z}(x)
+\end{aligned}</div></div></div>
+</div></div>
+<div class="sl-block sl-block-group" data-block-type="group" style="width: auto; height: auto;" data-name="group-6800a4" data-block-id="1288d84b813f7b6fa98a872b17b792a2"><div class="sl-block-content sl-block-group-content" style="transform-origin: 884.5px 268.25px; z-index: 20;">
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 597px; left: 586px; top: 144px;" data-name="text-5c2c52" data-block-id="387ddc6224229236b48756272fda4370"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 26;">
+<ul>
+	<li class="">Calculate dimension-less weighted mean :</li>
+</ul>
+</div></div>
+
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 720px; top: 241.5px;" data-name="math-2a6436" data-block-id="cf15a7bbb676c946811d1f12ce1dded3"><div class="sl-block-content notranslate" style="z-index: 28; font-size: 60%;"><div class="math-input">\begin{aligned}
+&amp;\bar{z}'(x) = \bar{z}(x) - \left&lt; z \right&gt; \\
+&amp;w_1 = \frac{1}{L_x^3} \sum_{x = -L_x}^{x=L_x} |x| \bar{z}'(x)
+\end{aligned}</div></div></div>
+</div></div></section><section data-id="f9c7af497fff256240f4bafef9bf4815"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 42px; height: auto;" data-name="text-c35a5a" data-block-id="a6e975efffbb75bb0bf0f464faf01b97"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h3><span style="font-size:1.2em">Data for Galaxy warp</span></h3>
+</div></div>
+
+<div class="sl-block" data-block-type="image" style="width: 672px; height: 504px; left: 0px; top: 144px; min-width: 1px; min-height: 1px;" data-name="image-6a7ea2" data-block-id="e664e974e57a68838de3e790b0e52620"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1024" data-natural-height="768" data-lazy-loaded="" data-src="galaxy_morphology_fr/a2e2ec3cb6e0a451a3b4c9ffc82d48c7.jpg"></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-599e7b" data-block-id="36a5419900fa098c9afe186dc21a3d42" style="height: auto; width: 560px; left: 720px; top: 144px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; line-height: 1.56;" data-has-line-height="">
+<ul>
+	<li>SDSS (Sloan Digital Sky Survey)
+	<ul>
+		<li>Cover 35% of sky</li>
+		<li>1 billion photometric object<br>
+		(200 million galaxies)</li>
+		<li>4 million spectra<br>
+		 </li>
+	</ul>
+	</li>
+	<li>NSA (NASA Sloan Atlas)
+	<ul>
+		<li>Catalog for SDSS</li>
+		<li>Contain 641,409 galaxies</li>
+		<li>~2.5 GB fits file</li>
+	</ul>
+	</li>
+</ul>
+</div></div></section><section data-id="9b31f04706c8a03f69ed95970aec9b6e"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 42px; height: auto;" data-name="text-c35a5a" data-block-id="56cf279c67dfe72986711c27bd255ad9"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h3><span style="font-size:1.2em">Pre-processing with NSA</span></h3>
+</div></div>
+
+
+<div class="sl-block" data-block-type="text" data-name="text-c637fe" data-block-id="8c9da1c5fc298b87932ea0883cb66f81" style="height: auto; width: 1120px; left: 80px; top: 144px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; line-height: 1.82;" data-has-line-height="">
+<p>Constraint for data</p>
+
+<ul>
+	<li>Filtering by major-minor ratio : \(b/a = 0.15\)</li>
+	<li>Filtering by magnitude : \(M_r \leq -17.7\)</li>
+	<li>Filtering by distance : \(D \leq 250\text{Mpc}\)</li>
+</ul>
+</div></div></section><section data-id="922483c473165540e21a0c6ab5c8d33b" data-auto-animate="" data-auto-animate-easing="cubic-bezier(0.230, 1.000, 0.320, 1.000)"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 42px; height: auto;" data-name="text-c35a5a" data-block-id="942535d6e1d32eb2682c72c20a4ad1cc"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h3><span style="font-size:1.2em">Processing procedure</span></h3>
+</div></div>
+
+
+<div class="sl-block" data-block-type="image" style="width: 400px; height: 539.957px; left: 80px; top: 162.022px; min-width: 1px; min-height: 1px;" data-name="image-767d21" data-block-id="ca6e1997c06f625da4669807c666bbf4"><div class="sl-block-content fragment" style="z-index: 11;" data-fragment-index="0"><img style="" data-natural-width="463" data-natural-height="625" data-lazy-loaded="" data-src="galaxy_morphology_fr/e72502438581923e081f4bff4e73cdf6.png"></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-a8ac55" data-block-id="64b15b70b1665dd1cd8637a8a08c556f" style="height: auto; width: 560px; left: 0px; top: 113.022px;"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" data-fragment-index="0">
+<p>SDSS \(r\)-band original image</p>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 560px; left: 640px; top: 113.022px;" data-block-id="55148b1692d4813089159a17f2243368" data-name="text-3c4f26"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" data-fragment-index="1">
+<p>Sersic-profile fitting</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 420.273px; height: 532.8px; left: 699.727px; top: 162.022px; min-width: 1px; min-height: 1px;" data-name="image-6c1c71" data-block-id="a7046ef3603723617029d51382238351"><div class="sl-block-content fragment" style="z-index: 14;" data-fragment-index="1"><img data-natural-width="493" data-natural-height="625" style="" data-lazy-loaded="" data-src="galaxy_morphology_fr/70870385dc849c1620c38a73bd6f4f51.png"></div></div></section><section data-auto-animate-easing="cubic-bezier(0.230, 1.000, 0.320, 1.000)" data-auto-animate="" data-id="4d4bae4b94d7519c1d79faf7fa4c0b7b"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 42px; height: auto;" data-name="text-c35a5a" data-block-id="8fed9f3b3c296e5b96b24523551b4507"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h3><span style="font-size:1.2em">Processing procedure</span></h3>
+</div></div>
+
+
+<div class="sl-block" data-block-type="image" style="width: 400px; height: 539.957px; left: 80px; top: 162.022px; min-width: 1px; min-height: 1px;" data-name="image-767d21" data-block-id="e47ba1e62c06f0b8f88bd815e1011968"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="463" data-natural-height="625" data-lazy-loaded="" data-src="galaxy_morphology_fr/e72502438581923e081f4bff4e73cdf6.png"></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-a8ac55" style="height: auto; width: 560px; left: 0px; top: 113.022px;" data-block-id="3f5acc9465477e020456ee19c6a9fcb3"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>SDSS \(r\)-band original image</p>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 560px; left: 640px; top: 113.022px;" data-name="text-3c4f26" data-block-id="e488f9bdfb3c853eeb65913f788d893e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>SDSS \(r\)-band rotated image</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 699.81px; height: 433.653px; left: 570.095px; top: 206.022px; min-width: 1px; min-height: 1px;" data-name="image-85934f" data-block-id="1f1235335ba711cd314899732d00adbc"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="915" data-natural-height="567" data-lazy-loaded="" data-src="galaxy_morphology_fr/f37d773319575d9998856d59a00f60bd.png"></div></div></section><section data-auto-animate-easing="cubic-bezier(0.230, 1.000, 0.320, 1.000)" data-auto-animate="" data-id="908db5c7b1e641176ba823e4cb12765f"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 42px; height: auto;" data-name="text-c35a5a" data-block-id="798c44f805753d51d1aa231122ed0a14"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h3><span style="font-size:1.2em">Processing procedure</span></h3>
+</div></div>
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 560px; left: 69.905px; top: 119.5px;" data-name="text-3c4f26" data-block-id="f5c9f4936aa696d3d429a49186d7b147"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>SDSS \(r\)-band rotated image</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 640px; height: 396.591px; left: 0px; top: 216px; min-width: 1px; min-height: 1px;" data-name="image-85934f" data-block-id="c0b2655e622303bff422b3320eed69e8"><div class="sl-block-content" style="z-index: 12;"><img style="left: 0px; top: 0px; width: 640px; height: 397px;" data-natural-width="915" data-natural-height="567" data-lazy-loaded="" data-crop-x="0" data-crop-y="0" data-crop-width="0.999999" data-crop-height="1" data-src="galaxy_morphology_fr/369fcdb9fc4bf16bafabc77d74dd6ad6.png"></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-7a824a" data-block-id="8c3e9c97e8f8e99fcc01d63a4b39155c" style="height: auto; width: 600px; left: 680px; top: 124.5px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>SDSS \(r\)-band cropped image</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 640px; height: 400.53px; left: 640px; top: 216px; min-width: 1px; min-height: 1px;" data-name="image-b0504a" data-block-id="9f08b6007aeba13181fab81b991eeed5"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="906" data-natural-height="567" data-lazy-loaded="" data-src="galaxy_morphology_fr/d5cfdbc2aa132429a0000d6a203568ef.png"></div></div></section><section data-id="107af43561be882ceb0bba44c54b2d11"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 42px; height: auto;" data-name="text-c35a5a" data-block-id="6bdc62485d349c6386f3fb616c7618d5"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h3><span style="font-size:1.2em">Processing procedure</span></h3>
+</div></div>
+
+
+<div class="sl-block" data-block-type="image" style="width: 880px; height: 556.117px; left: 200px; top: 163.883px; min-width: 1px; min-height: 1px;" data-name="image-0a817b" data-block-id="405dd757a3971c5dc23c405c0791d4cf"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="989" data-natural-height="625" style="" data-lazy-loaded="" data-src="galaxy_morphology_fr/e56a23222881815994d222cdff7ec223.png"></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-eb4f5c" data-block-id="19624717f613e6dc9de9c0f5dd787ffc" style="height: auto; width: 600px; left: 340px; top: 114.883px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>Calculate \(z'\) &amp; \(w_1\)</p>
+</div></div></section><section data-id="ad11c6ec52887676f3c2a7a38800415c"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 42px; height: auto;" data-name="text-c35a5a" data-block-id="532beb8e89de5e4e692827d1b7c3f631"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h3><span style="font-size:1.2em">Observed Result</span></h3>
+</div></div>
+
+
+<div class="sl-block" data-block-type="text" data-name="text-eb4f5c" style="height: auto; width: 600px; left: 340px; top: 119.5px;" data-block-id="57290703bbb03022331ddc34d9168b71"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>Observed \(w_1\)</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 740.89px; height: 546px; left: 248px; top: 174px; min-width: 1px; min-height: 1px;" data-name="image-5e9573" data-block-id="8817a980fe5f16da2faf0f89bd10a9b3"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="958" data-natural-height="706" style="" data-lazy-loaded="" data-src="galaxy_morphology_fr/9609c585731193150ac6babed79ca2c3.png"></div></div></section><section data-id="1c72d5bee228bfe49a3917966d66910c"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 42px; height: auto;" data-name="text-c35a5a" data-block-id="c7237be29414488375794e233ad37776"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h3><span style="font-size:1.2em">Modelling</span></h3>
+</div></div>
+
+
+<div class="sl-block" data-block-type="text" data-name="text-eb4f5c" style="height: auto; width: 1120px; left: 80px; top: 144px;" data-block-id="3990ce573fe244530b6b73919b0a78a4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>We should make a statistical model to constrain parameter \(\dfrac{\Delta G}{G_N},~\lambda_C\) from observations .</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-03d3af" data-block-id="45a96914d0b2d0de34b9f5e74ceb50eb" style="height: auto; width: 1120px; left: 80px; top: 252px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>First, \(\vec{a}_5\) is modelled as Yukawa force from sources within \(4\lambda_C\) :<br>
+<br>
+\(\displaystyle \vec{a}_{5,i}(\Delta G/G_N, \lambda_C) = \sum_{r_{ij} &lt; 4\lambda_C} - \frac{\Delta GM_j}{r_{ij}^2} e^{-r_{ij}/4\lambda_C} \left( 1 + \frac{r_{ij}}{\lambda_C}\right) \hat{r}_{ij}\)</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-9fa947" data-block-id="684d3b74c1af739631e688c5c6cd0d60" style="height: auto; width: 1120px; left: 80px; top: 468px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>Second, to solve this, assigning halos to the galaxies with AM (Abundance Matching)<br>
+and assume NFW halo profiles and power law to create a first component of \(\vec{a}_5\).<br>
+<br>
+\(\rho(r) \simeq \rho_{rs} (r/r_s)^{-n}\)</p>
+</div></div></section><section data-id="d73962342e0a6bf4b80b828837e07d1a"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 42px; height: auto;" data-name="text-c35a5a" data-block-id="a67bc4fcb19b471252c6c35fc42ad399"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h3><span style="font-size:1.2em">Modelling</span></h3>
+</div></div>
+
+
+
+<div class="sl-block" data-block-type="text" data-name="text-8a1456" data-block-id="4b24d7fd87fd2182e079337ac4c1b56b" style="height: auto; width: 1120px; left: 80px; top: 144px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>Using this profile, we can obtain \(w_1\):<br>
+<br>
+\(\displaystyle w_1 = -\frac{n(3-n)}{(n+1)(n+2)} a_{5,z} \frac{\Delta G}{G_N^2} \frac{1}{4\pi \rho_{rs}} \frac{(L_x / r_s)^n}{L_x}\)</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-1dc810" data-block-id="da9d633047a69fef34f8738b67efffb3" style="height: auto; width: 1120px; left: 80px; top: 342px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; line-height: 1.82;" data-has-line-height="">
+<ul>
+	<li>With DarkSky-400 simulation, find halo catalog for each NSA catalog.
+	<ul>
+		<li>Restoring lower mass substructure by MC and DarkSky-400.</li>
+		<li>Generate 200-mock catalogue.</li>
+		<li>Each MC realisations of our model produces a possible \(w_1\) for given \(\{\Delta G, \lambda_C\}\) so that the full set of realisations specifies the likelihood.</li>
+	</ul>
+	</li>
+</ul>
+</div></div></section><section data-id="e92f9af6f0f38fc8a6d1c1c97ab60ff9"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 42px; height: auto;" data-name="text-c35a5a" data-block-id="61f0d360958910152fbe4be2628c435c"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h3><span style="font-size:1.2em">Modelling</span></h3>
+</div></div>
+
+
+
+<div class="sl-block" data-block-type="text" data-name="text-8a1456" style="height: auto; width: 1120px; left: 80px; top: 432px;" data-block-id="57775238891a05b325f54bfb5a24337a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; line-height: 1.56;" data-has-line-height="">
+<p>Rewrite \(\mathcal{L}_{5,i}\) with Gaussian distribution (of width \(\sigma_i\) for galaxy \(i\))<br>
+<br>
+\(\displaystyle \mathcal{L}_{5,i} (w_1 | \Delta G, \lambda_C) = (1-f) \frac{\exp \left\{-w_1^2 / 2\sigma_i^2 \right\} }{\sqrt{2\pi} \sigma_i} + f \sum_{j=0}{N_\text{bins}} P_j \frac{\exp \left\{-(w_1 - \Delta G w_j)^2 / 2\sigma_i^2 \right\}}{\sqrt{2\pi} \sigma_i}\)</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-29cf53" data-block-id="ad7995a69a3049d2fcc61e63027f79f9" style="height: auto; width: 960px; left: 160px; top: 119.5px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; line-height: 1.82;" data-has-line-height="">
+<p><span style="color:rgb(0, 0, 0); text-align:left">Now, set likelihood as follows:</span><br>
+<span style="color:rgb(0, 0, 0); text-align:left">\(\mathcal{L}_{5,i} (w_1 | \Delta G,\lambda_C) = (1-f)\delta(w_1) + f \sum P_j \delta(w_1 - \Delta G w_j)\)</span></p>
+
+<ul style="color:rgb(0, 0, 0)">
+	<li>\(i\) for each galaxies, \(P_j = N_j / N_{MC}\) (fraction of bin \(j\))</li>
+	<li>\(w_j = w_1 + (j+1/2)\Delta w\) : Position of \(j\)-th bin center.</li>
+</ul>
+</div></div></section><section data-id="c798774ba0d01b529b47e2dd1e6eefc3"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 42px; height: auto;" data-name="text-c35a5a" data-block-id="a1c6d8e6eb63977ff33392a49d050066"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h3><span style="font-size:1.2em">Modelling</span></h3>
+</div></div>
+
+
+
+
+<div class="sl-block" data-block-type="text" data-name="text-29cf53" style="height: auto; width: 960px; left: 160px; top: 144px;" data-block-id="3c9dfbc38996084a5cc8a73bd8e13cdb"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; line-height: 1.56;" data-has-line-height="">
+<p>Perform three separate principal analyses.<br>
+ </p>
+
+<ol>
+	<li>1D inference for \(\Delta G/G_N\), separately for 20 logarithmically-uniformly spaced \(\lambda_C\)
+	<ol>
+		<li>Consider a screened fifth-force model as described earlier.</li>
+		<li>Switch screening off (\(f=1\))</li>
+	</ol>
+	</li>
+	<li>Full 2D inference of both \(\Delta G/G_N\) and \(\lambda_C\)</li>
+</ol>
+</div></div></section><section data-id="8818ffe8c8cefa9f765017e10e1f87cd"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 42px; height: auto;" data-name="text-c35a5a" data-block-id="53b4dcfec12ee81320b11ac1c72a7e24"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h3><span style="font-size:1.2em">Modelling</span></h3>
+</div></div>
+
+
+
+
+<div class="sl-block" data-block-type="image" style="width: 1208.51px; height: 344.479px; left: 35.745px; top: 259.76px; min-width: 1px; min-height: 1px;" data-name="image-fdc250" data-block-id="b0d12834c8113de1e3a38ebb8f21a4f4"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1491" data-natural-height="425" data-lazy-loaded="" data-src="galaxy_morphology_fr/57af79c37f30e9791bd7c0cee175d47a.png"></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-265aa5" data-block-id="847263a2a3163f5767083e9ebee8327f" style="height: auto; width: 800px; left: 240px; top: 177px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>1D Inference for \(\Delta G/G_N\)</p>
+</div></div></section><section data-id="83e2d3b274e4f4c18cf5d3ad40af1e39"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 42px; height: auto;" data-name="text-c35a5a" data-block-id="f54fda0849bfef1393d7d13ec2d5e154"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h3><span style="font-size:1.2em">Modelling</span></h3>
+</div></div>
+
+
+
+
+<div class="sl-block" data-block-type="text" data-name="text-265aa5" style="height: auto; width: 800px; left: 240px; top: 177px;" data-block-id="6f86d925774c1974e97ee392c0bf4721"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>MLE for each \(\lambda_C\)</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 1120px; height: 452.364px; left: 80px; top: 249.865px; min-width: 1px; min-height: 1px;" data-name="image-73dabc" data-block-id="a98d01aa8929f81168d59bf1dc4fd3b0"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1540" data-natural-height="622" data-lazy-loaded="" data-src="galaxy_morphology_fr/0a43c1e5200f291d48038f5ab924a74b.png"></div></div></section><section data-id="6e04d9073885935365526ea5bf743946"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 42px; height: auto;" data-name="text-c35a5a" data-block-id="5fed3c0e311437132b4015f5e2606128"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h3><span style="font-size:1.2em">Modelling</span></h3>
+</div></div>
+
+
+
+
+<div class="sl-block" data-block-type="image" style="width: 1208.51px; height: 344.479px; left: 35.745px; top: 259.76px; min-width: 1px; min-height: 1px;" data-name="image-fdc250" data-block-id="73c5d2964aad2a085d10c5119a0de99e"><div class="sl-block-content" style="z-index: 11;"><img style="left: -3px; top: 0px; width: 1215px; height: 344px;" data-natural-width="1573" data-natural-height="446" data-lazy-loaded="" data-crop-x="0.002648" data-crop-y="0" data-crop-width="0.994703" data-crop-height="1" data-src="galaxy_morphology_fr/3f9dcf014668f57257a8bd576520e197.png"></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-265aa5" style="height: auto; width: 800px; left: 240px; top: 177px;" data-block-id="b795d77ce350aa0758afa310e3a71bea"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>2D Inference for \(\Delta G/G_N,~\lambda_C\)</p>
+</div></div></section><section data-id="5494f186b9de99e840db76661ddf4b22"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 42px; height: auto;" data-name="text-c35a5a" data-block-id="9170655dc342be2fade389d4efdfee64"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h3><span style="font-size:46.8px">Discussion</span></h3>
+</div></div>
+
+
+
+
+<div class="sl-block" data-block-type="text" data-name="text-265aa5" style="height: auto; width: 1120px; left: 80px; top: 144px;" data-block-id="91c90841ca040844165cb7c7870f9883"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; line-height: 1.56;" data-has-line-height="">
+<ul>
+	<li>Need resampling
+	<ul>
+		<li>Bootstrapping : Not enough data sets, determine confidence interval </li>
+		<li>Jackknife-Resampling : Reduce outliers</li>
+	</ul>
+	</li>
+	<li>Consider gas-star offset together
+	<ul>
+		<li>Write universal likelihood to describe both</li>
+	</ul>
+	</li>
+	<li>Replace histogram density estimation
+	<ul>
+		<li>Discontinuity on edges, low resolution.</li>
+		<li>KDE with GMM</li>
+	</ul>
+	</li>
+</ul>
+</div></div></section>
+			</div>
+		</div>
+
+		<script>
+			var SLConfig = {"deck": {"id":1945610,"slug":"galaxy_morphology_fr","title":"Constraining f(R) with Galaxy morphology","description":"For Frontiers in Physics","width":1280,"height":720,"margin":0.05,"visibility":"all","published_at":"2020-12-09T07:12:25.291Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/dec43ccd968c4791eb570dff351cd2bf/thumb.jpg?1607443959","view_count":3,"user":{"id":1198239,"username":"axect","name":"","description":"","thumbnail_url":"https://www.gravatar.com/avatar/cda8e3c26bf8569f56759c20f93835ac?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","account_type":"enterprise","team_id":1998,"settings":{"id":4349006,"present_controls":true,"present_upsizing":true,"present_pointer":true,"present_notes":true,"default_deck_tag_id":null},"membership":{"role":"member","manager":false,"activated":true}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"montserrat","theme_color":"white-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":false,"rolling_links":false,"center":false,"shuffle":false,"should_loop":false,"share_notes":false,"slide_number":true,"slide_count":30,"rtl":false,"version":2,"collaborative":false,"deck_user_editor_limit":null,"data_updated_at":1633900579521,"font_typekit":"","font_google":"Signika, Anonymous Pro, Fira Mono, Oxygen, B612 Mono, Stardos Stencil, Patua One","time_limit":null,"navigation_mode":"default","upsizing_enabled":true,"notes":{"e6cb865c4a4c3f57886f9c87b106dafa":"Conservation is trivial.","fac5d55f86fb62636dbb9775c9fa12c2":"Next one is hydrostatic equilibrium. It seems little bit complex, but it's simple. It means the equilibrium of radiation pressure \u0026 gravitational force. So, firstly we obtain equation of motion \u0026 let's put zero acceleration. Then we can get hydrostatic equilibrium equation.","58db24c0737202d83f020040dd2ca898":"To work in General relativistic frame, first we should define what metric we use. Neutron star seems static, spherical symmetric star with rapid-rotation. But, this time, we consider non-rotating neutron star for convenience. (Also, Cas A is slowly-rotating Neutron star)\nThus, choosing this metric is reasonable. (Phi, Lambda) are just for radial contributions.\nAfter metric determination, there is systematic computation processes. We can calculate connection coefficient (a.k.a Christoffel symbol), Riemann curvature tensor, Ricci tensor and Einstein tensor.\nOf course, you can obtain these with your hand, but it's more comfortable with computation tools. I use Sagemanifold package to obtain this.\n\nFrom energy-momentum conservation, we can get this equation \u0026 from components of einstein equation. we get these equations.","9059ef6b547c50bc3c8944abd93662cc":"앞에서 설명했던 Screening 효과를 고려하면 질량이 무거운 천체들은 Self-screening에 의해 5번째 힘의 영향을 받지 않게 됩니다. 이를 밀도가 크지 않은 은하에 적용해보면 Gas나 Dark matter halo는 5번째 힘의 영향을 받아 가속도를 가지게 되고 반대로 별들은 Self-screening 하기에 충분한 질량을 가지므로 영향을 받지 않게 됩니다. 따라서 Gas와 별의 Offset이 발생하고 마찬가지로 Dark matter halo의 중심과 Galaxy disk의 중심의 offset이 발생합니다. 이번 발표에서는 후자의 경우를 메인으로 다루고자 합니다.","9d3858dea7f9de67cb0d876b0123d44c":"Now, let's compare both schemes - newtonian versus general realtivity.\nAnd we can validate both are same by non-relativistic approximation. (speed of light to infinity). Can't you see the speed of light in TOV equation? It is only visible for good kids.\nOf course I used geometric unit (c=G=1) to describe equation simple.\nAnd there are two equation pairs. Energy transport \u0026 Energy generation.","850f12b86ea1ed587b93a7aac0fe59be":"Dark matter halo의 center와 galaxy disk의 center가 벌어지게 되면서 U자 모양의 은하 휘어짐이 일어날 수 있게 됩니다.\n이때, Dark matter의 Total acceleration을 보게 되면 다섯번째 힘에 의해 다음과 같이 되고, 은하의 경우는, 두 center의 평형에서의 차이를 r_*로 놓으면 그 차이로 인한 중력을 추가적으로 받게 됩니다.","1e1f5a1a550e13a92563b85207eaea19":"(키보드) 결국 Stellar disk와 Dark matter halo의 Total acceleration은 같아야 하므로\n(키보드) 식을 연립하면 다음과 같은 결과를 얻을 수 있습니다.","edac318ee55d183317c757cc0ac99475":"이제 Galaxy warp를 측정하기 위하여 z축 가속도만 고려해보면 다음과 같은 식으로 서술할 수 있고, 이것으로 z축 변위를 구할 수 있습니다.\n또한 Galaxy warp가 Stellar disk의 사이즈에 비해 굉장히 작을 것임을 감안하면 z 변위를 중심으로부터의 수평 거리의 함수로 표현할 수 있습니다.","fa51af14abb9df57c81dd06d335f08cf":"이제 한 은하의 전체적인 U-shape Galaxy warp를 측정하는 지표를 나타내어야 합니다.\n(키보드) 가장 쉽게 나타낼 수 있는 지표로 x를 변화시키면서 그에 따른 z 변위의 평균이 있습니다. 이때, L_x는 은하의 광도를 나타낼 수 있는 이를 w_1이라 하겠습니다.","f9c7af497fff256240f4bafef9bf4815":"Galaxy warp를 측정하기위해서 충분한 은하 데이터가 필요한데, 이를 위해 가장 방대한 은하 데이터인 SDSS 데이터를 사용할 것입니다.\nSDSS는 여러 천체 관측 프로젝트를 포함하는 대형 Survey인데, 그 중에서도 특히 광학데이터인 ","9b31f04706c8a03f69ed95970aec9b6e":"Galaxy warp를 측정하기 위한 질 좋은 데이터의 조건은 다음과 같습니다.\n먼저 Galaxy warp를 측정할 수 있을만큼 납작해야합니다. NSA에 기재된 은하 중 가장 납작한 은하들의 major-minor ratio는 0.15 이므로 이에 해당하는 은하만 사용합니다.\n다음으로 광도가 밝고, 거리가 가까우면 비교적 정확하게 측정할 수 있으므로 이 조건에 해당하는 은하들만 사용하기로 합니다.\n따라서 이렇게 정리한 목록으로 SDSS에서 Data를 다운받아 사용할 것입니다.","922483c473165540e21a0c6ab5c8d33b":"간단히 SDSS data processing을 소개하도록 하겠습니다.\n(키보드) 먼저 기본 아틀라스 이미지는 다음과 같습니다. 이 이미지에는 Noise도 많고 광도 변화가 불규칙하여 은하의 물성을 알기가 어렵습니다. 따라서 SDSS는 원본 이미지 뿐만 아니라 (키보드) 이것의 광도를 은하 중심으로부터의 거리에 대한 함수로 Fitting한 Sersic profile 이미지를 동시에 제공합니다.\n이 데이터로부터 저희는 은하의 유효 반지름이나 중심의 위치, 수평축에 대해 기울어진 각도 등을 얻을 수 있고 이를 이용하여 앞서 언급한 카탈로그를 작성할 수 있습니다. \n\n하지만 이 원본 데이터는 은하의 기울기가 제각각이므로 데이터를 통합하여 처리하기 위해서는 모두 유사한 형태로 변환해야 합니다. (키보드) ","7ed9674b02b572bfeffffca02060b9f7":"다음으로 회전된 이미지에서 중심과 유효반경을 설정할 수 있습니다. 파란색 점은 중심을 나타내고 초록색 점은 x와 z의 유효반경을 나타냅니다.\n(키보드) 이 반경을 기준으로 그림을 잘라내면 이렇게 됩니다. 이제 앞에서 구했던 z와 w_1 공식으로 이를 계산하여 값을 구하면 됩니다.","a36962d01f652bff80d43d7db46a1462":"앞에서 5번째 힘을 이용해 휘어짐을 이론적으로 예측했던것을 관측결과를 이용하여 나타낼 수 있습니다. 은하의 휘어짐을 보기 위해서 은하 이미지 데이터를 활용할텐데, x를 고정하고 z를 움직이는 것으로 z 변위의 x에서의 평균값을 구할 수 있습니다. 이를 이용하여 전체 평균을 계산하면, 앞서 본 것과 같이 w_1을 계산할 수 있습니다. 다만 이 경우에 이미지 데이터는 discrete하므로 적분이 아닌 summation으로 계산하였습니다.\n ","107af43561be882ceb0bba44c54b2d11":"방금 은하에 대해 z'을 계산한 결과입니다. 이의 평균을 구하면 w_1이 도출됩니다.","ad11c6ec52887676f3c2a7a38800415c":"이 과정을 앞서 제시한 조건을 만족하는 모든 은하들에 대하여 계산하여 모은 결과는 다음과 같습니다.","1c72d5bee228bfe49a3917966d66910c":"이제 관측값은 모두 얻었습니다. 다만, 이 관측값을 이용해 parameter 들에 Constraint을 주려면 우리가 원하는 parameter들로 통계적 모델을 구성해야 합니다.\n먼저 다섯번째 힘은 앞서 말했다시피 Yukawa force로 표현됩니다. 따라서 a_5를 Delta G / G_N과 lambda_C로 나타낼 수 있습니다. 다음으로 앞서 기술한 w_1의 이론적인 표현을 완성하기 위해서는 각 은하마다의 Halo profile을 알아내야 합니다. 이를 위하여 Abundance matching 이라는 기술을 이용하면 은하의 Luminosity function과 Halo의 velocity function을 매칭할 수 있습니다.\n이를 위해 먼저 Halo의 density는 간단히 inverse power law로 가정합니다.","d73962342e0a6bf4b80b828837e07d1a":"앞선 profile 설정을 이용하면 w_1 을 이 inverse law를 따르는 Halo density 상에서 표현이 가능해집니다.\n이제 본격적으로 각 NSA catalog 은하에 Halo를 매칭을 해야하는데, 다행히 SDSS에 대한 r-band luminosity function은 아주 잘 알려져있고, 이에 맞는 Dark matter halo는 DarkSky-400 이라는 시뮬레이션을 통해 fitting을 할 수 있습니다.\n다음으로 Montecarlo simulation을 통해 NSA에 기재되기에는 너무 어두운 은하들과 그에 맞는 Halo를 얻습니다. 이렇게 200개의 가상 Halo 카탈로그를 만들게 됩니다.\n각각의 Monte Carlo에서는 임의의 Delta G와 Lambda C Sample에 대해 가능한 w_1값이 나오게 됩니다.","203a7346bbf0b1aa8f98e7b1366ff7e2":"f(R) gravity theory 는 modified gravity theories 중 하나로 Ricci scalar term 에다 Ricci scalar 로 된 non-linear term 을 더함으로써 중력을 수정하는 이론입니다.\n(키보드)\n\n따라서 4차원 pseudo-Riemannian manifold에서의 f(R)의 action 은 GR에서 Ricci scalar term 만 수정된 형태로 기술됩니다.","0ce074429b22fab172760769bf2a4b3a":"다들 잘 아시겠지만, 앞서 쓴 action의 least action principle 을 적용함으로써 Einstein equation 을 구할 수 있습니다.","958877ad8fb39b2917e891cc2531adff":"f(R)이론에 대해서는 nonlinear term이 추가됨으로 인해 방정식의 형태가 이렇게 변하게 됩니다. 이 때 $f_R$ 은 f(R)이 R로 미분된 함수를 의미합니다. ","12dc1544a4a1d4149c3248f7238017fb":"안녕하세요. 입자물리특별연구를 수강하고 있는 박성찬 교수님 연구실의 김태근 입니다. 제가 발표할 주제는 은하의 모양을 이용하여 f(R) 이론에 Constraint을 주는 것 입니다. \n(키보드)","f397ee35cfa62c8a31c56d0e85320882":"연구는 같은 연구실의 박예지, 현상철 학생과 같이 수행하고 있습니다.\n\n이번 발표는 지난 번 달팽이 강의때 했던 발표와 상당부분 겹치는 부분이 있으므로 f(R) 이론에 대한 Detail한 설명은 생략하고 방법과 실제 현상에 초점을 맞추어 발표를 진행하겠습니다.","cdd406182d2969a89398af61231ff5a7":"f(R) theory를 만들 때 f(R) 을 R에 대한 임의의 함수라 하였지만, 이 이론이 현상론적으로 타당하려면 몇 가지 조건이 필요합니다. \n\nR_0는 현재 Ricci scalar를 지칭합니다.\n\n(1)~(3)번 조건은 local gravity test, matter-dominated epoch 의 존재와 cosmological perturbation의 안정성을 만족하기 위해 필요하고 마지막 조건은 late time De-Sitter point 의 안정성을 위해 요구됩니다.","4f42bb74e7d58ed9e6b3824c1dfe1bca":"이 조건을 만족하는 모델들은 많지만, 그 중에서 이번 연구에 사용한 모델은 Hu-Sawicki 모델입니다. Hu-Sawicki 모델은 이렇게 분수 꼴로 주어지는데, GR limit에서는 0이 아닌 Constant 값을 가지고, 반대로 matter dominant 영역에서는 0이 된다는 것에서 기존 LCDM 모델과 굉장히 잘 맞는다는 것을 확인할 수 있습니다.","d478152871d024b47aea29d53c8c98fe":"Hu-Sawicki 모델을 이용하여 새로이 중력 퍼텐셜을 계산해보면, 다음과 같이 뉴턴 중력 퍼텐셜에 Yukawa 형태의 퍼텐셜이 추가됩니다. 이때, m이 충분히 크면 이 Correction은 무시할만큼 작으므로 기존 중력과 차이가 없게 되지만, 질량이 작은 경우는 크게 영향을 받을 것입니다. 따라서 태양계 정도나 무거운 은하의 경우에는 이 퍼텐셜의 효과가 모두 Screening 되어 보이지 않게 되지만, 밀도가 낮은 은하의 성간 가스들 처럼 질량이 작은 물체의 경우에는 이 새로운 퍼텐셜의 영향을 받게 될 것입니다. 이때 받는 힘은 기존의 힘과 다른 새로운 힘이므로 \"다섯번째 힘\"이라고 부릅니다. 이때 이 힘의 range를 lambda_c라고 합니다.\n\n만약 screened 되지 않은 둘 사이의 거리가 compton length 보다 짧은 거리에 있는 objects 는 둘 사이 중력과 fifth force  라 불리는 새로운 힘에 영향을 받게 된다.","e92f9af6f0f38fc8a6d1c1c97ab60ff9":"앞서 나온 데이터로 통계적 추정을 하기 위해 Likelihood를 다음과 같이 설정합니다.\n이때 히스토그램은 w_1의 최소부터 최대까지를 균등하게 나누었으며 각 bin의 width를 Delta w라 하고, w_j를 각 bin의 Center, P_j를 각 bin의 비율로 정의합니다.\n첫번째 항은 Screened contribution을 의미하며 두 번째 항은 Unscreened contribution을 의미합니다.\n\n이를 Gaussian 분포를 가정하여 다시 써보면 다음과 같이 나오게 됩니다.","4d4bae4b94d7519c1d79faf7fa4c0b7b":"앞서 얻은 Sersic profile fitting에서의 데이터를 바탕으로 전체 이미지를 회전하면 은하의 원반을 수평 축에 평행하게 정렬할 수 있습니다. 이를 각 은하 이미지에 모두 적용하면 모든 은하의 원반을 이와 같이 수평으로 정렬할 수 있습니다.","908db5c7b1e641176ba823e4cb12765f":"다음으로 w_1 값을 계산하기 위해 역시나 앞서 구했던 Sersic profile에서의 정보를 이용하여 수평방향 유효 반지름을 구할 수 있습니다. 또한 앞서 major-to-minor ratio를 이용하여 z축 유효 반지름도 구하여 점을 찍으면 좌측 그림이 됩니다.\n이 범위 내부를 은하로 규정할 것이므로 이미지를 크롭하여 나온 이미지만 데이터로 사용할 것 입니다.","c798774ba0d01b529b47e2dd1e6eefc3":"앞서 설정한 Likelihood와 데이터들로 다음 세 가지 분석을 수행할 것 입니다.\n먼저, Lambda_C를 바꿔가면서 Delta G/G_N을 계산할텐데, 이를 Screening을 포함한 기존 Likelihood에 대해서도 하고, Screening 효과를 끈, 즉, f=1로 둔 Likelihood에 대해서도 분석을 수행합니다.\n다음으로 Delta G/G_N, Lambda_C의 상관관계 분석을 수행할 것 입니다.","8818ffe8c8cefa9f765017e10e1f87cd":"이 이미지들은 1D inference를 수행한 결과입니다. 그림을 보면 without screening 모델이 훨씬 Tight하게 Constrained 되어 있는 것을 볼 수 있는데, 이는 Screened galaxy에서는 다섯번째 힘의 영향이 screen 되므로 w_1은 0이 되어야 하기 때문입니다.","6e04d9073885935365526ea5bf743946":"2D ineference 로 부터 추론한 Posterior들은 다음과 같습니다. 앞 두 개는 Marginal distribution을 나타낸 것이며 (c)가 전체 2D posterior를 나타냅니다. (b)와 (c)에서 보다시피 log(lambda_c)는 0.1과 0.2 사이가 유력하게 나타납니다.","83e2d3b274e4f4c18cf5d3ad40af1e39":"또한 앞서 설명한 MCMC로 각 lambda_C마다 MLE를 수행해보면 lambda_C가 1.8 Mpc인 경우에 관측값과 가장 잘 맞는 것을 볼 수 있습니다.","5494f186b9de99e840db76661ddf4b22":"여기까지가 지금까지 수행한 연구였습니다. Lambda_C와 Delta G의 best fit이 얼마인지 게산을 할 수 있었습니다만, 아직 후처리가 제대로 되어 있지 않습니다.\n\n따라서 앞으로 해야할 것은 첫 번째로 Resampling입니다. 지금 데이터 셋의 크기가 크지 않으므로 Bootstrapping을 통해 좀 더 정확한 추정과 신뢰구간을 계산할 수 있을 것 입니다. 또한, 데이터의 특성상 Outlier가 꽤 있는 편인데, 이를 줄이기 위해 Jackknife Resampling 등을 할 수 있을 것 입니다.\n\n다음으로 지금은 Galaxy warp만 고려했지만 Gas-star offset 또한 유명한 문제이므로 이 둘을 포함하여 하나의 통합적인 모델로 다룰 수 있을 것 입니다. 이것으로 좀 더 Tight한 Constraint을 줄 수 있을 것입니다.\n\n마지막으로 지금은 양상을 보기 위해서 굉장히 간편한 방법인 히스토그램 밀도 추정을 사용하였는데, 이는 단점이 많은 방법입니다. 각 bin의 edge에서 불연속이 되고 해상도도 낮은 편입니다. 따라서 이를 해결하기 위해 Kernel Density Estimation을 도입할 수 있을 것 입니다."}}};
+
+
+			// Use local fonts
+			SLConfig.fonts_url = 'lib/fonts/';
+		</script>
+
+		<script src="lib/reveal.js"></script>
+		<script src="lib/reveal-plugins.js"></script>
+		<script src="lib/offline.js"></script>
+
+		<!-- Initialize the presentation -->
+		<script>
+			Reveal.initialize({
+				width: 1280,
+				height: 720,
+				margin: 0.05,
+				
+
+				hash: true,
+				controls: true,
+				progress: true,
+				mouseWheel: false,
+				showNotes: false,
+				slideNumber: true,
+				fragmentInURL: true,
+
+				autoSlide: 0,
+				autoSlideStoppable: true,
+
+				autoAnimateMatcher: SL.deck.AutoAnimate.matcher,
+
+				center: false,
+				shuffle: false,
+				loop: false,
+				rtl: false,
+				navigationMode: "default",
+
+				transition: "slide",
+				backgroundTransition: "slide",
+
+				highlight: {
+					escapeHTML: false
+				},
+
+				plugins: [ RevealZoom, RevealNotes, RevealMarkdown, RevealHighlight ]
+			});
+		</script>
+
+		
+
+	</body>
+</html>

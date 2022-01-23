@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+	<html class="sl-root decks export offline loaded">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Python 04 - Number</title>
+
+		<meta name="description" content="With Class">
+
+		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
+
+		<!-- Team CSS -->
+		<style id="global-css-output" type="text/css">
+			.reveal {
+  /*.slides h1, .slides h2 { 
+ font-family: "Amatic SC", cursive;
+}
+
+
+.slides h3 {
+  font-family: "WindSong", cursive;
+}
+
+
+.slides h3 {
+  font-family: 'Sacramento', cursive;
+}
+
+
+@font-face {
+	font-family: 'UhBeemysen';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeemysen.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.slides {
+  font-family: "UhBeemysen";
+}
+*/
+}
+
+		</style>
+
+
+		<!-- User CSS -->
+		<style id="user-css-output" type="text/css">
+			.reveal .slides h1 {
+  font-family: "Caveat";
+}
+.reveal .slides h2 {
+  font-family: "Caveat";
+}
+.reveal .slides p {
+  font-family: "Signika";
+}
+.reveal .slides ul {
+  font-family: "Signika";
+}
+.reveal .slides ol {
+  font-family: "Signika";
+}
+
+		</style>
+	</head>
+	<body class="reveal-viewport theme-font-montserrat theme-color-white-blue">
+		<div class="reveal">
+			<div class="slides">
+				<section data-id="d53a01da6f0fdc4d5830a719e88dc8d5"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 140px; height: auto;" data-block-id="a03a4a616510a27a2db8775faa5ca031"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10; font-size: 80%;" dir="ui">
+<h1>Python 04 - Number</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 640px; left: 160px; top: 420px;" data-block-id="994c8308c593b6b45730e088a437c32d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><strong>Tae Geun Kim</strong></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 490px;" data-block-id="94325affcbb342a0343c9c7fa0a59681"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>@ Jungjin Academy</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 640px; left: 160px; top: 594px;" data-block-id="a92e9b5fc8e9569d01617783ecd4f686"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>2020.03.14</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 218px;" data-block-id="cd0acffa7d71da2688618fbbd3fc2acd"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; font-size: 70%;">
+<h2>with Class</h2>
+</div></div></section><section data-id="747e5d9e1f555f9b25ce31682e66bf12"><div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 81px; height: auto;" data-block-id="ad97e4e86e4483b78072e0d0ebf5cede"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 80%;">
+<h2>Table of Contents</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 210px; height: auto;" data-block-id="0c71b5bff964de16fb8ae8f452f2f867"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; line-height: 1.82;" data-has-line-height="">
+<ul>
+	<li class="fragment" data-fragment-index="0">Solution of previous quiz (Quad)</li>
+	<li class="fragment" data-fragment-index="0">Previous project : Rational number</li>
+	<li class="fragment" data-fragment-index="1">Natural number</li>
+	<li class="fragment" data-fragment-index="2">Complex number</li>
+	<li class="fragment" data-fragment-index="3">Project : Arithmetic of Natural number</li>
+</ul>
+</div></div></section><section data-id="dd7653c433b5dc40e059f26088d479c1"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 11px; height: auto;" data-block-id="482ffa88fa9591c67f09958263e47b8b"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 80%;">
+<h2>Solution of previous quiz</h2>
+</div></div>
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 560px; left: 0px; top: 70px;" data-block-id="03bf71ea052d3919db36fec8772d643d"><div class="sl-block-content notranslate" data-highlight-theme="monokai-sublime" data-code-frame="osx" style="z-index: 11;"><pre class="python"><code data-line-numbers="">from math import sqrt
+
+class Quad:
+    def __init__(self, a, b, c):
+        self.a = a
+        self.b = b
+        self.c = c
+  
+    def D(self):
+    	return self.b**2 - 4*self.a*self.c
+  
+    def root(self):
+    	D = self.D()
+    	(a, b, c) = (self.a, self.b, self.c)
+    	if D &gt; 0:
+      	    return ((-b + sqrt(D)) / (2*a), (-b - sqrt(D)) / (2*a))
+    	elif D == 0:
+      	    return -b / (2*a)
+    	else:
+      	    return "No root"
+  
+    def print_root(self):
+    	print(self.root())</code></pre></div></div></section><section data-id="d529c27edac160cb4aacc73f4c8d378b"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 11px; height: auto;" data-block-id="794bf9b01b470e8aa4c1dd547684b839"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 80%;">
+<h2>Previous Project : Rational Number</h2>
+</div></div>
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 210px; left: 0px; top: 70px;" data-block-id="6fd45cbb3ca02991513a209042371e32"><div class="sl-block-content notranslate fragment" data-highlight-theme="monokai-sublime" data-code-frame="osx" style="z-index: 11;" data-fragment-index="0"><pre class="python"><code data-line-numbers=""># 유클리드 호제법
+def gcd(a, b):
+    if b == 0:
+        return a
+    else:
+        return gcd(b, a % b)</code></pre></div></div>
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 420px; left: 0px; top: 280px;" data-block-id="edd26cb50e37ea636b5143e111aa93ef" data-name="code-351acc"><div class="sl-block-content notranslate fragment" data-highlight-theme="monokai-sublime" data-code-frame="osx" style="z-index: 12;" data-fragment-index="1"><pre class="python"><code data-line-numbers="">class Rational:
+    def __init__(self, num, denom):
+        self.num = num
+        self.denom = denom
+        self.simplify()
+    
+    def simplify(self):
+        num = abs(self.num)
+        denom = abs(self.denom)
+        g = gcd(num, denom)
+        if g == 1:
+            pass
+        else:
+            self.num = int(self.num / g)
+            self.denom = int(self.denom / g)</code></pre></div></div></section><section data-id="5fcc3cfd592b8f8d6077c58983e5713c"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 11px; height: auto;" data-block-id="3f6bde1d210b295ff03e07c8b58826c2"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 80%;">
+<h2>Previous Project : Rational Number</h2>
+</div></div>
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 630px; left: 0px; top: 70px;" data-name="code-351acc" data-block-id="35c20f16a3ebc53101b756d07e04ee10"><div class="sl-block-content notranslate" data-highlight-theme="monokai-sublime" data-code-frame="osx" style="z-index: 12;"><pre class="python"><code data-line-numbers="">class Rational:
+    def __init__(self, num, denom):
+        # Already Defined
+    def simplify(self):
+        # Already Defined
+    
+    def __str__(self):
+        num = self.num
+        denom = self.denom
+        if self.num &lt; 0 and self.denom &lt; 0:
+            num = abs(num)
+            denom = abs(denom)
+        elif self.num &lt; 0:
+            pass
+        elif self.denom &lt; 0:
+            num = -num
+            denom = abs(denom)
+        else:
+            pass
+        return "{}/{}".format(num, denom)
+</code></pre></div></div></section><section data-id="2ac8d7b0f30773303b165b3c9cc24a4b"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 11px; height: auto;" data-block-id="c4fa571d327a1828e09e6c766a9cbb25"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 80%;">
+<h2>Previous Project : Rational Number</h2>
+</div></div>
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 630px; left: 0px; top: 70px;" data-name="code-351acc" data-block-id="973845e76b1bb84bd9ad9d75988b6458"><div class="sl-block-content notranslate" data-highlight-theme="monokai-sublime" data-code-frame="osx" style="z-index: 11;"><pre class="python"><code data-line-numbers="">class Rational:
+    def __init__(self, num, denom):
+        # Already Defined
+    def simplify(self):
+        # Already Defined
+    def __str__(self):
+        # Already Defined
+
+    def __add__(self, other):
+        r = Rational(1,1)
+        denom1 = abs(self.denom)
+        denom2 = abs(other.denom)
+        g = gcd(denom1, denom2)
+        q1 = int(self.denom / g)
+        q2 = int(other.denom / g)
+        r.denom = g * q1 * q2
+        r.num = self.num * q2 + other.num * q1
+        r.simplify()
+        return r
+      
+    def __sub__(self, other):
+        temp = Rational(-other.num, other.denom)
+        return self + temp
+</code></pre></div></div></section><section data-id="c7c9abe2b6160812ba00854640be7f1c"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 11px; height: auto;" data-block-id="587a4c246e2b818279ecfd0baf3aa02f"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 80%;">
+<h2>Previous Project : Rational Number</h2>
+</div></div>
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 630px; left: 0px; top: 70px;" data-name="code-351acc" data-block-id="eceed9ac4c180a2d74966cf3d7cba3df"><div class="sl-block-content notranslate" data-highlight-theme="monokai-sublime" data-code-frame="osx" style="z-index: 11;"><pre class="python"><code data-line-numbers="">class Rational:
+    def __init__(self, num, denom):
+        # Already Defined
+    def simplify(self):
+        # Already Defined
+    def __str__(self):
+        # Already Defined
+    def __add__(self, other):
+        # Already Defined
+    def __sub__(self, other):
+        # Already Defined
+    
+    def __mul__(self, other):
+        # Write!
+
+    def __truediv__(self, other):
+        # Write!
+    
+    def __pow__(self, n):
+        # Write!</code></pre></div></div></section><section data-id="1ebbf4987fa287fdd2ef9d464c61e3e4"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 11px; height: auto;" data-block-id="3d41203447383e9eab5216c3946430c8"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 80%;">
+<h2>Previous Project : Rational Number</h2>
+</div></div>
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 630px; left: 0px; top: 70px;" data-name="code-351acc" data-block-id="912a7f613a85d69d3ff0da0c52743ae1"><div class="sl-block-content notranslate" data-highlight-theme="monokai-sublime" data-code-frame="osx" style="z-index: 11;"><pre class="python"><code data-line-numbers="">class Rational:
+    def __init__(self, num, denom):
+        # Already Defined
+    def simplify(self):
+        # Already Defined
+    def __str__(self):
+        # Already Defined
+    def __add__(self, other):
+        # Already Defined
+    def __sub__(self, other):
+        # Already Defined
+        
+    def __mul__(self, other):
+        r = Rational(1, 1)
+        r.num = self.num * other.num
+        r.denom = self.denom * other.denom
+        r.simplify()
+        return r
+
+    def __truediv__(self, other):
+        temp = Rational(other.denom, other.num)
+        return self * temp
+
+    def __pow__(self, n):
+        return Rational(self.num ** n, self.denom ** n)
+</code></pre></div></div></section><section data-id="f5ac585fd2f62411db290163a56da0e3"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 11px; height: auto;" data-block-id="2d67ff1ac51e14bedccacc0739ab6cd1"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 80%;">
+<h2>Previous Project : Rational Number</h2>
+</div></div>
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 630px; left: 0px; top: 70px;" data-name="code-351acc" data-block-id="86a33123924103fe4a337d5a71cdd2a6"><div class="sl-block-content notranslate" data-highlight-theme="monokai-sublime" data-code-frame="osx" style="z-index: 11;"><pre class="python"><code data-line-numbers="">class Rational:
+    # Already Defined
+
+r1 = Rational(1, 27)
+r2 = Rational(2, 27)
+print("r1", r1)
+print("r2", r2)
+print()
+
+print("r1+r2=", r1 + r2)
+print("r1-r2=", r1 - r2)
+print("r1*r2=", r1 * r2)
+print("r1/r2=", r1 / r2)
+print("r1**2=", r1 ** 2)
+</code></pre></div></div></section><section data-id="5de344da8c1ac317ea3776330089533a" data-background-image="py04/86f6d9a6dcfbf645bb7dd138fce66b1a.png" data-background-color="rgb(38,42,50)"><div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 70px; height: auto;" data-block-id="8ada22fbecb7a913c1a7d89ba1bbae2f"><div class="sl-block-content" data-placeholder-tag="h1" style="text-align: left; z-index: 10; color: rgb(201, 218, 248);" data-placeholder-text="Text">
+<h1><strong>Natural number</strong></h1>
+</div></div></section><section data-id="94644e425b37970c124ec3ca8ef58e15"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 11px; height: auto;" data-block-id="143a8224bdd29f6c9293c98910a2ee52"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 80%;">
+<h2>Definition</h2>
+</div></div>
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 140px;" data-block-id="07b9718efdd1c4d3bf4f1eca0300eb42"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; line-height: 1.56;" data-has-line-height="">
+<ul>
+	<li class="fragment" data-fragment-index="0">Start with 1</li>
+	<li class="fragment" data-fragment-index="1">Next of 1 = 2 (Successor(1) = 2)</li>
+	<li class="fragment" data-fragment-index="2">Successor(2) = 3</li>
+	<li class="fragment" data-fragment-index="3">...</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 420px;" data-block-id="21afc51e6fdf20eef85fcdbf9c18f889"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; line-height: 1.56;" data-has-line-height="" data-fragment-index="4">
+<p>Q. What is Successor(Successor(3))?</p>
+</div></div></section><section data-id="3bb8d2f0e3023bdc2bfaa2c9ada3f8ca"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 11px; height: auto;" data-block-id="a1d425ef8c5e4ed8112a5aaccc417079"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 80%;">
+<h2>Implement Successor</h2>
+</div></div>
+
+
+
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 430px; left: 80px; top: 140px;" data-block-id="1318d336eca9bf59de7314b1463c3776"><div class="sl-block-content notranslate" data-highlight-theme="monokai-sublime" data-code-frame="osx" style="z-index: 11;"><pre class="python"><code data-line-numbers=""># Number/01_successor.py
+class Successor:
+    def __init__(self, n):
+        self.prev = n
+
+    def unwrap(self):
+        return self.prev
+
+    def __str__(self):
+        return "Successor(" + str(self.prev) + ")"
+
+a = Successor(1)
+print(a)
+print(a.unwrap())
+
+b = Successor(a)
+print(b)
+print(b.unwrap().unwrap())
+</code></pre></div></div></section><section data-id="e627ea09e060d432102ad1190db6a858"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 11px; height: auto;" data-block-id="aaf29651f75e1df0696bf316471f0bd0"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 80%;">
+<h2>More specific</h2>
+</div></div>
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 140px;" data-block-id="d24722cbfa871509833cad1e0750c5e4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; line-height: 1.56;" data-has-line-height="">
+<p>To implement natural number, we should start from 1.</p>
+
+<p>What is One?</p>
+
+<p> </p>
+
+<ul>
+	<li class="fragment" data-fragment-index="0">One is not successor of any number.</li>
+	<li class="fragment" data-fragment-index="1">Every natural number is defined by successors of One.</li>
+	<li class="fragment" data-fragment-index="2">We can't unwrap One.</li>
+</ul>
+</div></div></section><section data-id="b774b6cce08d2f025769eed88e69e805"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 11px; height: auto;" data-block-id="1d89dcd5b7b2e50d6739393c5ff06c4d"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 80%;">
+<h2>Implement One</h2>
+</div></div>
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 140px;" data-block-id="bb30a86286fcd60b0011c3f0199f1b9d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; line-height: 1.56;" data-has-line-height="">
+<ul>
+	<li class="fragment" data-fragment-index="0">
+	<pre>One is also Successor</pre>
+	</li>
+	<li class="fragment" data-fragment-index="1">
+	<pre>One.unwrap() -&gt; Error
+</pre>
+
+	<ul>
+		<li><span style="font-size:0.7em">We need custom error handling</span></li>
+	</ul>
+	</li>
+	<li class="fragment" data-fragment-index="2">
+	<pre>One.value = None</pre>
+	</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 420px;" data-block-id="3f05ebcbc4114e6c5001fa0080b86d20"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" data-fragment-index="3">
+<p>We use new concept : Inheritance (상속)</p>
+</div></div></section><section data-id="2205a842f8b7c3d53788d9bec7a8383c"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 11px; height: auto;" data-block-id="98cfc1ba82fe6d8a8e95c1fdcabbdb68"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 80%;">
+<h2>Implement One</h2>
+</div></div>
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 490px; left: 0px; top: 140px;" data-block-id="8eb3da598874e6ef73aca274bbfa0452"><div class="sl-block-content notranslate" data-highlight-theme="monokai-sublime" data-code-frame="osx" style="z-index: 11;"><pre class="python"><code data-line-numbers=""># Number/02_one.py
+# You should copy Successor before write One
+class OneIsNotSuccessor(Exception):
+    # How to print?
+    def __str__(self):
+        return "One is not successor"
+
+# Inheritance
+class One(Successor):
+    def __init__(self):
+        self.prev = None
+
+    def unwrap(self):
+        raise OneIsNotSuccessor()
+    
+    def __str__(self):
+        return "1"
+
+a = One()
+print(a)
+a.unwrap() # Raise Error! -&gt; Finish Code
+print(1+1) # Can't be executed
+</code></pre></div></div></section><section data-id="36117bff2475bb78147d25a54b11274c"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 11px; height: auto;" data-block-id="958f8f1fac5138f6b48926964bd9bd27"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 80%;">
+<h2>Implement Natural number</h2>
+</div></div>
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 490px; left: 0px; top: 140px;" data-block-id="11a4a650ff5ee84e8f601e1f768982ff"><div class="sl-block-content notranslate" data-highlight-theme="monokai-sublime" data-code-frame="osx" style="z-index: 11;"><pre class="python"><code data-line-numbers=""># Number/03_natural.py
+# You should write Successor, One before natural number
+class NegativeOrZero(Exception):
+    def __str__(self):
+        return "Natural number is not negative or zero"
+
+def natural(n):
+    if n &lt;= 0:
+        raise NegativeOrZero()
+    elif n == 1:
+        return One()
+    else:
+        result = One()
+        for _i in range(n-1):
+            result = Successor(result)
+        return result
+
+a = natural(10)
+print(a)</code></pre></div></div></section><section data-background-color="rgb(38,42,50)" data-background-image="py04/86f6d9a6dcfbf645bb7dd138fce66b1a.png" data-id="fdcf7400a28c6a13c5adf22ba103ae06"><div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 70px; height: auto;" data-block-id="37bc365ab581f23092ebfb5f8eaef1fc"><div class="sl-block-content" data-placeholder-tag="h1" style="text-align: left; z-index: 10; color: rgb(201, 218, 248);" data-placeholder-text="Text">
+<h1>Complex number</h1>
+</div></div></section><section data-id="22e06f8a6b3fbe8b3cf2b9399c3322c1"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 11px; height: auto;" data-block-id="e0a04b49800118330b4b4575cf5e25bf"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 80%;">
+<h2>Complex number 1</h2>
+</div></div>
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 371px; top: 137px;" data-block-id="2cbaf8c9a0b7054c641cf91433fb6af3"><div class="sl-block-content notranslate" style="z-index: 11;"><div class="math-input">z = a + bi</div></div></div>
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 420px; left: 80px; top: 280px;" data-block-id="d472a99e40ccae237bf7a6c3c111a187"><div class="sl-block-content notranslate" data-highlight-theme="monokai-sublime" data-code-frame="osx" style="z-index: 12;"><pre class="python"><code data-line-numbers=""># Number/04_complex_1.py
+class Complex:
+    def __init__(self, a, b):
+        self.real = a
+        self.imag = b
+
+    def __str__(self):
+        return str(self.real) + " + " + str(self.imag) + "i"
+
+z1 = Complex(1, 2)
+z2 = Complex(1, 0)
+z3 = Complex(0, 1)
+z4 = Complex(1, -2)
+
+print(z1)
+print(z2)
+print(z3)
+print(z4)</code></pre></div></div></section><section data-id="337862ac439d4d85eaedeeebe6d77678"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 11px; height: auto;" data-block-id="de02e552ca7bc328590bd9b386dd4b2a"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 80%;">
+<h2>Complex number 2 - Quiz</h2>
+</div></div>
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 490px; left: 80px; top: 210px;" data-block-id="c2823d1dc9bcc7e27a7c7fe7989e9c72"><div class="sl-block-content notranslate" data-highlight-theme="monokai-sublime" data-code-frame="osx" style="z-index: 11;"><pre class="python"><code data-line-numbers=""># Number/04_complex_2.py
+class Complex:
+    def __init__(self, a, b):
+        self.real = a
+        self.imag = b
+
+    def __str__(self):
+        # For example,
+        # Complex(1, 2) =&gt; 1 + 2i
+        # Complex(1,-2) =&gt; 1 - 2i</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 140px;" data-block-id="78844efe7d0bf0249cd937b96f9bd91d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>Complete below code.</p>
+</div></div></section><section data-id="a777761424f5698a82147614d0b44730"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 11px; height: auto;" data-block-id="5fcf4be75553bce63ce2697237399eed"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 80%;">
+<h2>Complex number 2 - Answer</h2>
+</div></div>
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 490px; left: 71px; top: 140px;" data-block-id="7ac9174e943335c15048e5e3c16cb6ba"><div class="sl-block-content notranslate" data-highlight-theme="monokai-sublime" data-code-frame="osx" style="z-index: 11;"><pre class="python"><code data-line-numbers=""># Number/04_complex_2.py
+class Complex:
+    def __init__(self, a, b):
+        self.real = a
+        self.imag = b
+
+    def __str__(self):
+        if self.imag &gt;= 0:
+            return str(self.real) + " + " + str(self.imag) + "i"
+        else:
+            return str(self.real) + " - " + str(-self.imag) + "i"
+
+z = Complex(1, -3)
+print(z)
+</code></pre></div></div></section><section data-id="5f602a70591aadbe625f240a70721010"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 11px; height: auto;" data-block-id="6d974edabcfbe6c1b8de6c635eab2b91"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 80%;">
+<h2>Arithmetic for Complex</h2>
+</div></div>
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 225.5px; top: 177px;" data-block-id="e5a77eb375c9b5418cfabda4520f6f83"><div class="sl-block-content notranslate fragment" style="z-index: 11; font-size: 90%;" data-fragment-index="0"><div class="math-input">(1 + 2i) + (2 - 3i) = 3 - i</div></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 393px;" data-block-id="4adec2482d2b365daf17cf36690edb7c"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" data-fragment-index="1">
+<p>Python support arithmetic methods</p>
+
+<p> </p>
+
+<ul>
+	<li>
+	<pre>__add__ : Addition</pre>
+	</li>
+	<li>
+	<pre>__sub__ : Subtraction</pre>
+	</li>
+	<li>
+	<pre>__mul__ : Multiplication</pre>
+	</li>
+	<li>
+	<pre>__truediv__ : Division</pre>
+	</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 280px;" data-block-id="c006b525570dad7b2932dcb16bb33619"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" data-fragment-index="0">
+<p>How to implement?</p>
+</div></div></section><section data-id="6be4dba68645b257466464498215ff3f"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 11px; height: auto;" data-block-id="b1fe11d1d8b2cf778de780e21e14df93"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 80%;">
+<h2>Complex 3 - Arithmetic</h2>
+</div></div>
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 484px; left: 80px; top: 140px;" data-block-id="2f8aeea9528d9f151fbb41a6b2b33065"><div class="sl-block-content notranslate" data-highlight-theme="monokai-sublime" data-code-frame="osx" style="z-index: 11;"><pre class="python"><code data-line-numbers=""># Number/04_complex_3.py
+class Complex:
+    def __init__(self, a, b):
+        self.real = a
+        self.imag = b
+
+    def __str__(self):
+        if self.imag &gt;= 0:
+            return str(self.real) + " + " + str(self.imag) + "i"
+        else:
+            return str(self.real) + " - " + str(-self.imag) + "i"
+
+    def __add__(self, other):
+        return Complex(self.real + other.real, self.imag + other.imag)
+
+z1 = Complex(1, 2)
+z2 = Complex(2, -3)
+z = z1 + z2
+print(z)</code></pre></div></div></section><section data-id="6db85382cb85f241b351754577d676a8"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 11px; height: auto;" data-block-id="8955ac55ae45b3a25557ba76703d8dc0"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 80%;">
+<h2>Complex 4 - Quiz</h2>
+</div></div>
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 484px; left: 80px; top: 210px;" data-block-id="9c81314398702195cf8054bd3f4a43bc"><div class="sl-block-content notranslate" data-highlight-theme="monokai-sublime" data-code-frame="osx" style="z-index: 11;"><pre class="python"><code data-line-numbers=""># Number/04_complex_4.py
+class Complex:
+    def __init__(self, a, b):
+
+    def __str__(self):
+
+    def __add__(self, other):
+      
+    def __sub__(self, other):
+      
+    def __mul__(self, other):
+      
+z1 = Complex(1, 2)
+z2 = Complex(2, -3)
+
+print(z1 + z2)
+print(z1 - z2)
+print(z1 * z2)</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 140px;" data-block-id="f50b8bca9428d7addeb1f52535020037"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>Fill the below code.</p>
+</div></div></section><section data-id="57cbdb5b9323be1136b4cb2add81edf3"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 11px; height: auto;" data-block-id="6a190adaac20d939179b2ba2e59eaf92"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 80%;">
+<h2>Complex 4 - Answer</h2>
+</div></div>
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 630px; left: 0px; top: 70px;" data-block-id="a04275aea9bd475969f1b808de43fa52"><div class="sl-block-content notranslate" data-highlight-theme="monokai-sublime" data-code-frame="osx" style="z-index: 11;"><pre class="python"><code data-line-numbers=""># Number/04_complex_4.py
+class Complex:
+    def __init__(self, a, b):
+        self.real = a
+        self.imag = b
+
+    def __str__(self):
+        if self.imag &gt;= 0:
+            return str(self.real) + " + " + str(self.imag) + "i"
+        else:
+            return str(self.real) + " - " + str(-self.imag) + "i"
+
+    def __add__(self, other):
+        return Complex(self.real + other.real, self.imag + other.imag)
+
+    def __sub__(self, other):
+        return Complex(self.real - other.real, self.imag - other.imag)
+
+    def __mul__(self, other):
+        return Complex(
+                self.real * other.real - self.imag * other.imag, 
+                self.real * other.imag + self.imag * other.real
+        )
+
+z1 = Complex(1, 2)
+z2 = Complex(2, -3)
+print(z1 + z2)
+print(z1 - z2)
+print(z1 * z2)</code></pre></div></div></section><section data-id="220328d0099b8820880e211c5b615a6f"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 11px; height: auto;" data-block-id="d27755032cff3d76ac3caf7e846e2866"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 80%;">
+<h2>Complex 4 - Quiz</h2>
+</div></div>
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 484px; left: 80px; top: 210px;" data-block-id="870244a2d6c106318895662999be8105"><div class="sl-block-content notranslate" data-highlight-theme="monokai-sublime" data-code-frame="osx" style="z-index: 11;"><pre class="python"><code data-line-numbers=""># Number/04_complex_5.py
+class Complex:
+    # Already Defined
+      
+    def __truediv__(self, other):
+        # Write!
+      
+z1 = Complex(1, 2)
+z2 = Complex(2, -3)
+
+print(z1 / z2)</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 140px;" data-block-id="a074142742fa8a0d16de3f8d783934fd"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>Fill the below code.</p>
+</div></div></section><section data-background-color="rgb(38,42,50)" data-background-image="py04/86f6d9a6dcfbf645bb7dd138fce66b1a.png" data-id="0c77ee30b192abde33fc6c1b42d8f470"><div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 70px; height: auto;" data-block-id="10573dab7b3038850543b14f0e9c45c1"><div class="sl-block-content" data-placeholder-tag="h1" style="text-align: left; z-index: 10; color: rgb(201, 218, 248);" data-placeholder-text="Text">
+<h1><strong>Project</strong></h1>
+
+<h1><strong>: Arithmetic of Natural number</strong></h1>
+</div></div></section><section data-id="8c1ae3a806b8fd5166cd124e1fcdf6e0"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 11px; height: auto;" data-block-id="a9741278fe5dbc440fb63b0bcefd3d82"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 80%;">
+<h2>Project</h2>
+</div></div>
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 140px;" data-block-id="73c4b37658719ade4616f392ab65a2ea"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 80%; line-height: 1.56;" data-has-line-height="">
+<p>아래의 조건을 만족하는 좀 더 완벽한 자연수를 구현하시오.</p>
+
+<p> </p>
+
+<ul>
+	<li>Successor, One은 Class로 구현</li>
+	<li>n을 받아서 Successor로 만드는 natural 함수 구현</li>
+	<li>Successor는 사칙 연산이 가능해야 함</li>
+	<li>Successor의 값을 실제 정수(int)로 바꾸어 주는 method인 to_int 함수 구현</li>
+</ul>
+
+<p> </p>
+
+<p>더 자세한 사항은 다음 장의 코드 서식을 참조하시오.</p>
+</div></div></section><section data-id="4f9b18099a5ff2e5159d5d13c0897486"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 11px; height: auto;" data-block-id="94a5b91e624baf4c4b6ff3eaf8513f28"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 80%;">
+<h2>Project</h2>
+</div></div>
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 630px; left: 80px; top: 70px;" data-block-id="2c00b72621a1113c200ea0a33dc94562"><div class="sl-block-content notranslate" data-highlight-theme="monokai-sublime" data-code-frame="osx" style="z-index: 12;"><pre class="python"><code data-line-numbers=""># Number/05_project.py
+class Successor:
+    def __init__(self, n):
+
+    def unwrap(self):
+
+    def __str__(self):
+
+    def __add__(self, other):
+    
+    def __sub__(self, other):
+    
+    def __mul__(self, other):
+
+    def to_int(self):
+      
+class One(Successor):
+  
+def natural(n):
+  
+a = natural(12)
+b = natural(13)
+
+print(a + b)
+print(a - b)
+print(b - a)
+print(a * b)
+print((a * b).to_int())</code></pre></div></div></section>
+			</div>
+		</div>
+
+		<script>
+			var SLConfig = {"deck": {"id":1717535,"slug":"py04","title":"Python 04 - Number","description":"With Class","width":960,"height":700,"margin":0.05,"visibility":"all","published_at":"2020-02-14T13:15:23.855Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/f1918bea0579c08f1401239da84842af/thumb.jpg?1584159710","view_count":10,"user":{"id":1198239,"username":"axect","name":"","description":"","thumbnail_url":"https://www.gravatar.com/avatar/cda8e3c26bf8569f56759c20f93835ac?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","account_type":"enterprise","team_id":1998,"settings":{"id":4349006,"present_controls":true,"present_upsizing":true,"present_pointer":true,"present_notes":true,"default_deck_tag_id":null},"membership":{"role":"member","manager":false,"activated":true}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"montserrat","theme_color":"white-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":false,"rolling_links":false,"center":false,"shuffle":false,"should_loop":false,"share_notes":false,"slide_number":true,"slide_count":28,"rtl":false,"version":2,"collaborative":false,"deck_user_editor_limit":null,"data_updated_at":1584159710398,"font_typekit":"","font_google":"Caveat, Kalam, Permanent Marker, Signika, Righteous, Baloo","time_limit":null,"navigation_mode":"default","upsizing_enabled":true,"notes":{}}};
+
+
+			// Use local fonts
+			SLConfig.fonts_url = 'lib/fonts/';
+		</script>
+
+		<script src="lib/reveal.js"></script>
+		<script src="lib/reveal-plugins.js"></script>
+		<script src="lib/offline.js"></script>
+
+		<!-- Initialize the presentation -->
+		<script>
+			Reveal.initialize({
+				width: 960,
+				height: 700,
+				margin: 0.05,
+				
+
+				hash: true,
+				controls: true,
+				progress: true,
+				mouseWheel: false,
+				showNotes: false,
+				slideNumber: true,
+				fragmentInURL: true,
+
+				autoSlide: 0,
+				autoSlideStoppable: true,
+
+				autoAnimateMatcher: SL.deck.AutoAnimate.matcher,
+
+				center: false,
+				shuffle: false,
+				loop: false,
+				rtl: false,
+				navigationMode: "default",
+
+				transition: "slide",
+				backgroundTransition: "slide",
+
+				highlight: {
+					escapeHTML: false
+				},
+
+				plugins: [ RevealZoom, RevealNotes, RevealMarkdown, RevealHighlight ]
+			});
+		</script>
+
+		
+
+	</body>
+</html>

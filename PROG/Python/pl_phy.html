@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+	<html class="sl-root decks export offline loaded">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>PL2020 - With Physics</title>
+
+		<meta name="description" content="Programming Lecture 2020 - With Physics">
+
+		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
+
+		<!-- Team CSS -->
+		<style id="global-css-output" type="text/css">
+			.reveal {
+  /*.slides h1, .slides h2 { 
+ font-family: "Amatic SC", cursive;
+}
+
+
+.slides h3 {
+  font-family: "WindSong", cursive;
+}
+
+
+.slides h3 {
+  font-family: 'Sacramento', cursive;
+}
+
+
+@font-face {
+	font-family: 'UhBeemysen';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeemysen.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.slides {
+  font-family: "UhBeemysen";
+}
+*/
+}
+
+		</style>
+
+
+		<!-- User CSS -->
+		<style id="user-css-output" type="text/css">
+			.reveal .slides h1 {
+  font-family: "Anonymous Pro";
+}
+.reveal .slides h2 {
+  font-family: "Anonymous Pro";
+}
+.reveal .slides h3 {
+  font-family: "Anonymous Pro";
+}
+.reveal .slides p {
+  font-family: "Oxygen";
+}
+.reveal .slides ul {
+  font-family: "Oxygen";
+}
+.reveal .slides ol {
+  font-family: "Oxygen";
+}
+
+		</style>
+	</head>
+	<body class="reveal-viewport theme-font-overpass2 theme-color-white-blue">
+		<div class="reveal">
+			<div class="slides">
+				<section data-id="12dc1544a4a1d4149c3248f7238017fb" data-auto-animate=""><div class="sl-block" data-block-type="text" style="width: 960px; left: 160px; top: 80px; height: auto;" data-block-id="09905b32e53bb402a65cf2bc26d9f412" data-name="text-c03501"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Programming Lecture 2020<br>
+:With physics</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 340px; top: 386px;" data-block-id="6b3ea6b527c4d6dfd2b9aaabaf1c986c" data-name="text-32546a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 120%;">
+<h3>Tae Geun Kim</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 340px; top: 500px;" data-block-id="ffbe9500456db150e1e3d12796e0bbfc" data-name="text-a145ae"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 90%;">
+<p>Yonsei HEP-COSMO</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 340px; top: 570px;" data-block-id="33273930754bdcab462d83a8325aa06b" data-name="text-1a4da0"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 90%;">
+<p>@ Jungjin Academy</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 340px; top: 607px;" data-block-id="371d960b1762385fcf52d7729af56c80" data-name="text-c835ef"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; font-size: 90%;">
+<p>2020.05.02</p>
+</div></div></section><section data-id="29e839cbbae2ef71007eaf4dba353983"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 41px; height: auto;" data-block-id="acfbcc5b423334adab423230e24c784e"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Table of Contents</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 240px; top: 150px;" data-name="text-1a5e44" data-block-id="01973909f29718e32c09b6c7217d366f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; line-height: 1.82;" data-has-line-height="">
+<ul>
+	<li>Basic Physics</li>
+	<li>Differentiation</li>
+	<li>Gravitational Motion</li>
+	<li>Collision</li>
+	<li>Project : Simulation</li>
+</ul>
+</div></div></section><section data-background-size="contain" data-id="d103df9dfab0310eabd1150d8f215af2" data-background-image="pl_phy/55a1d4581c163aa1a50a8257bfd8e859.jpg"><div class="sl-block" data-block-type="text" style="width: 864px; left: 80px; top: 72px; height: auto;" data-block-id="ab0db65406ffc5ba26daeb9fe2c9d29a"><div class="sl-block-content" data-placeholder-tag="h1" style="text-align: left; z-index: 10; color: rgb(255, 255, 255); font-size: 200%;" data-placeholder-text="Text">
+<h1><span style="font-size:1.0em">Basic Physics</span></h1>
+
+<h1> </h1>
+</div></div></section><section data-id="094d115230deefc52016a3b9cd5e886e"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 41px; height: auto;" data-name="text-c35a5a" data-block-id="09c7bdf6f0b0af2bcce2bc2a6261791d"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Review: Highschool Physics</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 640px; left: 0px; top: 144px;" data-name="text-21dee4" data-block-id="555b9375f63115c8f2e609f71dc4cf27"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; line-height: 1.56;" data-has-line-height="" data-fragment-index="0">
+<p>역학에서 중요한 3가지 요소는 다음과 같다.</p>
+
+<ul>
+	<li>\(a\) : 가속도 (Acceleration)</li>
+	<li>\(v\) : 속도 (Velocity)</li>
+	<li>\(s\) : 변위 (Displacement)</li>
+</ul>
+
+<p> </p>
+
+<p>이들은 다음과 같은 관계를 가진다.</p>
+
+<ul>
+	<li>\(a = \dfrac{dv}{dt}\) <span style="font-size:0.7em">(가속도는 속도의 시간에 따른 변화율)</span><br>
+	 </li>
+	<li>\(v = \dfrac{ds}{dt}\) <span style="font-size:0.7em">(속도는 변위의 시간에 따른 변화율)</span>
+</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 640px; left: 640px; top: 144px;" data-block-id="f2f0b2b6da1f16b2f44a444ad3d9fc27" data-name="text-d285cf"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; line-height: 1.56;" data-has-line-height="" data-fragment-index="1">
+<p><strong>등속도 운동</strong></p>
+
+<ul>
+	<li>\(a = 0\)</li>
+	<li>\(v = v_0\) (\(v_0\)는 초기속도)</li>
+	<li>\(s = v_0 t\)</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 640px; left: 640px; top: 432px;" data-block-id="aa8ca68554dcfda4c602b18b272a4dae" data-name="text-5ceb5d"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; line-height: 1.56;" data-has-line-height="" data-fragment-index="2">
+<p><strong>등가속도 운동</strong></p>
+
+<ul>
+	<li>\(a = a\) (\(a\)는 상수)</li>
+	<li>\(v = v_0 + at\)</li>
+	<li>\(s = v_0 t + \dfrac{1}{2}at^2\)</li>
+</ul>
+</div></div></section><section data-id="fc84c289d2575f9a20070aa2b30cbfb7"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 41px; height: auto;" data-name="text-c35a5a" data-block-id="b01b13fc3106fefa286c748f3719c0f5"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Free particle motion</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 1120px; left: 80px; top: 144px;" data-name="text-8fa1d2" data-block-id="fe35d743b0f1cd6f28dd1aed7d5e4636"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 90%;">
+<p>Q. 찬우가 우주에서 \(20m/s\)의 속력으로 공을 던졌다고 할 때, 3초 후 공의 변위는 얼마인가?<br>
+(모든 중력과 마찰은 무시할 수 있다고 가정한다.)</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 1120px; left: 80px; top: 245px;" data-block-id="572167e4ce9ae0d80f7b87969be11389" data-name="text-f33bd5"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 90%;" data-fragment-index="0">
+<p>A. \(v = v_0 = 20m/s,~s = v_0 t = 20t~\Rightarrow~s = 60m\)</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 1120px; left: 80px; top: 327px;" data-block-id="f38e6b3b9f2e4f34a2c08cd16bf02fb8" data-name="text-ffa8d3"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 90%;" data-fragment-index="1">
+<p>이것을 코드로 짜는 것은 간단하다.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 288px; left: 160px; top: 432px;" data-name="code-3cbe6c" data-block-id="224ca732db941f7e48101649d15f4164"><div class="sl-block-content notranslate fragment" data-highlight-theme="github-gist" data-code-frame="none" style="z-index: 14; font-size: 150%;" data-fragment-index="2"><pre class="python"><code data-line-numbers=""># 12_physics/01_const.py
+def s_gen(v0):
+    return lambda t: v0 * t
+  
+s = s_gen(20)
+print(s(3))</code></pre></div></div></section><section data-id="124e9e507f655f05ad3c9807852b4678"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 36px; height: auto;" data-name="text-c35a5a" data-block-id="a6808e88b218a7b36045815555f16be8"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Uniformly accelerated motion</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 1120px; left: 80px; top: 144px;" data-name="text-8fa1d2" data-block-id="53a6bd89d7bb7265035a6c9d4e314a37"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 90%;">
+<p>Q. 윤수가 20m 높이의 건물에서 공을 놓아 떨어뜨렸다고 할 때, 공은 몇 초 후에 지면에 도달하는가?<br>
+(중력가속도는 \(10m/s^2\)이며 모든 공기저항은 무시한다.)</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 1120px; left: 80px; top: 245px;" data-name="text-f33bd5" data-block-id="7e696210c7492848211df36cfb4d8266"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 90%;" data-fragment-index="0">
+<p>A. \(a = g = 10m/s^2,~v = v_0+gt = 10t,~s=v_0t + \dfrac{1}{2}gt^2 = 5t^2 = 20~\Rightarrow~t = 2\)</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 1120px; left: 80px; top: 327px;" data-name="text-ffa8d3" data-block-id="a6755c8e22b4790fea30a4f1a9fb9ccd"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 90%;" data-fragment-index="1">
+<p>이것을 코드로 구현해보자.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 288px; left: 160px; top: 432px;" data-name="code-3cbe6c" data-block-id="a5f493d113860540c20b78c94dd2ece2"><div class="sl-block-content notranslate fragment" data-highlight-theme="github-gist" data-code-frame="none" style="z-index: 14; font-size: 150%;" data-fragment-index="2"><pre class="python"><code data-line-numbers=""># 12_physics/02_unif.py
+def s_gen(a, v0):
+    return lambda t: v0 * t + 0.5 * a * t**2
+  
+s = s_gen(10, 0)
+t = 0
+while s(t) &lt; 20:
+  t += 0.1
+print(t, s(t))</code></pre></div></div></section><section data-id="d1a3c935c4a005282b0515d7abc0010e"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 36px; height: auto;" data-name="text-c35a5a" data-block-id="ae2a0e6883d699ab39bfc0c44900b2c1"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Drag force</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 1120px; left: 80px; top: 144px;" data-name="text-8fa1d2" data-block-id="d7fa9912d7cbedb7f2b293279f14d25f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 90%;">
+<p>Q. 윤수가 20m 높이의 건물에서 1kg 공을 떨어뜨렸다고 할 때, 공은 몇 초 후에 지면에 도달하는가?<br>
+(중력가속도는 \(10m/s^2\)이며 공기저항력은 \(0.1 v^2\) 이라고 한다. )</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 1120px; left: 80px; top: 245px;" data-name="text-f33bd5" data-block-id="6d6ae91f7398695259775858b7a1c372"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 90%;" data-fragment-index="0">
+<p>A. 속력은 계속 변하므로 고교물리 공식으로는 풀 수 없다.<br>
+적분을 이용하거나 혹은 다른 방법을 모색해야 한다.</p>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 1120px; left: 80px; top: 360px;" data-name="text-866852" data-block-id="d824a027586d71c6f7789e6c7db1902b"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 90%;" data-fragment-index="1">
+<p>실제 환경에서는 공식을 이용한 접근은 거의 불가능하므로 미분방정식을 수치적으로 풀어 계산한다.<br>
+<br>
+우선 미분을 구현해보자.</p>
+</div></div></section><section data-background-image="pl_phy/55a1d4581c163aa1a50a8257bfd8e859.jpg" data-background-size="contain" data-id="e29fe5eb1aaa71ddae3d0262541ad6a6"><div class="sl-block" data-block-type="text" style="width: 864px; left: 80px; top: 72px; height: auto;" data-block-id="1734c12131011e4a185c883f686fc2fd"><div class="sl-block-content" data-placeholder-tag="h1" style="text-align: left; z-index: 10; color: rgb(255, 255, 255); font-size: 200%;" data-placeholder-text="Text">
+<h1>Differentiation</h1>
+
+<h1> </h1>
+</div></div></section><section data-id="9827b5f57d8b7bad154d95a6feb119ba"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="e510f093cd6b762c2f60416b3ecdc3e5"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>differentiation</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 160px; top: 144px;" data-name="text-ae77af" data-block-id="0272d3fcd365bdff4473aa56e4dbc5a3"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-fragment-index="0">
+<p>Q. 미분계수의 정의는?</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 160px; top: 216px;" data-block-id="100cd47d1b5be8ff493a9eb60a62e245" data-name="text-42c39a"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" data-fragment-index="1">
+<p>A. \(\displaystyle f'(a) =  \lim_{h \rightarrow 0} \frac{f(a+h) - f(a)}{h} \)</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 160px; top: 360px;" data-block-id="17a1824070ce80c19c5923a6bb9e43e9" data-name="text-be72f7"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" data-fragment-index="2">
+<p>Q. 도함수의 정의는?</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 160px; top: 432px;" data-block-id="bd54c60a2200eda0d7369648d7351b7c" data-name="text-222d7d"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;" data-fragment-index="3">
+<p>A. \(\displaystyle f'(x) =  \lim_{h \rightarrow 0} \frac{f(x+h) - f(x)}{h} \)</p>
+</div></div></section><section data-id="f179eca1ccde907e2f7b37438683189c"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="cc1ebb557d914dc0f1bbd1a850580fc7"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>differentiation</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 160px; top: 144px;" data-name="text-ae77af" data-block-id="d1d6d94a73c1dae82f60a96c6b591fcb"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; line-height: 1.56;" data-fragment-index="0" data-has-line-height="">
+<p>컴퓨터가 미분 계산을 하는 방법은 크게 다음의 2가지가 있다.</p>
+
+<ul>
+	<li>
+<strong>수치적 미분</strong> (Numerical Differentiation)</li>
+	<li>
+<strong>대수적 미분</strong> (Symbolic Differentiation)</li>
+</ul>
+
+<p> </p>
+
+<p>위의 방법은 빠르고 모든 언어에서 계산 가능하지만 오차가 크고,<br>
+아래의 방법은 느리고 특정 언어들에서만 계산이 가능하지만 정확하다.</p>
+</div></div></section><section data-id="8c86b4713366ee6197cfb76af985416c"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="06d4e7100e6afeb118e69073c0d176af"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Numerical differentiation</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 360px; left: 160px; top: 288px;" data-name="code-d71c94" data-block-id="1f03bfa6adc185105a15953a00226ec6"><div class="sl-block-content notranslate" data-highlight-theme="github-gist" data-code-frame="none" style="z-index: 11; font-size: 150%;"><pre class="python"><code data-line-numbers=""># 12_physics/03_diff.py
+def diff(f, a, h=1e-6):
+    return (f(a+h) - f(a)) / h
+
+def f(x):
+    return x**2 + 2*x
+  
+print(diff(f, 1))
+print(diff(f, 1, 1e-8))
+print(diff(f, 1, 1e-15))</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 160px; top: 144px;" data-name="text-3c26a7" data-block-id="ce000991b93791754e6bfb27639b3659"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>컴퓨터는 극한 계산을 할 수 없으므로 작은 \(h\) 값을 주어 근사한다.</p>
+</div></div></section><section data-id="b3dadf61665ad52da712a1d5f338fccc"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="6b067b1209b580ad2e9e65fe12795d77"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Numerical derivative</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="code" style="width: 640px; height: 504px; left: 0px; top: 216px;" data-name="code-d71c94" data-block-id="c37e748d5371801b06ab0441503183cf"><div class="sl-block-content notranslate" data-highlight-theme="github-gist" data-code-frame="none" style="z-index: 11;"><pre class="python"><code data-line-numbers=""># 12_physics/04_deriv.py
+import numpy as np
+import matplotlib.pyplot as plt
+
+class Derivative:
+    def __init__(self, f, h=1e-6):
+        self.f = f
+        self.h = h
+
+    def __call__(self, x):
+        return (self.f(x + self.h) - self.f(x)) / self.h
+
+def f(x):
+    return x**2 + 2*x
+
+df = Derivative(f)
+x = np.arange(-2, 2, 0.1)
+
+# Write plot code!</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 160px; top: 144px;" data-name="text-3c26a7" data-block-id="009d0d630786e17dc7d1243835d9f682"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>도함수를 구하기 위해서는 Class를 사용한다.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 640px; height: 504px; left: 640px; top: 216px;" data-block-id="9b754d565f4d3b0dc2359a5e8f2f099f" data-name="code-314299"><div class="sl-block-content notranslate fragment" data-highlight-theme="github-gist" data-code-frame="none" style="z-index: 13;" data-fragment-index="0"><pre class="python"><code data-line-numbers="">plt.figure(figsize=(10, 6), dpi=150)
+plt.plot(x, f(x), label='f')
+plt.plot(x, df(x), label='df')
+plt.axhline(y=0, color='k')
+plt.axvline(x=0, color='k')
+plt.legend()
+plt.grid()
+plt.savefig("deriv.png")</code></pre></div></div></section><section data-id="b99bc74aa9205308656b61842eb6ba8c"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="beb3ca3b4c2e0e1fd860dd8dd8321278"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Numerical derivative</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="image" style="width: 1040px; height: 624px; left: 120px; top: 72px; min-width: 1px; min-height: 1px;" data-name="image-a2766f" data-block-id="0a7e987346348b74608f097b84ecda19"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1500" data-natural-height="900" data-lazy-loaded="" data-src="pl_phy/9e2d5719c4cd31e965ae76ff01bedcf2.png"></div></div></section><section data-id="a1ed6dd673fc677cf934d4b75d3dee35"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="3bbf539bda18abf09c058e17b4375768"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Euler method</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 1120px; left: 80px; top: 144px;" data-name="text-3c26a7" data-block-id="88407f11cef6a3473f63f81cf7907283"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>함수 \(f(x)\)의 도함수를 \(g(x)\)라고 하고, \(h\)가 아주 작다고 하면 다음 식이 성립한다.</p>
+</div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 282.5px; top: 256.5px;" data-name="math-13650a" data-block-id="7a56b5929cfdc3bd17d961f62868ede2"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 60%;"><div class="math-input">g(x) \simeq \dfrac{f(x+h) - f(x)}{h}~\Rightarrow~f(x+h) = f(x) + g(x) \cdot h</div></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 1120px; left: 80px; top: 385px;" data-name="text-fc3f87" data-block-id="2d1d751739acaf2692692198203368db"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" data-fragment-index="0">
+<p>즉, 특정 \(x\)에서 \(f(x)\)와 \(g(x)\)의 값을 알고 있다면, \(f(x+h)\)의 값을 구할 수 있다.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 1120px; left: 80px; top: 457px;" data-block-id="d55c898f9de7f305048f5afe9984b29b" data-name="text-319d03"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;" data-fragment-index="0">
+<p>이를 Euler method라고 한다.</p>
+</div></div></section><section data-id="80e5a67c8d8e4ca842d3293fbe5f42e2"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="6b0271b09dbfce8814afa4c79fb2616a"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Euler method</h2>
+</div></div>
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 160px; top: 144px;" data-name="text-e46f59" data-block-id="052049adc54b367590b29dccb876eef9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; line-height: 1.95;" data-has-line-height="">
+<p>이를 물리에 적용해보면 다음과 같다.</p>
+
+<ol>
+	<li><span style="font-size:0.9em">시간에 대한 가속도를 함수 형태로 알고 있다고 가정한다.</span></li>
+	<li>
+<span style="font-size:0.9em">현재 속도를 이용하여 다음 변위를 예측한다.</span><br>
+	\(s_{t+h} = s_t + v_t \cdot h\)</li>
+	<li>
+<span style="font-size:0.9em">현재 가속도를 이용하여 다음 속도를 예측한다.</span><br>
+	\(v_{t+h} = v_t + a(t) \cdot h\)</li>
+	<li>
+<span style="font-size:0.9em">시간을 업데이트 한다.</span><br>
+	\(t \rightarrow t+h\)</li>
+	<li><span style="font-size:0.9em">1 ~ 4을 반복한다.</span></li>
+</ol>
+</div></div></section><section data-id="24d0824f47a794adbb581e4be309fc32"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="6bf564fb7692b681c4782e708dc3519f"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Euler method Class</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="code" style="width: 960px; height: auto; left: 160px; top: 144px;" data-name="code-57b077" data-block-id="070b5133726d37e267b6a4ec96a081f7"><div class="sl-block-content notranslate" data-highlight-theme="github-gist" data-code-frame="none" style="z-index: 11; font-size: 120%;" data-code-autoheight="true"><pre class="python"><code data-line-numbers=""># 12_physics/phys.py
+class Phys1D:
+    def __init__(self, x, v, f, h=1e-6):
+        self.x = x      # Value
+        self.v = v      # Value
+        self.accel = f  # Function
+        self.t = 0      # Value
+        self.a = 0      # Value
+        self.h = h      # Value
+
+    def calc_accel(self):
+        self.a = self.accel(self)
+
+    def update(self):
+        self.calc_accel()
+        self.x += self.v * self.h
+        self.v += self.a * self.h
+        self.t += self.h
+</code></pre></div></div></section><section data-id="4c6655667b5cfcbe6362635839eed091"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="920b633b93fdc687dafa552b76829a87"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Revisit Free particle</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 1120px; left: 80px; top: 144px;" data-name="text-196dfc" data-block-id="811f7254edcee508f52988cff6e9f652"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>Q. 찬우가 우주에서 \(20m/s\)의 속력으로 공을 던졌다고 할 때, 3초 후 공의 변위는 얼마인가?<br>
+(모든 중력과 마찰은 무시할 수 있다고 가정한다.)</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 960px; height: auto; left: 160px; top: 288px;" data-name="code-f672e5" data-block-id="d5e557cd56c04c58ce5d866003db7f72"><div class="sl-block-content notranslate" data-highlight-theme="github-gist" data-code-frame="none" style="z-index: 12; font-size: 120%;" data-code-autoheight="true"><pre class="python"><code data-line-numbers=""># 12_physics/05_free.py
+from phys import Phys1D
+
+def a(p):
+    return 0
+
+ball = Phys1D(0, 20, a)
+while ball.t &lt; 3:
+    ball.update()
+#    print("{:.6f}\t{:.6f}\t{:.6f}".format(ball.x, ball.v, ball.t))
+print(ball.x)</code></pre></div></div></section><section data-id="b08f0529bfaed6fac0962df8062ae28d"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="11f47743b5bc57620ac19f30473c23fa"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Revisit Gravity</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 1120px; left: 80px; top: 144px;" data-name="text-196dfc" data-block-id="e1de710194285f35f372978676fe61b1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 90%;">
+<p>Q. 윤수가 20m 높이의 건물에서 공을 놓아 떨어뜨렸다고 할 때, 공은 몇 초 후에 지면에 도달하는가?<br>
+(중력가속도는 \(10m/s^2\)이며 모든 공기저항은 무시한다.)</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 960px; height: auto; left: 160px; top: 288px;" data-name="code-f672e5" data-block-id="4c2691df11a228f7b550b61c52206090"><div class="sl-block-content notranslate fragment" data-highlight-theme="github-gist" data-code-frame="none" style="z-index: 12; font-size: 120%;" data-code-autoheight="true" data-fragment-index="0"><pre class="python"><code data-line-numbers=""># 12_physics/06_grav.py
+from phys import Phys1D
+
+def a(p):
+    return -10
+
+ball = Phys1D(20, 0, a)
+while ball.x &gt; 0:
+    ball.update()
+    print("{:.6f}\t{:.6f}\t{:.6f}".format(ball.x, ball.v, ball.t))</code></pre></div></div></section><section data-id="0e6eb3e8c4671f16b6a441b6ceb24f3a"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="eeab26a672ee5078366a431595a6c83c"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Gravity2</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 1120px; left: 80px; top: 144px;" data-name="text-196dfc" data-block-id="118e749ae1b98eea1ae87406e66a13e8"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 90%;">
+<p>Q. 윤수가 20m 높이의 건물에서 공을 위로 10m/s로 던졌을 때, 공은 몇 초 후에 지면에 도달하는가?<br>
+(중력가속도는 \(10m/s^2\)이며 모든 공기저항은 무시한다.)</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 960px; height: auto; left: 160px; top: 288px;" data-name="code-f672e5" data-block-id="6357e7e55a359af460799f10064bfc3a"><div class="sl-block-content notranslate fragment" data-highlight-theme="github-gist" data-code-frame="none" style="z-index: 12; font-size: 120%;" data-code-autoheight="true" data-fragment-index="0"><pre class="python"><code data-line-numbers=""># 12_physics/07_grav2.py
+from phys import Phys1D
+
+def a(p):
+    return -10
+
+ball = Phys1D(20, 10, a)
+while ball.x &gt; 0:
+    ball.update()
+    print("{:.6f}\t{:.6f}\t{:.6f}".format(ball.x, ball.v, ball.t))
+</code></pre></div></div></section><section data-id="b9001ed890a3ca6790ec082c6098bb1c"><div class="sl-block" data-block-type="text" style="width: 800px; left: 240px; top: 30px; height: auto;" data-name="text-c35a5a" data-block-id="4868a88999419f46d83a5343d8718963"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Revisit DRAG</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 1120px; left: 80px; top: 144px;" data-name="text-196dfc" data-block-id="56fb32ac357a5ef8a45360eb140d511b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 90%;">
+<p>Q. 윤수가 20m 높이의 건물에서 1kg 공을 떨어뜨렸다고 할 때, 공은 몇 초 후에 지면에 도달하는가?<br>
+(중력가속도는 \(10m/s^2\)이며 공기저항력은 \(0.1 v^2\) 이라고 한다. )</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 960px; height: auto; left: 160px; top: 288px;" data-name="code-f672e5" data-block-id="a5490b4b47d6c7ccc812f7808d9f1642"><div class="sl-block-content notranslate fragment" data-highlight-theme="github-gist" data-code-frame="none" style="z-index: 12; font-size: 120%;" data-code-autoheight="true" data-fragment-index="0"><pre class="python"><code data-line-numbers=""># 12_physics/08_drag.py
+from phys import Phys1D
+
+def a(p):
+    return -10 + 0.1 * p.v**2
+
+ball = Phys1D(20, 0, a, 1e-6)
+while ball.x &gt;= 0:
+    ball.update()
+    print("{:.6f}\t{:.6f}\t{:.6f}".format(ball.x, ball.v, ball.t))
+</code></pre></div></div></section>
+			</div>
+		</div>
+
+		<script>
+			var SLConfig = {"deck": {"id":1779306,"slug":"pl_phy","title":"PL2020 - With Physics","description":"Programming Lecture 2020 - With Physics","width":1280,"height":720,"margin":0.05,"visibility":"all","published_at":"2020-05-01T18:02:55.894Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/0c537c27c4f40c940df4222f0a2e7fd7/thumb.jpg?1587149053","view_count":6,"user":{"id":1198239,"username":"axect","name":"","description":"","thumbnail_url":"https://www.gravatar.com/avatar/cda8e3c26bf8569f56759c20f93835ac?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","account_type":"enterprise","team_id":1998,"settings":{"id":4349006,"present_controls":true,"present_upsizing":true,"present_pointer":true,"present_notes":true,"default_deck_tag_id":null},"membership":{"role":"member","manager":false,"activated":true}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"overpass2","theme_color":"white-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":false,"rolling_links":false,"center":false,"shuffle":false,"should_loop":false,"share_notes":false,"slide_number":true,"slide_count":20,"rtl":false,"version":2,"collaborative":false,"deck_user_editor_limit":null,"data_updated_at":1588366137084,"font_typekit":"","font_google":"Signika, Ubuntu, Anonymous Pro, Fira Mono, Oxygen, B612 Mono, Noto Serif KR","time_limit":null,"navigation_mode":"default","upsizing_enabled":true,"notes":{}}};
+
+
+			// Use local fonts
+			SLConfig.fonts_url = 'lib/fonts/';
+		</script>
+
+		<script src="lib/reveal.js"></script>
+		<script src="lib/reveal-plugins.js"></script>
+		<script src="lib/offline.js"></script>
+
+		<!-- Initialize the presentation -->
+		<script>
+			Reveal.initialize({
+				width: 1280,
+				height: 720,
+				margin: 0.05,
+				
+
+				hash: true,
+				controls: true,
+				progress: true,
+				mouseWheel: false,
+				showNotes: false,
+				slideNumber: true,
+				fragmentInURL: true,
+
+				autoSlide: 0,
+				autoSlideStoppable: true,
+
+				autoAnimateMatcher: SL.deck.AutoAnimate.matcher,
+
+				center: false,
+				shuffle: false,
+				loop: false,
+				rtl: false,
+				navigationMode: "default",
+
+				transition: "slide",
+				backgroundTransition: "slide",
+
+				highlight: {
+					escapeHTML: false
+				},
+
+				plugins: [ RevealZoom, RevealNotes, RevealMarkdown, RevealHighlight ]
+			});
+		</script>
+
+		
+
+	</body>
+</html>
