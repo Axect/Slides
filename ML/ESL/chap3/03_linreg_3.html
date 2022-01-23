@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>03 Linear Regression 3</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="socialst.css">
+    <link rel="stylesheet" type="text/css" href="additional.css">
+  </head>
+  <body>
+    <textarea id="source">
+
+
+layout: true
+<div class="my-header">
+  <p class="align_left"><img src="images/yonsei_logo.png" style="height: 30px;"/></p>
+  <p class="align_right"><b>Linear Regression 3</b></p>
+</div>
+<div class="my-footer">
+  <p class="align_right"><b>2021.05.21 ML Study</b></p>
+  <p class="align_left"><b>Tae Geun Kim</b></p>
+</div>
+
+---
+
+class: center, middle
+
+# Linear Regression
+
+<h4 style="color:brown">Part III: Various Algorithms</h4>
+
+<h3 style="color: darkblue">Tae Geun Kim</h3>
+
+---
+
+## Table of Contents
+
+--
+
+* LASSO
+
+--
+
+* Principal Component Regression
+
+---
+
+class: center, middle
+
+# LASSO
+
+---
+
+### Find `\(\small \hat{\beta}\)` for Lasso
+
+Lasso cost function is given as :
+
+$$
+\small
+\begin{align}
+\text{PRSS}^{\text{lasso}}(\beta) &= \frac{1}{2}\text{RSS}(\beta) + \lambda \lVert \beta \rVert\_1 \\\\
+&= \frac{1}{2} \sum\_{i=1}^N \left[ y\_i - \sum\_{j=1}^p x\_{ij}\beta\_j \right]^2 + \lambda \sum\_{j=1}^p \lvert \beta\_j \rvert
+\end{align}
+$$
+
+--
+
+We can decompose `\(\small \text{RSS}\)` term as follows:
+
+$$
+\small
+\begin{align}
+\frac{\partial}{\partial \beta\_j} \text{RSS}(\beta) &= - \sum\_{i=1}^N x\_{ij} \left[y\_i - \sum\_{k \neq j}^p x\_{ik}\beta\_k - x\_{ij}\beta\_j \right] \\\\
+&= - \sum\_{i=1}^N x\_{ij} \left[ y\_i - \sum\_{k\neq j}x\_{ik}\beta\_k \right] + \beta\_j \sum\_{i=1}^N x\_{ij}^2 \\\\
+&\equiv -\rho\_j + \beta\_j z\_j
+\end{align}
+$$
+
+---
+
+### Find `\(\small \hat{\beta}\)` for Lasso
+
+Now, focus on the `\(\small L_1\)` term:
+
+$$
+\small
+\lambda \sum\_{j=1}^p \lvert \beta\_j \rvert = \lambda \lvert \beta\_j \rvert + \lambda \sum\_{k\neq j}^p \lvert \beta\_k \rvert
+$$
+
+--
+And differentiate it with **subdifferential**:
+
+$$
+\small
+\partial\_{\beta\_j}\lambda \sum\_{j=1}^p |\beta\_j | = \partial\_{\beta\_j}\lambda \lvert \beta\_j\rvert
+= \begin{cases}
+\left\\{ -\lambda \right\\} & \text{if } \beta\_j < 0 \\\\
+\left[ -\lambda, \lambda \right] & \text{if }\beta\_j = 0 \\\\
+\left\\{ \lambda \right\\} & \text{if } \beta\_j > 0
+\end{cases}
+$$
+
+--
+And we need some theorems for subdifferential:
+
+* **Moreau-Rockafellar theorem**: If `\(\small f,g\)` are both convex with subdifferentials `\(\small \partial f,\,\partial g\)`
+then the subdifferential of `\(\small f + g\)` is `\(\small \partial f + \partial g\)`
+
+* **Stationary condition**: A point `\(\small x_0\)` is the **global minimum** of a convex function `\(\small f\)` iff the **zero** is contained in the subdifferential.
+
+---
+
+### Find `\(\small \hat{\beta}\)` for Lasso
+
+Then let's put it together :
+
+$$
+\begin{align}
+\partial\_{\beta\_j} \text{PRSS}^{\text{lasso}}(\beta) &= - \rho\_j + \beta\_j z\_j + \partial\_{\beta\_j} \lambda \lvert \beta\_j \rvert \\\\
+0 &= \begin{cases}
+-\rho\_j + \beta\_j z\_j - \lambda & \text{if } \beta\_j < 0 \\\\
+[-\rho\_j - \lambda,~-\rho\_j + \lambda] & \text{if } \beta\_j = 0 \\\\
+-\rho\_j + \beta\_j z\_j + \lambda & \text{if } \beta\_j > 0
+\end{cases}
+\end{align}
+$$
+
+--
+
+We know that `\(\small \beta_j = 0\)` is a global minimum, thus, there should be the zero in closed interval of the second case.
+
+$$
+0 \in [ -\rho\_j - \lambda,~-\rho\_j + \lambda ] ~ \Rightarrow ~
+\begin{cases} - \rho\_j - \lambda \leq 0 \\\\ -\rho\_j + \lambda \geq 0
+\end{cases}
+~ \Rightarrow ~ -\lambda \leq \rho\_j \leq \lambda
+$$
+
+---
+
+### Find `\(\small \hat{\beta}\)` for Lasso
+
+Then we can get the solution :
+
+$$
+\hat{\beta}\_j = \begin{cases}
+  \frac{\rho\_j + \lambda}{z\_j} & \text{for }\rho\_j < -\lambda \\\\
+  0 & \text{for } -\lambda \leq \rho \leq \lambda \\\\
+  \frac{\rho\_j - \lambda}{z\_j} & \text{for } \rho\_j > \lambda
+\end{cases}
+$$
+
+--
+
+&nbsp;
+
+And it can be denoted with **Soft-thresholding** function.
+
+$$
+\small
+\hat{\beta}\_j = \frac{1}{z\_j} S(\rho\_j, \lambda)
+$$
+
+
+$$
+\small
+S(\rho\_j, \lambda) = \begin{cases}
+\rho\_j + \lambda & \text{for }\rho\_j < -\lambda \\\\
+0 & \text{for } -\lambda \leq \rho \leq \lambda \\\\
+\rho\_j - \lambda & \text{for } \rho\_j > \lambda
+\end{cases}
+$$
+
+---
+
+### Find `\(\small \hat{\beta}\)` for Lasso
+
+To find `\(\small \hat{\beta}_j\)`, we need some iterations - called **Coordinate descent**.
+
+--
+
+**Coordinate descent update rule** :
+
+* For `\(\small 1 \leq j \leq p\)`
+
+* Compute `\(\small \displaystyle \rho_j = \sum_{i=1}^N x_{ij} (y_i - \sum_{k\neq j}^p x_{ik}\beta_k) \)`
+
+* Compute `\(\small \displaystyle z_j = \sum_{i=1}^N x_{ij}^2\)` 
+`\(\small ~ \Rightarrow\)` If we normalize `\(\small \mathbf{X}\)` then we can omit this process
+
+* Set `\(\small \displaystyle \beta_j = \frac{1}{z_j}S(\rho_j, \lambda)\)`
+
+* Repeat above processes for the number of iterations or until convergence.
+
+---
+
+### Summary of Lasso
+
+1. **Center** and **normalize** input via `\(\small L_2\)` norm:
+  $$\small \displaystyle \mathbf{X} ~\overset{\text{center}}{\longrightarrow}~ \mathbf{X}^c = (x^c\_{ij}) = (x_{ij} - \bar{x}_j) 
+  ~\overset{\text{normalize}}{\longrightarrow}~ \mathbf{X}^{c.n} = \frac{\mathbf{X}^c}{\lVert \mathbf{X}^c\rVert}$$
+
+2. **Center** response: 
+  $$\mathbf{y}^c = \mathbf{y} - \bar{\mathbf{y}}$$
+
+3. Calculate `\(\small \hat{\beta_j}\)` via **Coordinate descent rule**.
+
+4. Calculate `\(\small\hat{\mathbf{y}}^c\)`:
+$$\small \hat{\mathbf{y}}^c = \mathbf{X}^{c.n} \hat{\beta}$$
+
+5. Add intercept:
+$$\small \hat{\mathbf{y}} = \bar{\mathbf{y}} + \hat{\mathbf{y}}^c$$
+
+---
+
+### Implementation of Lasso
+
+[Axect's Github](https://github.com/Axect/ESL_Study/blob/master/chap3/python/06_lasso.py)
+
+---
+
+class: center, middle
+
+# Principal Components Regression
+
+---
+
+### Principal Components Regression (PCR)
+
+In Ridge regression, we already learned about *principal components*.
+
+$$
+\mathbf{z}\_m = \mathbf{X} v\_m ~(1\leq m \leq p)~\quad \text{where}\quad \mathbf{X} = \mathbf{U\Sigma V}^T, ~ \mathbf{V} = (v\_m)
+$$
+
+<br/>
+
+--
+
+Now, let's take `\(\small M\)` principal components and regress `\(\small \mathbf{y}\)` on it.   
+Since `\(\small \mathbf{z}_m\)` are orthogonal, the regression is just a sum of univariate regressions:
+
+$$
+\hat{\mathbf{y}}^{\text{pcr}}\_{(M)} = \bar{y} \mathbf{1} + \sum\_{m=1}^M \hat{\theta}\_m \mathbf{z}\_m
+\quad \text{where}\quad \hat{\theta}\_m = \frac{\left< \mathbf{z}\_m, \mathbf{y} \right>}{\left<\mathbf{z}\_m ,\mathbf{z}\_m \right>}
+$$
+
+--
+
+And corresponding parameter is given as follows:
+
+$$
+\hat{\beta}^{\text{pcr}}(M) = \sum\_{m=1}^M \hat{\theta}\_m v\_m
+$$
+
+---
+
+### Summary of PCR
+
+1. **Standardize** input `\( \mathbf{X}\)`
+
+2. **Center** response `\( \mathbf{y}\)`
+
+3. Obtain SVD of input : `\( \mathbf{X} = \mathbf{U\Sigma V}^T\)`
+
+4. Set the number of features `\(M\)`
+
+5. Take `\( \mathbf{z}_m = \mathbf{X} v_m~(1\leq m \leq M)\)`
+
+6. Regress `\(\mathbf{y}\)` on `\(\mathbf{z}_1,\,\mathbf{z}_2,\,\cdots,\,\mathbf{z}_M\)`
+
+7. Add intercept term `\(\bar{y}\mathbf{1}\)`
+
+---
+
+### Implementation of PCR
+
+[Axect's Github](https://github.com/Axect/ESL_Study/blob/master/chap3/python/08_pcr.py)
+
+---
+
+### References
+
+* T. Hastie et al., *The Elements of Statistical Learning 2nd ed*, Springer (2009)
+
+---
+
+class: center, middle
+
+# Thank you!
+
+
+
+    </textarea>
+    <!-- <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script> -->
+    <script src="./remark-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <!-- <script src="./MathJax.js" type="text/javascript"></script> -->
+    <script>
+      var slideshow = remark.create({
+          ratio: '4:3',
+
+          highlightLanguage: 'rust',
+          highlightStyle: 'monokai',
+          highlightLines: 'true',
+          highlightSpans: 'true'
+      });
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          inlineMath: [['$','$'], ['\\(','\\)']],
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+      MathJax.Hub.Queue(function() {
+          $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+              return(elem.SourceElement());
+          }).parent().addClass('has-jax');
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
