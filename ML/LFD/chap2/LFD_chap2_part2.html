@@ -711,6 +711,30 @@ But real bound is little bit different.
 
 ---
 
+### The VC Generalization Bound
+
+<img src="images/ex_2_05.png" alt="ex_2_05" style="width:100%">
+
+--
+
+$$\small m\_\mathcal{H}(N) = N+1 \,\Rightarrow\, E\_\text{out}(g) \leq E\_\text{in}(g) + \sqrt{\frac{8}{N} \ln \frac{4 (2N+1)}{\delta}}$$
+
+--
+
+$$
+\small N=100 ~ \Rightarrow ~ \delta = \frac{804}{e^{1/8}} \simeq 709.52751 ~\Rightarrow~ P \geq 1-\delta \simeq -709
+$$
+
+--
+
+**Q.** For $\small 1-\delta = 0.9$, what is the minimum sample size $N$ that can be used to achieve the desired tolerance?
+
+--
+
+**A.** $N \simeq 10940$.
+
+---
+
 ### References
 
 * [Learning From Data](http://amlbook.com/), Yaser S. Abu-Mostafa, Malik Magdon-Ismail, and Hsuan-Tien Lin, AMLbook.com (2012)
